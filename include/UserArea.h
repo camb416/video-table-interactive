@@ -30,10 +30,10 @@ class UserArea
 {
     public:
         UserArea();
-    UserArea(char c, Rectf vR, bool f, float angle_in );
+        UserArea(char c, Rectf vR, bool f, float angle_in , Vec2f pos_in);
         void update();
         void draw();
-        
+        Vec2f pos;
         char getKey();
         void nextMovie();
     
@@ -44,6 +44,7 @@ class UserArea
         bool flipped;
 
     float angle;
+    int frameCount;
 
 };
 

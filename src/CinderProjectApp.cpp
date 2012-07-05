@@ -27,15 +27,32 @@ public:
 
 void ProjectApp::setup()
 {
-    Rectf r = Rectf(0, 0, 640, 480);
-    Rectf r2 = Rectf(640, 0, 1280, 480);
-    Rectf r3 = Rectf(0, 480, 640, 960);
-    Rectf r4 = Rectf(640, 480, 1280, 960);
+
+    // seed a random number
+    srand ( time(NULL) );
+
+    Rectf r = Rectf(0, 0, 640, 480);    
+    // while passing Rectfs makes it easier to draw in GL,
+    // it's nice to abstract the positioning of the user area
+    // considering that we will never scale an entire user area.
+    // although, we may scale individual parts of it, we want positionability,
+    // but not scalability in rendering these things.
+
     
-    mAreas.push_back(UserArea('a' , r, true, 0 ));
-    mAreas.push_back(UserArea('s' , r, true, 45 ));
-    mAreas.push_back(UserArea('z' , r, false, 90 ));
-    mAreas.push_back(UserArea('x' , r, false , 135));                 
+    Vec2f pos0 = Vec2f(320.0f,240.0f);
+    Vec2f pos1 = Vec2f(960.0f,240.0f);
+    Vec2f pos2 = Vec2f(320.0f,720.0f);
+    Vec2f pos3 = Vec2f(960.0f,720.0f);
+
+    // eventually, we'll take care of this rectangle stuff in the videoplayer class
+    // and just have it generate the rect from the size of the video file
+    // it loads. Also, the flipped flag can go away. I like the keystroke in the constructor though.
+    // it would be really cool to load this data from an XML file. That way we could add/remove user areas
+    // and/or change keypresses or reposition them using XML and not recompiling...
+    mAreas.push_back(UserArea('a' , r, false, 180, pos0));
+    mAreas.push_back(UserArea('s' , r, false, 180, pos1));
+    mAreas.push_back(UserArea('z' , r, false, 0, pos2));
+    mAreas.push_back(UserArea('x' , r, false, 0, pos3));                 
 }
 
 void ProjectApp::prepareSettings( Settings *settings )

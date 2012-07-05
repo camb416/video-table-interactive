@@ -26,17 +26,25 @@ UserArea::UserArea()
 {
 }
 
-UserArea::UserArea(char c, Rectf vR, bool f, float angle_in)
+UserArea::UserArea(char c, Rectf vR, bool f, float angle_in, Vec2f pos_in)
 {
+    pos = pos_in;
     angle = angle_in;
     key = c;
     vidRect = vR;
     player = VideoPlayer( vR, f );  
     flipped = f;
+ 
+    /* generate random number between 0 and 627 (roughly 2*PI*100) */
+    frameCount = rand() % 628;
+    
+    cout << "the random frame is: " << frameCount << endl;
+    
 }
 
 void UserArea::update()
 {
+    frameCount++;
     player.update();
 }
 
@@ -44,16 +52,18 @@ void UserArea::draw()
 {
     gl::pushMatrices();
     
-   // if (flipped)
-   // {
-       //gl::translate(vidRect.getUpperLeft());
-       // console()<<key<<" "<<vidRect.getX1() << "," << vidRect.getY1();
-       // gl::translate(Vec2f(vidRect.getWidth(), vidRect.getHeight()));
-        gl::translate(vidRect.getX1(), vidRect.getY1());
-        gl::rotate(angle );
-        
-        
-   // }
+    gl::translate(pos.x,pos.y);
+    
+    // 
+    // gl::rotate(angle);
+    // 
+    // yeah but that's no fun... let's add some wiggle!
+    // here's where the framecount comes in to do some animation.
+    // using sine because it makes a nice pulsing pattern on the angle.
+    // this is also a lot of fun to use in a scale property over time to make a pulsing patterns
+    // that look like breathing
+    gl::rotate(angle + sin(((float)frameCount)/100.0f)*7.5f);
+    
     
     player.draw();
     
