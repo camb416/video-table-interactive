@@ -24,29 +24,28 @@ VideoPlayer::VideoPlayer()
 {
 }
 
-VideoPlayer::VideoPlayer( Rectf r, bool f )
+VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
 {
-    //console() << App::getResourcePath( "m1.mp4" ) << endl;
+    console() << "size: " << names.size() << endl;
     
     ind = 0;
     
-    movieNames[0] = "m1.mp4";
-    movieNames[1] = "m2.m4v";
-    movieNames[2] = "m3.mp4";
-    moviePath = movieNames[ind];
+    movieNames = names;
+    
+    moviePath = movieNames.at(ind);
     if ( ! moviePath.empty() )
         loadMovieFile(moviePath);
    
     drawRect = r;	
-    flipped = f;
 }
 
 void VideoPlayer::nextMovie()
 {
     ind++;
-    if ( ind > size - 1)
+    if ( ind > movieNames.size() - 1)
         ind = 0;
-    loadMovieFile( movieNames[ind]);
+    console() << ind << endl;
+    loadMovieFile( movieNames.at(ind));
 }
 
 void VideoPlayer::loadMovieFile( const string &moviePath )

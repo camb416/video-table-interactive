@@ -11,6 +11,7 @@
 
 
 #include <iostream>
+#include <vector>
 #include "cinder/app/AppBasic.h"
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
@@ -26,7 +27,7 @@ using namespace std;
 class VideoPlayer {
 public:
     VideoPlayer();
-    VideoPlayer( Rectf r, bool f);
+    VideoPlayer( Rectf r, vector<string> movies );
     void update(); 
     void draw();
     
@@ -36,15 +37,14 @@ public:
     void nextMovie();
     
     
-    static const int           size = 3;
-    //fs::path                   movies[size];
-    string                  movieNames[size];
+    static const int        size = 3;
+    vector<string>          movieNames;
     string                  moviePath;
     int                     ind;
 	gl::Texture             mFrameTexture, mInfoTexture;
 	qtime::MovieGl          mMovie;
     Rectf                   drawRect;
-    bool                    flipped;
+    
     
     
     

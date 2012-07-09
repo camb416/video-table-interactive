@@ -12,6 +12,7 @@
 
 #include "VideoPlayer.h"
 
+#include <vector>
 #include "cinder/app/AppBasic.h"
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
@@ -30,13 +31,13 @@ class UserArea
 {
     public:
         UserArea();
-        UserArea(char c, Rectf vR, bool f, float angle_in , Vec2f pos_in);
+        UserArea(char c, Rectf vR, vector<string> videos, float angle_in , Vec2f pos_in);
         void update();
         void draw();
         Vec2f pos;
         char getKey();
         void nextMovie();
-    
+private:
         char key;
         VideoPlayer player;
         Rectf vidRect;

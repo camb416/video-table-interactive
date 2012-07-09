@@ -5,8 +5,9 @@
 #include "cinder/Text.h"
 #include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
+#include "cinder/Xml.h"
+#include <queue>
 
-//#include "VideoPlayer.h"
 #include "UserArea.h"
 
 using namespace ci;
@@ -21,38 +22,55 @@ public:
     void prepareSettings( Settings *settings );
 	void update();
 	void draw();
+    void parseXML();
     
     vector<UserArea> mAreas;
 };
 
 void ProjectApp::setup()
 {
-
+    parseXML();
     // seed a random number
     srand ( time(NULL) );
 
-    Rectf r = Rectf(0, 0, 640, 480);    
     // while passing Rectfs makes it easier to draw in GL,
     // it's nice to abstract the positioning of the user area
     // considering that we will never scale an entire user area.
     // although, we may scale individual parts of it, we want positionability,
     // but not scalability in rendering these things.
 
-    
-    Vec2f pos0 = Vec2f(320.0f,240.0f);
-    Vec2f pos1 = Vec2f(960.0f,240.0f);
-    Vec2f pos2 = Vec2f(320.0f,720.0f);
-    Vec2f pos3 = Vec2f(960.0f,720.0f);
 
     // eventually, we'll take care of this rectangle stuff in the videoplayer class
     // and just have it generate the rect from the size of the video file
     // it loads. Also, the flipped flag can go away. I like the keystroke in the constructor though.
     // it would be really cool to load this data from an XML file. That way we could add/remove user areas
     // and/or change keypresses or reposition them using XML and not recompiling...
-    mAreas.push_back(UserArea('a' , r, false, 180, pos0));
-    mAreas.push_back(UserArea('s' , r, false, 180, pos1));
-    mAreas.push_back(UserArea('z' , r, false, 0, pos2));
-    mAreas.push_back(UserArea('x' , r, false, 0, pos3));                 
+}
+
+void ProjectApp::parseXML()
+{
+    char key;
+    Rectf r = Rectf(0, 0, 640, 480);  
+    float x, y, angle;
+    Vec2f pos;
+    vector<string> videos;
+    
+    XmlTree doc(loadResource( "USER_AREAS.xml" ) );
+    for( XmlTree::Iter area = doc.begin(); area!= doc.end(); ++area )
+    {
+        key = area->getAttributeValue<char>( "key" );
+        x = area->getAttributeValue<float>( "centerX");
+        y = area->getAttributeValue<float>( "centerY" );
+        angle = area->getAttributeValue<float>( "angle" );
+        pos = Vec2f(x, y);
+        
+        for( XmlTree::Iter vid = area->begin(); vid != area->end(); ++vid)
+            videos.push_back(vid->getValue());
+        
+        mAreas.push_back(UserArea( key, r, videos, angle, pos ));
+        videos.clear();
+    }
+
 }
 
 void ProjectApp::prepareSettings( Settings *settings )

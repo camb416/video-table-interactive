@@ -26,14 +26,13 @@ UserArea::UserArea()
 {
 }
 
-UserArea::UserArea(char c, Rectf vR, bool f, float angle_in, Vec2f pos_in)
+UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2f pos_in)
 {
     pos = pos_in;
     angle = angle_in;
     key = c;
     vidRect = vR;
-    player = VideoPlayer( vR, f );  
-    flipped = f;
+    player = VideoPlayer( vR, videos );  
  
     /* generate random number between 0 and 627 (roughly 2*PI*100) */
     frameCount = rand() % 628;
