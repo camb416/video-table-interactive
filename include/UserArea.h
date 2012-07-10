@@ -20,6 +20,7 @@
 #include "cinder/Text.h"
 #include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
+#include "cinder/Xml.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -32,11 +33,15 @@ class UserArea
     public:
         UserArea();
         UserArea(char c, Rectf vR, vector<string> videos, float angle_in , Vec2f pos_in);
+    UserArea(XmlTree area);
         void update();
         void draw();
         Vec2f pos;
         char getKey();
         void nextMovie();
+    enum button_t {LEFT_BUTTON, MID_BUTTON, RIGHT_BUTTON};
+    void registerButton(button_t b, int serial, int index);
+    
 private:
         char key;
         VideoPlayer player;

@@ -21,6 +21,8 @@
 		1B09CABE15A385990086B68B /* m2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABD15A385990086B68B /* m2.m4v */; };
 		1B09CAC015A385A10086B68B /* m3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABF15A385A10086B68B /* m3.mp4 */; };
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
+		1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1C426D15AB815C00CC936A /* Phidget21.framework */; };
+		1B1C428315AB815D00CC936A /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C426E15AB815C00CC936A /* README */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -46,6 +48,11 @@
 		1B09CABD15A385990086B68B /* m2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = m2.m4v; path = ../resources/m2.m4v; sourceTree = "<group>"; };
 		1B09CABF15A385A10086B68B /* m3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m3.mp4; path = ../resources/m3.mp4; sourceTree = "<group>"; };
 		1B1C425C15A73FF200CC936A /* USER_AREAS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = USER_AREAS.xml; path = ../resources/USER_AREAS.xml; sourceTree = "<group>"; };
+		1B1C426A15AB815C00CC936A /* phidget21.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phidget21.h; sourceTree = "<group>"; };
+		1B1C426D15AB815C00CC936A /* Phidget21.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Phidget21.framework; path = ../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx/Phidget21.framework; sourceTree = "<group>"; };
+		1B1C426E15AB815C00CC936A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		1B1C428015AB815C00CC936A /* PhidgetConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetConnector.h; sourceTree = "<group>"; };
+		1B1C428115AB815C00CC936A /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
 				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
 				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +98,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B1C426D15AB815C00CC936A /* Phidget21.framework */,
 				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
 				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
 				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
@@ -122,9 +131,62 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1B1C426715AB812300CC936A /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C426815AB815C00CC936A /* phidgets */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		1B1C426815AB815C00CC936A /* phidgets */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C426915AB815C00CC936A /* include */,
+				1B1C426B15AB815C00CC936A /* lib */,
+				1B1C426E15AB815C00CC936A /* README */,
+				1B1C427F15AB815C00CC936A /* src */,
+			);
+			name = phidgets;
+			path = ../../../Downloads/cinder_0.8.4_mac/blocks/phidgets;
+			sourceTree = "<group>";
+		};
+		1B1C426915AB815C00CC936A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C426A15AB815C00CC936A /* phidget21.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1B1C426B15AB815C00CC936A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C426C15AB815C00CC936A /* macosx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		1B1C426C15AB815C00CC936A /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = macosx;
+			sourceTree = "<group>";
+		};
+		1B1C427F15AB815C00CC936A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1B1C428015AB815C00CC936A /* PhidgetConnector.h */,
+				1B1C428115AB815C00CC936A /* PhidgetModel.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CinderProject */ = {
 			isa = PBXGroup;
 			children = (
+				1B1C426715AB812300CC936A /* Blocks */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -221,6 +283,7 @@
 				1B09CABE15A385990086B68B /* m2.m4v in Resources */,
 				1B09CAC015A385A10086B68B /* m3.mp4 in Resources */,
 				1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */,
+				1B1C428315AB815D00CC936A /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +307,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_MODEL_TUNING = G5;
@@ -268,6 +335,10 @@
 			buildSettings = {
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx\"",
+				);
 				GCC_FAST_MATH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;

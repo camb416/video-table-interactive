@@ -7,6 +7,7 @@
 #include "cinder/ImageIo.h"
 #include "cinder/Xml.h"
 #include <queue>
+#include "PhidgetConnector.h"
 
 #include "UserArea.h"
 
@@ -25,6 +26,11 @@ public:
     void parseXML();
     
     vector<UserArea> mAreas;
+    PhidgetConnector pConnector;    // the Phidget Connector object.
+
+    bool oldVal;        // keeps track of touch sensor's changes
+    bool newVal;
+
 };
 
 void ProjectApp::setup()
@@ -32,7 +38,13 @@ void ProjectApp::setup()
     parseXML();
     // seed a random number
     srand ( time(NULL) );
+    
+    pConnector.useEvents(false);
+    pConnector.connect(148986);
 
+    oldVal = false;
+    
+    
     // while passing Rectfs makes it easier to draw in GL,
     // it's nice to abstract the positioning of the user area
     // considering that we will never scale an entire user area.
@@ -49,33 +61,35 @@ void ProjectApp::setup()
 
 void ProjectApp::parseXML()
 {
-    char key;
+ /*   char key;
     Rectf r = Rectf(0, 0, 640, 480);  
     float x, y, angle;
     Vec2f pos;
-    vector<string> videos;
+    vector<string> videos;  */
     
     XmlTree doc(loadResource( "USER_AREAS.xml" ) );
     for( XmlTree::Iter area = doc.begin(); area!= doc.end(); ++area )
     {
-        key = area->getAttributeValue<char>( "key" );
-        x = area->getAttributeValue<float>( "centerX");
+       /* key = area->getAttributeValue<char>( "key" );
+        x = area->getAttributeValue<float>( "centerX" );
         y = area->getAttributeValue<float>( "centerY" );
         angle = area->getAttributeValue<float>( "angle" );
         pos = Vec2f(x, y);
         
         for( XmlTree::Iter vid = area->begin(); vid != area->end(); ++vid)
-            videos.push_back(vid->getValue());
+            videos.push_back(vid->getValue());  
         
         mAreas.push_back(UserArea( key, r, videos, angle, pos ));
-        videos.clear();
+        videos.clear(); */
+        XmlTree a = *area;
+        mAreas.push_back( UserArea(a) ) ;
     }
 
 }
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	settings->setWindowSize( 1280, 960 );
+	settings->setWindowSize( 1760, 960 );
 	settings->setFrameRate( 60.0f );
 }
 
@@ -93,9 +107,26 @@ void ProjectApp::keyDown( KeyEvent event )
 
 void ProjectApp::update()
 {
+    
+    pConnector.updateKits();
+    
     // iterate, update areas
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
          p->update();
+    
+    //pConnector.print();
+    //console() << pConnector.getVal(148986, 7);
+    
+    newVal = pConnector.getBool(148986, 7);
+    
+    if (newVal && !oldVal)
+    {
+        console() << "push" << endl;
+        for(int i = 0; i<mAreas.size(); i++)
+            mAreas.at(i).nextMovie();
+    }
+    
+    oldVal = newVal;
 }
 
 void ProjectApp::draw()

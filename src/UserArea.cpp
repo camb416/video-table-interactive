@@ -41,10 +41,25 @@ UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2
     
 }
 
+UserArea::UserArea(XmlTree area)
+{
+    pos = Vec2f(area.getAttributeValue<float>( "centerX" ), area.getAttributeValue<float>( "centerY" ));
+    angle = area.getAttributeValue<float>( "angle" );
+    key = area.getAttributeValue<char>( "key" );
+    
+    vector<string> videos;
+    for( XmlTree::Iter vid = area.begin(); vid != area.end(); ++vid)
+        videos.push_back(vid->getValue());
+    player = VideoPlayer ( Rectf(0, 0, 640, 480), videos);
+    frameCount = rand() % 628;
+}
+
 void UserArea::update()
 {
     frameCount++;
     player.update();
+    
+    
 }
 
 void UserArea::draw()
@@ -54,19 +69,24 @@ void UserArea::draw()
     gl::translate(pos.x,pos.y);
     
     // 
-    // gl::rotate(angle);
+     gl::rotate(angle);
     // 
     // yeah but that's no fun... let's add some wiggle!
     // here's where the framecount comes in to do some animation.
     // using sine because it makes a nice pulsing pattern on the angle.
     // this is also a lot of fun to use in a scale property over time to make a pulsing patterns
     // that look like breathing
-    gl::rotate(angle + sin(((float)frameCount)/100.0f)*7.5f);
+    //gl::rotate(angle + sin(((float)frameCount)/100.0f)*7.5f);
     
     
     player.draw();
     
     gl::popMatrices();
+}
+
+void UserArea::registerButton(button_t b, int serial, int index)
+{
+    
 }
 
 char UserArea::getKey()
