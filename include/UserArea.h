@@ -11,9 +11,10 @@
 
 
 #include "VideoPlayer.h"
+#include "Button.h"
 
 #include <vector>
-#include "cinder/app/AppBasic.h"
+//#include "cinder/app/AppBasic.h"
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
@@ -48,6 +49,7 @@ private:
         Rectf vidRect;
         int state;
         bool flipped;
+    vector<Button::Button> buttons;
 
     float angle;
     int frameCount;

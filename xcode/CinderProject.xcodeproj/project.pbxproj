@@ -23,6 +23,7 @@
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
 		1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1C426D15AB815C00CC936A /* Phidget21.framework */; };
 		1B1C428315AB815D00CC936A /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C426E15AB815C00CC936A /* README */; };
+		1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7C415ACA26100B2B72E /* Button.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -53,6 +54,8 @@
 		1B1C426E15AB815C00CC936A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		1B1C428015AB815C00CC936A /* PhidgetConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetConnector.h; sourceTree = "<group>"; };
 		1B1C428115AB815C00CC936A /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
+		1BB7A7C215ACA24D00B2B72E /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../include/Button.h; sourceTree = "<group>"; };
+		1BB7A7C415ACA26100B2B72E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
@@ -88,9 +91,10 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1BB7A7C415ACA26100B2B72E /* Button.cpp */,
+				1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */,
 				1B029E8715A2475300FD18F5 /* UserArea.cpp */,
 				00BAE6590E7ED9C10018A608 /* CinderProjectApp.cpp */,
-				1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -200,8 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */,
-				1B029E8E15A248D800FD18F5 /* UserArea.h */,
+				1BB7A7C215ACA24D00B2B72E /* Button.h */,
 				1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */,
+				1B029E8E15A248D800FD18F5 /* UserArea.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				00BAE65A0E7ED9C10018A608 /* CinderProjectApp.cpp in Sources */,
 				1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */,
 				1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */,
+				1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

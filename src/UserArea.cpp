@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "UserArea.h"
+#include "Button.h"
 
 #include "cinder/app/AppBasic.h"
 #include "cinder/Surface.h"
@@ -48,8 +49,16 @@ UserArea::UserArea(XmlTree area)
     key = area.getAttributeValue<char>( "key" );
     
     vector<string> videos;
-    for( XmlTree::Iter vid = area.begin(); vid != area.end(); ++vid)
-        videos.push_back(vid->getValue());
+    for( XmlTree::Iter child = area.begin(); child != area.end(); ++child)
+    {
+        if ( child->getTag() == "video" )
+            videos.push_back(child->getValue());
+        else if ( child->getTag() == "button" )
+        {
+            XmlTree b = *child;
+            buttons.push_back(Button::Button(b));
+        }
+    }
     player = VideoPlayer ( Rectf(0, 0, 640, 480), videos);
     frameCount = rand() % 628;
 }

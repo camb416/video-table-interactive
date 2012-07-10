@@ -43,44 +43,13 @@ void ProjectApp::setup()
     pConnector.connect(148986);
 
     oldVal = false;
-    
-    
-    // while passing Rectfs makes it easier to draw in GL,
-    // it's nice to abstract the positioning of the user area
-    // considering that we will never scale an entire user area.
-    // although, we may scale individual parts of it, we want positionability,
-    // but not scalability in rendering these things.
-
-
-    // eventually, we'll take care of this rectangle stuff in the videoplayer class
-    // and just have it generate the rect from the size of the video file
-    // it loads. Also, the flipped flag can go away. I like the keystroke in the constructor though.
-    // it would be really cool to load this data from an XML file. That way we could add/remove user areas
-    // and/or change keypresses or reposition them using XML and not recompiling...
 }
 
 void ProjectApp::parseXML()
-{
- /*   char key;
-    Rectf r = Rectf(0, 0, 640, 480);  
-    float x, y, angle;
-    Vec2f pos;
-    vector<string> videos;  */
-    
+{    
     XmlTree doc(loadResource( "USER_AREAS.xml" ) );
     for( XmlTree::Iter area = doc.begin(); area!= doc.end(); ++area )
     {
-       /* key = area->getAttributeValue<char>( "key" );
-        x = area->getAttributeValue<float>( "centerX" );
-        y = area->getAttributeValue<float>( "centerY" );
-        angle = area->getAttributeValue<float>( "angle" );
-        pos = Vec2f(x, y);
-        
-        for( XmlTree::Iter vid = area->begin(); vid != area->end(); ++vid)
-            videos.push_back(vid->getValue());  
-        
-        mAreas.push_back(UserArea( key, r, videos, angle, pos ));
-        videos.clear(); */
         XmlTree a = *area;
         mAreas.push_back( UserArea(a) ) ;
     }

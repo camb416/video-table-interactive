@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 American Museum of Natural History. All rights reserved.
 //
 
-#include <iostream>
+#include <iostream> 
 #include "VideoPlayer.h"
 #include "cinder/app/AppBasic.h"
 #include "cinder/Surface.h"
@@ -14,7 +14,7 @@
 #include "cinder/qtime/QuickTime.h"
 #include "cinder/Text.h"
 //#include "cinder/Utilities.h"
-#include "cinder/ImageIo.h"
+#include "cinder/ImageIo.h" 
 
 using namespace ci;
 using namespace ci::app;
