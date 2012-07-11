@@ -51,7 +51,7 @@ void ProjectApp::parseXML()
     for( XmlTree::Iter area = doc.begin(); area!= doc.end(); ++area )
     {
         XmlTree a = *area;
-        mAreas.push_back( UserArea(a) ) ;
+        mAreas.push_back( UserArea(a/*, pConnector*/) ) ;
     }
 
 }

@@ -22,6 +22,7 @@
 #include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
 #include "cinder/Xml.h"
+#include "PhidgetConnector.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -31,29 +32,31 @@ using namespace std;
 
 class UserArea
 {
-    public:
-        UserArea();
-        UserArea(char c, Rectf vR, vector<string> videos, float angle_in , Vec2f pos_in);
+public:
+    UserArea();
+    UserArea(char c, Rectf vR, vector<string> videos, float angle_in , Vec2f pos_in);
     UserArea(XmlTree area);
-        void update();
-        void draw();
-        Vec2f pos;
-        char getKey();
-        void nextMovie();
+    //UserArea(XmlTree area, PhidgetConnector pc);
+    
+    void update();
+    void draw();
+    Vec2f pos;
+    char getKey();
+    void nextMovie();
     enum button_t {LEFT_BUTTON, MID_BUTTON, RIGHT_BUTTON};
     void registerButton(button_t b, int serial, int index);
     
 private:
-        char key;
-        VideoPlayer player;
-        Rectf vidRect;
-        int state;
-        bool flipped;
+    char key;
+    VideoPlayer player;
+    Rectf vidRect;
+    int state;
+    bool flipped;
     vector<Button::Button> buttons;
-
+    
     float angle;
     int frameCount;
-
+    
 };
 
 #endif

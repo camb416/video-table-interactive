@@ -11,10 +11,8 @@
 
 #include <iostream>
 #include <vector>
-#include "cinder/app/AppBasic.h"
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
-#include "cinder/qtime/QuickTime.h"
 #include "cinder/Text.h"
 #include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
@@ -30,6 +28,9 @@ public:
     Button();
     Button(XmlTree xml);
     void draw();
+    void press();
+    void release();
+    bool stateChange();
     
 private:
     float posX;
@@ -39,6 +40,9 @@ private:
     int sensor;
     string unpressed;
     string pressed;
+    bool isPressed;
+    bool wasPressed;
+    gl::Texture mTexture;
 };
 
 #endif

@@ -24,6 +24,8 @@
 		1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1C426D15AB815C00CC936A /* Phidget21.framework */; };
 		1B1C428315AB815D00CC936A /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C426E15AB815C00CC936A /* README */; };
 		1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7C415ACA26100B2B72E /* Button.cpp */; };
+		1BB7A7D315ADD3BA00B2B72E /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB7A7D215ADD3BA00B2B72E /* active.png */; };
+		1BB7A7D515ADD3CB00B2B72E /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB7A7D415ADD3CB00B2B72E /* inactive.png */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -56,6 +58,8 @@
 		1B1C428115AB815C00CC936A /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
 		1BB7A7C215ACA24D00B2B72E /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../include/Button.h; sourceTree = "<group>"; };
 		1BB7A7C415ACA26100B2B72E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
+		1BB7A7D215ADD3BA00B2B72E /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../../../Downloads/active.png; sourceTree = "<group>"; };
+		1BB7A7D415ADD3CB00B2B72E /* inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inactive.png; path = ../../../Downloads/inactive.png; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				1B1C425C15A73FF200CC936A /* USER_AREAS.xml */,
+				1BB7A7D415ADD3CB00B2B72E /* inactive.png */,
+				1BB7A7D215ADD3BA00B2B72E /* active.png */,
 				1B09CABF15A385A10086B68B /* m3.mp4 */,
 				1B09CABD15A385990086B68B /* m2.m4v */,
 				1B09CABB15A385920086B68B /* m1.mp4 */,
@@ -289,6 +295,8 @@
 				1B09CAC015A385A10086B68B /* m3.mp4 in Resources */,
 				1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */,
 				1B1C428315AB815D00CC936A /* README in Resources */,
+				1BB7A7D315ADD3BA00B2B72E /* active.png in Resources */,
+				1BB7A7D515ADD3CB00B2B72E /* inactive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

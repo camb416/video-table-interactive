@@ -12,11 +12,16 @@
 
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
-#include "cinder/qtime/QuickTime.h"
 #include "cinder/Text.h"
 #include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
 #include "cinder/Xml.h"
+#include "cinder/app/AppBasic.h"
+
+using namespace ci::app;
+using namespace ci;
+using namespace std;
+
 
 Button::Button()
 {
@@ -34,7 +39,37 @@ Button::Button(XmlTree xml)
     {
         if (img->getAttributeValue<string>( "id" ) == "active")
             pressed = img->getValue();
-        else
+        else if (img->getAttributeValue<string>( "id" ) == "inactive")
             unpressed = img->getValue();
     }
+    release();
+    isPressed = false;
+    wasPressed = false;
 }
+
+void Button::draw()
+{
+    if (mTexture)
+    {
+        gl::pushMatrices();
+        gl::translate(-mTexture.getWidth()/2, -mTexture.getHeight()/2);
+        gl::draw( mTexture, Vec2f( posX, posY ) );
+        gl::popMatrices();
+    }
+}
+
+void Button::press()
+{
+    mTexture = gl::Texture( loadImage( loadResource( pressed ) ) );
+}
+
+bool Button::stateChange()
+{
+    return !wasPressed && isPressed;
+}
+
+void Button::release()
+{
+    mTexture = gl::Texture( loadImage( loadResource( unpressed ) ) );
+}
+

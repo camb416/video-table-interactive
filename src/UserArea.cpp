@@ -17,6 +17,8 @@
 #include "cinder/Text.h"
 #include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
+//#include "PhidgetConnector.h"
+
 
 using namespace ci;
 using namespace ci::app;
@@ -42,7 +44,7 @@ UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2
     
 }
 
-UserArea::UserArea(XmlTree area)
+UserArea::UserArea(XmlTree area/*, PhidgetConnector pc*/)
 {
     pos = Vec2f(area.getAttributeValue<float>( "centerX" ), area.getAttributeValue<float>( "centerY" ));
     angle = area.getAttributeValue<float>( "angle" );
@@ -86,15 +88,13 @@ void UserArea::draw()
     // this is also a lot of fun to use in a scale property over time to make a pulsing patterns
     // that look like breathing
     //gl::rotate(angle + sin(((float)frameCount)/100.0f)*7.5f);
-    
-    
+
     player.draw();
     
+    for (int i = 0; i < buttons.size(); i++)
+        buttons.at(i).draw();
+    
     gl::popMatrices();
-}
-
-void UserArea::registerButton(button_t b, int serial, int index)
-{
     
 }
 
