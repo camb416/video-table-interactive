@@ -44,7 +44,7 @@ UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2
     
 }
 
-UserArea::UserArea(XmlTree area/*, PhidgetConnector pc*/)
+UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)
 {
     pos = Vec2f(area.getAttributeValue<float>( "centerX" ), area.getAttributeValue<float>( "centerY" ));
     angle = area.getAttributeValue<float>( "angle" );
@@ -59,10 +59,13 @@ UserArea::UserArea(XmlTree area/*, PhidgetConnector pc*/)
         {
             XmlTree b = *child;
             buttons.push_back(Button::Button(b));
+            buttonStates.push_back(false);
         }
     }
     player = VideoPlayer ( Rectf(0, 0, 640, 480), videos);
     frameCount = rand() % 628;
+    
+    pc = pc_;
 }
 
 void UserArea::update()
@@ -70,6 +73,26 @@ void UserArea::update()
     frameCount++;
     player.update();
     
+    // Check for button presses
+    for (int i = 0; i < buttons.size(); i++)
+    {
+        // is it pressed?
+        if (pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
+        {
+            buttons.at(i).press();
+            console()<<"button press"<<endl;
+            buttonStates[i] = true;
+        }
+        // was it just pressed?
+        else if (buttonStates[i])
+        {
+            buttonStates[i] = false;
+            nextMovie();
+            buttons.at(i).release();
+        }
+   /*     else
+            buttons.at(i).release();    */
+    }
     
 }
 
@@ -79,9 +102,8 @@ void UserArea::draw()
     
     gl::translate(pos.x,pos.y);
     
-    // 
      gl::rotate(angle);
-    // 
+
     // yeah but that's no fun... let's add some wiggle!
     // here's where the framecount comes in to do some animation.
     // using sine because it makes a nice pulsing pattern on the angle.

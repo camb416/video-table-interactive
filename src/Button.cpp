@@ -65,11 +65,21 @@ void Button::press()
 
 bool Button::stateChange()
 {
-    return !wasPressed && isPressed;
+    return wasPressed && !isPressed;
 }
 
 void Button::release()
 {
     mTexture = gl::Texture( loadImage( loadResource( unpressed ) ) );
+}
+
+int Button::getDevice()
+{
+    return device;
+}
+
+int Button::getSensor()
+{
+    return sensor;
 }
 

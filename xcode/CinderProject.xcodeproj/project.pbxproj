@@ -17,6 +17,8 @@
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B029E8715A2475300FD18F5 /* UserArea.cpp */; };
 		1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */; };
+		1B08EE5415AF1D1B000D7325 /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B08EE5315AF1D1B000D7325 /* active.png */; };
+		1B08EE5615AF1D27000D7325 /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B08EE5515AF1D27000D7325 /* inactive.png */; };
 		1B09CABC15A385920086B68B /* m1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABB15A385920086B68B /* m1.mp4 */; };
 		1B09CABE15A385990086B68B /* m2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABD15A385990086B68B /* m2.m4v */; };
 		1B09CAC015A385A10086B68B /* m3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABF15A385A10086B68B /* m3.mp4 */; };
@@ -24,8 +26,8 @@
 		1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1C426D15AB815C00CC936A /* Phidget21.framework */; };
 		1B1C428315AB815D00CC936A /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C426E15AB815C00CC936A /* README */; };
 		1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7C415ACA26100B2B72E /* Button.cpp */; };
-		1BB7A7D315ADD3BA00B2B72E /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB7A7D215ADD3BA00B2B72E /* active.png */; };
-		1BB7A7D515ADD3CB00B2B72E /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB7A7D415ADD3CB00B2B72E /* inactive.png */; };
+		1BB7A7DB15AE039D00B2B72E /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7DA15AE039C00B2B72E /* PhidgetConnector.cpp */; };
+		1BB7A7DD15AE069900B2B72E /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7DC15AE069900B2B72E /* PhidgetModel.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -47,6 +49,8 @@
 		1B029E8E15A248D800FD18F5 /* UserArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserArea.h; path = ../include/UserArea.h; sourceTree = "<group>"; };
 		1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoPlayer.cpp; path = ../src/VideoPlayer.cpp; sourceTree = "<group>"; };
 		1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoPlayer.h; path = ../include/VideoPlayer.h; sourceTree = "<group>"; };
+		1B08EE5315AF1D1B000D7325 /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../../../Downloads/active.png; sourceTree = "<group>"; };
+		1B08EE5515AF1D27000D7325 /* inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inactive.png; path = ../../../Downloads/inactive.png; sourceTree = "<group>"; };
 		1B09CABB15A385920086B68B /* m1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m1.mp4; path = ../resources/m1.mp4; sourceTree = "<group>"; };
 		1B09CABD15A385990086B68B /* m2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = m2.m4v; path = ../resources/m2.m4v; sourceTree = "<group>"; };
 		1B09CABF15A385A10086B68B /* m3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m3.mp4; path = ../resources/m3.mp4; sourceTree = "<group>"; };
@@ -58,8 +62,8 @@
 		1B1C428115AB815C00CC936A /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
 		1BB7A7C215ACA24D00B2B72E /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../include/Button.h; sourceTree = "<group>"; };
 		1BB7A7C415ACA26100B2B72E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
-		1BB7A7D215ADD3BA00B2B72E /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../../../Downloads/active.png; sourceTree = "<group>"; };
-		1BB7A7D415ADD3CB00B2B72E /* inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inactive.png; path = ../../../Downloads/inactive.png; sourceTree = "<group>"; };
+		1BB7A7DA15AE039C00B2B72E /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
+		1BB7A7DC15AE069900B2B72E /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
@@ -95,10 +99,10 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				00BAE6590E7ED9C10018A608 /* CinderProjectApp.cpp */,
 				1BB7A7C415ACA26100B2B72E /* Button.cpp */,
 				1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */,
 				1B029E8715A2475300FD18F5 /* UserArea.cpp */,
-				00BAE6590E7ED9C10018A608 /* CinderProjectApp.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -187,6 +191,8 @@
 			children = (
 				1B1C428015AB815C00CC936A /* PhidgetConnector.h */,
 				1B1C428115AB815C00CC936A /* PhidgetModel.h */,
+				1BB7A7DA15AE039C00B2B72E /* PhidgetConnector.cpp */,
+				1BB7A7DC15AE069900B2B72E /* PhidgetModel.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -218,9 +224,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B08EE5515AF1D27000D7325 /* inactive.png */,
+				1B08EE5315AF1D1B000D7325 /* active.png */,
 				1B1C425C15A73FF200CC936A /* USER_AREAS.xml */,
-				1BB7A7D415ADD3CB00B2B72E /* inactive.png */,
-				1BB7A7D215ADD3BA00B2B72E /* active.png */,
 				1B09CABF15A385A10086B68B /* m3.mp4 */,
 				1B09CABD15A385990086B68B /* m2.m4v */,
 				1B09CABB15A385920086B68B /* m1.mp4 */,
@@ -295,8 +301,8 @@
 				1B09CAC015A385A10086B68B /* m3.mp4 in Resources */,
 				1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */,
 				1B1C428315AB815D00CC936A /* README in Resources */,
-				1BB7A7D315ADD3BA00B2B72E /* active.png in Resources */,
-				1BB7A7D515ADD3CB00B2B72E /* inactive.png in Resources */,
+				1B08EE5415AF1D1B000D7325 /* active.png in Resources */,
+				1B08EE5615AF1D27000D7325 /* inactive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +317,8 @@
 				1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */,
 				1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */,
 				1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */,
+				1BB7A7DB15AE039D00B2B72E /* PhidgetConnector.cpp in Sources */,
+				1BB7A7DD15AE069900B2B72E /* PhidgetModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

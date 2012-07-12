@@ -51,7 +51,8 @@ void ProjectApp::parseXML()
     for( XmlTree::Iter area = doc.begin(); area!= doc.end(); ++area )
     {
         XmlTree a = *area;
-        mAreas.push_back( UserArea(a/*, pConnector*/) ) ;
+        PhidgetConnector *pc = &pConnector;
+        mAreas.push_back( UserArea(a, pc) ) ;
     }
 
 }
@@ -79,14 +80,14 @@ void ProjectApp::update()
     
     pConnector.updateKits();
     
-    // iterate, update areas
+    // Update UserAreas
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
          p->update();
     
     //pConnector.print();
     //console() << pConnector.getVal(148986, 7);
     
-    newVal = pConnector.getBool(148986, 7);
+ /*   newVal = pConnector.getBool(148986, 7);
     
     if (newVal && !oldVal)
     {
@@ -95,7 +96,7 @@ void ProjectApp::update()
             mAreas.at(i).nextMovie();
     }
     
-    oldVal = newVal;
+    oldVal = newVal;    */
 }
 
 void ProjectApp::draw()

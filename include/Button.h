@@ -11,10 +11,10 @@
 
 #include <iostream>
 #include <vector>
-#include "cinder/Surface.h"
+//#include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
-#include "cinder/Text.h"
-#include "cinder/Utilities.h"
+//#include "cinder/Text.h"
+//#include "cinder/Utilities.h"
 #include "cinder/ImageIo.h"
 #include "cinder/Xml.h"
 
@@ -31,6 +31,8 @@ public:
     void press();
     void release();
     bool stateChange();
+    int getDevice();
+    int getSensor();
     
 private:
     float posX;

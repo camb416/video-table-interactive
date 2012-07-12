@@ -36,7 +36,7 @@ public:
     UserArea();
     UserArea(char c, Rectf vR, vector<string> videos, float angle_in , Vec2f pos_in);
     UserArea(XmlTree area);
-    //UserArea(XmlTree area, PhidgetConnector pc);
+    UserArea(XmlTree area, PhidgetConnector *pc_);
     
     void update();
     void draw();
@@ -53,10 +53,11 @@ private:
     int state;
     bool flipped;
     vector<Button::Button> buttons;
+    vector<bool> buttonStates;
     
     float angle;
     int frameCount;
-    
+    PhidgetConnector *pc;
 };
 
 #endif
