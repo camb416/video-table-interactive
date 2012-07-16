@@ -9,16 +9,9 @@
 #include <iostream> 
 #include "VideoPlayer.h"
 #include "cinder/app/AppBasic.h"
-#include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
-#include "cinder/Text.h"
-//#include "cinder/Utilities.h"
-#include "cinder/ImageIo.h" 
 
-using namespace ci;
-using namespace ci::app;
-using namespace std;
 
 VideoPlayer::VideoPlayer()
 {
@@ -26,8 +19,6 @@ VideoPlayer::VideoPlayer()
 
 VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
 {
-    console() << "size: " << names.size() << endl;
-    
     ind = 0;
     
     movieNames = names;
@@ -44,7 +35,6 @@ void VideoPlayer::nextMovie()
     ind++;
     if ( ind > movieNames.size() - 1)
         ind = 0;
-    console() << ind << endl;
     loadMovieFile( movieNames.at(ind));
 }
 

@@ -14,19 +14,9 @@
 #include "Button.h"
 
 #include <vector>
-//#include "cinder/app/AppBasic.h"
-#include "cinder/Surface.h"
-#include "cinder/gl/Texture.h"
-#include "cinder/qtime/QuickTime.h"
-#include "cinder/Text.h"
-#include "cinder/Utilities.h"
-#include "cinder/ImageIo.h"
-#include "cinder/Xml.h"
+//#include "cinder/Xml.h"
 #include "PhidgetConnector.h"
 
-using namespace ci;
-using namespace ci::app;
-using namespace std;
 
 
 
@@ -40,6 +30,7 @@ public:
     
     void update();
     void draw();
+    void drawBackground();
     Vec2f pos;
     char getKey();
     void nextMovie();
@@ -54,10 +45,11 @@ private:
     bool flipped;
     vector<Button::Button> buttons;
     vector<bool> buttonStates;
-    
+    string background;
     float angle;
     int frameCount;
     PhidgetConnector *pc;
+    gl::Texture mTexture;
 };
 
 #endif

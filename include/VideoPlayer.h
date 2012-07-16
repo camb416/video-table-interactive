@@ -16,9 +16,6 @@
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
-#include "cinder/Text.h"
-#include "cinder/Utilities.h"
-#include "cinder/ImageIo.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -44,10 +41,7 @@ public:
 	gl::Texture             mFrameTexture, mInfoTexture;
 	qtime::MovieGl          mMovie;
     Rectf                   drawRect;
-    
-    
-    
-    
+ 
 };
 
  #endif 

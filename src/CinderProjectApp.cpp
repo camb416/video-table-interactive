@@ -23,43 +23,56 @@ public:
     void prepareSettings( Settings *settings );
 	void update();
 	void draw();
-    void parseXML();
     
     vector<UserArea> mAreas;
     PhidgetConnector pConnector;    // the Phidget Connector object.
 
-    bool oldVal;        // keeps track of touch sensor's changes
-    bool newVal;
-
+private:
+    void parseXML();
+    string background;
+    gl::Texture mTexture;
+    float width, height;
+    
 };
 
 void ProjectApp::setup()
 {
     parseXML();
+    mTexture = gl::Texture( loadImage( loadResource( background ) ) );
+    
     // seed a random number
     srand ( time(NULL) );
     
     pConnector.useEvents(false);
     pConnector.connect(148986);
 
-    oldVal = false;
+    width = 1760.0;
+    height = 960.0;
+    
+   // oldVal = false;
 }
 
 void ProjectApp::parseXML()
 {    
-    XmlTree doc(loadResource( "USER_AREAS.xml" ) );
-    for( XmlTree::Iter area = doc.begin(); area!= doc.end(); ++area )
-    {
-        XmlTree a = *area;
-        PhidgetConnector *pc = &pConnector;
-        mAreas.push_back( UserArea(a, pc) ) ;
+    try {
+        XmlTree doc(loadResource( "USER_AREAS.xml" ) );
+        XmlTree areas = doc.getChild("project");
+        background = areas.getAttributeValue<string>("background");
+        for( XmlTree::Iter area = areas.begin(); area!= areas.end(); ++area )
+        {
+            XmlTree a = *area;
+            PhidgetConnector *pc = &pConnector;
+            mAreas.push_back( UserArea(a, pc) ) ;
+        }
     }
-
+    catch ( ... ) {
+        console() << "Unable to load XML document. Check for syntax errors." << endl;
+    }
 }
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	settings->setWindowSize( 1760, 960 );
+	settings->setWindowSize( 1760.0, 960.0 );
 	settings->setFrameRate( 60.0f );
 }
 
@@ -83,20 +96,6 @@ void ProjectApp::update()
     // Update UserAreas
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
          p->update();
-    
-    //pConnector.print();
-    //console() << pConnector.getVal(148986, 7);
-    
- /*   newVal = pConnector.getBool(148986, 7);
-    
-    if (newVal && !oldVal)
-    {
-        console() << "push" << endl;
-        for(int i = 0; i<mAreas.size(); i++)
-            mAreas.at(i).nextMovie();
-    }
-    
-    oldVal = newVal;    */
 }
 
 void ProjectApp::draw()
@@ -104,10 +103,13 @@ void ProjectApp::draw()
 	gl::clear( Color( 0, 0, 0 ) );
 	gl::enableAlphaBlending();
     
+    if( mTexture )
+        gl::draw(mTexture, Rectf(0, 0, mTexture.getWidth(), mTexture.getHeight()));
+    
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-    {
-        p->draw();
-    }
+        p->drawBackground();
+    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
+        p->draw();  
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );

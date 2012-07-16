@@ -9,13 +9,10 @@
 #ifndef CinderProject_Button_h
 #define CinderProject_Button_h
 
+//#include "UserArea.h"
 #include <iostream>
 #include <vector>
-//#include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
-//#include "cinder/Text.h"
-//#include "cinder/Utilities.h"
-#include "cinder/ImageIo.h"
 #include "cinder/Xml.h"
 
 
@@ -27,6 +24,7 @@ class Button {
 public:
     Button();
     Button(XmlTree xml);
+    //Button(XmlTree xml, void (*f)());
     void draw();
     void press();
     void release();
@@ -45,6 +43,7 @@ private:
     bool isPressed;
     bool wasPressed;
     gl::Texture mTexture;
+    void (*func)();
 };
 
 #endif
