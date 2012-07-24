@@ -19,26 +19,49 @@ VideoPlayer::VideoPlayer()
 
 VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
 {
-    ind = 0;
+/*    ind = 0;
     
     movieNames = names;
-    
+   
     moviePath = movieNames.at(ind);
     if ( ! moviePath.empty() )
         loadMovieFile(moviePath);
    
-    drawRect = r;	
+    drawRect = r;       */
+    
+    ind = 0;
+    for (int i = 0; i < names.size(); i++)
+    {
+        try {
+            if (!names[i].empty())
+            {
+                loadedMovies.push_back(qtime::MovieGl( loadResource(names[i]) ) );
+                console() << "movie " << i   << " loaded" << endl;
+            }
+            else
+                console() << "movie name is empty." << endl;    }
+        catch (...) { console() << "Unable to load movie titled " << names[i] << endl; }
+    }
+    
+  //  mMovie = loadedMovies[ind];
+    loadedMovies[ind].setLoop();
+    loadedMovies[ind].play();
+    loadedMovies[ind].stepForward();
 }
 
 void VideoPlayer::nextMovie()
 {
     ind++;
-    if ( ind > movieNames.size() - 1)
+    if ( ind > loadedMovies.size() - 1)
         ind = 0;
-    loadMovieFile( movieNames.at(ind));
+    //loadMovieFile( movieNames.at(ind));
+    
+    loadedMovies[ind].setLoop();
+    loadedMovies[ind].play();
+    loadedMovies[ind].stepForward();
 }
 
-void VideoPlayer::loadMovieFile( const string &moviePath )
+/*void VideoPlayer::loadMovieFile( const string &moviePath )
 {
     try {
         mMovie = qtime::MovieGl( loadResource(moviePath) );
@@ -49,34 +72,33 @@ void VideoPlayer::loadMovieFile( const string &moviePath )
         console() << "Unable to load the movie. " << moviePath << std::endl;
 		mMovie.reset();
     }
-}
+}   */
 
 void VideoPlayer::update()
 {
     
-    if( mMovie )
-    {
-		mFrameTexture = mMovie.getTexture();
-        //if (mFrameTexture && flipped)
-        //    mFrameTexture.setFlipped(true);
-    }
+ //   if( mMovie )
+//		mFrameTexture = mMovie.getTexture();
+    if (loadedMovies[ind])
+        mFrameTexture = loadedMovies[ind].getTexture();
+    
+  //  console() << loadedMovies[ind].isPlaying() << endl;
 }
 
 void VideoPlayer::draw()
 {
 	if( mFrameTexture ){
         gl::pushMatrices();
-        
-        //
+
         // gl::translate(mFrameTexture.getWidth()/-2.0f,mFrameTexture.getHeight()/-2.0f);
-        //
-        // until then, let's force it to 640x480 for testing. This whole Rect business is annoying anyways.
         
         gl::translate(-320,-240);
         
         gl::draw( mFrameTexture, drawRect  );
         gl::popMatrices();
     }
+    else
+        console() << "no texture" << endl;
 }
 
 
