@@ -28,6 +28,7 @@ public:
     void draw();
     void press();
     void release();
+    void update();
     bool stateChange();
     int getDevice();
     int getSensor();
@@ -42,7 +43,14 @@ private:
     string pressed;
     bool isPressed;
     bool wasPressed;
-    gl::Texture mTexture;
+    gl::Texture inactiveTexture;
+    gl::Texture activeTexture;
+    gl::Texture drawTexture;
+    float alpha;
+    float dAlpha;
+    float alpha2;
+    float dAlpha2;
+    
     void (*func)();
 };
 

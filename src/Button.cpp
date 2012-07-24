@@ -35,39 +35,67 @@ Button::Button(XmlTree xml)
     for( XmlTree::Iter img = xml.begin(); img != xml.end(); ++img)
     {
         if (img->getAttributeValue<string>( "id" ) == "active")
+        {
             pressed = img->getValue();
+            activeTexture = gl::Texture( loadImage( loadResource( pressed ) ) );
+        }
         else if (img->getAttributeValue<string>( "id" ) == "inactive")
+        {
             unpressed = img->getValue();
+            inactiveTexture = gl::Texture( loadImage( loadResource( unpressed ) ) );
+        }
     }
     release();
-    isPressed = false;
-    wasPressed = false;
+//    isPressed = false;
+//    wasPressed = false;
+    alpha = 0.0f;
+    dAlpha = 1.0f;
+    alpha2 = 0.0f;
+    dAlpha2 = 0.0f;
+}
+
+void Button::update()
+{
+    alpha += (dAlpha - alpha) / 4.0f;
+    alpha2 += (dAlpha2 - alpha2) / 4.0f;
 }
 
 void Button::draw()
 {
-    if (mTexture)
+  //  ColorT myColor = ColorT(255,0,0);
+    
+    
+    
+    if (activeTexture && inactiveTexture)
     {
         gl::pushMatrices();
-        gl::translate(-mTexture.getWidth()/2, -mTexture.getHeight()/2);
-        gl::draw( mTexture, Vec2f( posX, posY ) );
+        gl::translate(-inactiveTexture.getWidth()/2, -inactiveTexture.getHeight()/2);
+       
+        if(alpha>0.01f){
+            gl::color(ColorA(255,255,255,alpha));
+            gl::draw( inactiveTexture, Vec2f( posX, posY ) );
+        }
+        if(alpha2>0.01f){
+            gl::color(ColorA(255,255,255,alpha2));
+            gl::draw( activeTexture, Vec2f( posX, posY ) );
+        
+        }
         gl::popMatrices();
     }
 }
 
 void Button::press()
 {
-    mTexture = gl::Texture( loadImage( loadResource( pressed ) ) );
-}
-
-bool Button::stateChange()
-{
-    return wasPressed && !isPressed;
+ //   drawTexture = activeTexture;
+    dAlpha = 0;
+    dAlpha2 = 1.0f;
 }
 
 void Button::release()
 {
-    mTexture = gl::Texture( loadImage( loadResource( unpressed ) ) );
+ //   drawTexture = inactiveTexture;
+    dAlpha = 1.0f;
+    dAlpha2 = 0.0f;
 }
 
 int Button::getDevice()

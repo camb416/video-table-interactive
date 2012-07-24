@@ -58,6 +58,8 @@ void ProjectApp::parseXML()
         XmlTree doc(loadResource( "USER_AREAS.xml" ) );
         XmlTree areas = doc.getChild("project");
         background = areas.getAttributeValue<string>("background");
+        mTexture = gl::Texture( loadImage( loadResource( background ) ) );
+        
         for( XmlTree::Iter area = areas.begin(); area!= areas.end(); ++area )
         {
             XmlTree a = *area;
@@ -100,11 +102,12 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
-	gl::clear( Color( 0, 0, 0 ) );
-	gl::enableAlphaBlending();
+   
+	gl::clear( Color( 0, 0, 0) );
+	 gl::enableAlphaBlending();
     
-    if( mTexture )
-        gl::draw(mTexture, Rectf(0, 0, mTexture.getWidth(), mTexture.getHeight()));
+   // if( mTexture )
+   //     gl::draw(mTexture, Rectf(0, 0, mTexture.getWidth(), mTexture.getHeight()));
     
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
         p->drawBackground();

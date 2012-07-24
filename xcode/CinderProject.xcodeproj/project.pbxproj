@@ -24,6 +24,8 @@
 		1B09CABC15A385920086B68B /* m1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABB15A385920086B68B /* m1.mp4 */; };
 		1B09CABE15A385990086B68B /* m2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABD15A385990086B68B /* m2.m4v */; };
 		1B09CAC015A385A10086B68B /* m3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABF15A385A10086B68B /* m3.mp4 */; };
+		1B0D993A15B86C9500FE7A94 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D993915B86C9500FE7A94 /* Image.cpp */; };
+		1B10281115BEF54D00956467 /* TwoStateButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B10281015BEF54D00956467 /* TwoStateButton.cpp */; };
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
 		1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1C426D15AB815C00CC936A /* Phidget21.framework */; };
 		1B1C428315AB815D00CC936A /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C426E15AB815C00CC936A /* README */; };
@@ -58,6 +60,10 @@
 		1B09CABB15A385920086B68B /* m1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m1.mp4; path = ../resources/m1.mp4; sourceTree = "<group>"; };
 		1B09CABD15A385990086B68B /* m2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = m2.m4v; path = ../resources/m2.m4v; sourceTree = "<group>"; };
 		1B09CABF15A385A10086B68B /* m3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m3.mp4; path = ../resources/m3.mp4; sourceTree = "<group>"; };
+		1B0D993715B86A6100FE7A94 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		1B0D993915B86C9500FE7A94 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		1B10280E15BEF54000956467 /* TwoStateButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoStateButton.h; sourceTree = "<group>"; };
+		1B10281015BEF54D00956467 /* TwoStateButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoStateButton.cpp; sourceTree = "<group>"; };
 		1B1C425C15A73FF200CC936A /* USER_AREAS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = USER_AREAS.xml; path = ../resources/USER_AREAS.xml; sourceTree = "<group>"; };
 		1B1C426A15AB815C00CC936A /* phidget21.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phidget21.h; sourceTree = "<group>"; };
 		1B1C426D15AB815C00CC936A /* Phidget21.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Phidget21.framework; path = ../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx/Phidget21.framework; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 				1BB7A7C415ACA26100B2B72E /* Button.cpp */,
 				1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */,
 				1B029E8715A2475300FD18F5 /* UserArea.cpp */,
+				1B0D993915B86C9500FE7A94 /* Image.cpp */,
+				1B10281015BEF54D00956467 /* TwoStateButton.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -221,6 +229,8 @@
 				1BB7A7C215ACA24D00B2B72E /* Button.h */,
 				1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */,
 				1B029E8E15A248D800FD18F5 /* UserArea.h */,
+				1B0D993715B86A6100FE7A94 /* Image.h */,
+				1B10280E15BEF54000956467 /* TwoStateButton.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -327,6 +337,8 @@
 				1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */,
 				1BB7A7DB15AE039D00B2B72E /* PhidgetConnector.cpp in Sources */,
 				1BB7A7DD15AE069900B2B72E /* PhidgetModel.cpp in Sources */,
+				1B0D993A15B86C9500FE7A94 /* Image.cpp in Sources */,
+				1B10281115BEF54D00956467 /* TwoStateButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

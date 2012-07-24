@@ -68,6 +68,8 @@ void UserArea::update()
     // Check for button presses
     for (int i = 0; i < buttons.size(); i++)
     {
+        
+        buttons.at(i).update();
         // is it pressed?
         if (pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
         {
@@ -93,8 +95,8 @@ void UserArea::draw()
     gl::translate(pos.x,pos.y);
     gl::rotate(angle);
 
-    //gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);
-  
+  //  gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);
+    gl::color(Color(255,255,255));
     player.draw();
 
     for (int i = 0; i < buttons.size(); i++)
@@ -106,6 +108,7 @@ void UserArea::draw()
 
 void UserArea::drawBackground()
 {
+     gl::color(Color(255,255,255));
     gl::pushMatrices();
     
     gl::translate(pos.x,pos.y);

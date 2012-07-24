@@ -40,6 +40,7 @@ public:
     int                     ind;
 	gl::Texture             mFrameTexture, mInfoTexture;
 	qtime::MovieGl          mMovie;
+    vector<qtime::MovieGl>  loadedMovies;
     Rectf                   drawRect;
  
 };
