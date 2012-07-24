@@ -46,7 +46,8 @@ UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)
         else if ( child->getTag() == "button" )
         {
             XmlTree b = *child;
-            buttons.push_back(Button::Button(b/*, &UserArea::nextMovie*/));
+            //buttons.push_back(Button::Button(b/*, &UserArea::nextMovie*/));
+            buttons.push_back(TwoStateButton(b));
             buttonStates.push_back(false);
            
            // void (UserArea::*func)() = &UserArea::nextMovie;
@@ -69,11 +70,11 @@ void UserArea::update()
     for (int i = 0; i < buttons.size(); i++)
     {
         
-        buttons.at(i).update();
+        buttons[i].update();
         // is it pressed?
         if (pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
         {
-            buttons.at(i).press();
+            buttons[i].press();
             console()<<"button press"<<endl;
             buttonStates[i] = true;
         }
@@ -82,7 +83,7 @@ void UserArea::update()
         {
             buttonStates[i] = false;
             nextMovie();
-            buttons.at(i).release();
+            buttons[i].release();
         }
     }
     
@@ -100,7 +101,7 @@ void UserArea::draw()
     player.draw();
 
     for (int i = 0; i < buttons.size(); i++)
-        buttons.at(i).draw();
+        buttons[i].draw();
     
     gl::popMatrices();
     

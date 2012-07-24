@@ -10,14 +10,14 @@
 #include "TwoStateButton.h"
 using namespace gallerytools;
 
-TwoStateButton::TwoStateButton(string _active, string _inactive, Vec2f _pos)
+/* TwoStateButton::TwoStateButton(string _active, string _inactive, Vec2f _pos)
 {
     gallerytools::Image active = Image(_active, _pos);
     gallerytools::Image inactive = Image(_inactive, _pos);
     pos = _pos;
     
     active.hide();
-}
+}   */
 
 TwoStateButton::TwoStateButton(XmlTree xml)
 {
@@ -44,14 +44,14 @@ TwoStateButton::TwoStateButton(XmlTree xml)
 
 void TwoStateButton::press()
 {
-    active.fadeIn();
-    inactive.fadeOut();
+    active.fadeIn(1.0f);
+    inactive.fadeOut(10.0f);
 }
 
 void TwoStateButton::release()
 {
-    inactive.fadeIn();
-    active.fadeOut();
+    inactive.fadeIn(1.0f);
+    active.fadeOut(10.0f);
 }
 
 int TwoStateButton::getSensor()

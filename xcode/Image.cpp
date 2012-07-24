@@ -53,7 +53,7 @@ Image::Image(string _file, Vec2f _pos)
     hidden = false;
     deg = 0;
     moveRate = 30.0f;
-    fadeRate = 30.0f;
+    fadeRate = 50.0f;
 }
 
 
@@ -83,22 +83,23 @@ void Image::moveTo(int _x, int _y, bool _tween)
     }    
 }
 
+/*
 void Image::moveTo(int _x, int _y)
 {
     tween = false;
     x = _x;
     y = _y;
-}
+}   */
 
 void Image::moveTo (Vec2f pos, bool _tween)
 {
     moveTo( pos.x, pos.y, _tween );
 }
-
+/*
 void Image::moveTo (Vec2f pos)
 {
     moveTo( pos.x, pos.y );
-}
+}   */
 
 void Image::hide()
 {

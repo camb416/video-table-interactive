@@ -67,10 +67,6 @@ void VideoPlayer::draw()
 	if( mFrameTexture ){
         gl::pushMatrices();
         
-        // this is very pesky.
-        // ideally we should just draw the video whatever size the file is, and center it on our Vec2f position. That leaves the
-        // most room for error in dropping assets in.
-        // I think we should do this later on, once we have some vids of the correct size.
         //
         // gl::translate(mFrameTexture.getWidth()/-2.0f,mFrameTexture.getHeight()/-2.0f);
         //

@@ -18,7 +18,7 @@ namespace gallerytools {
     class TwoStateButton {
     public:
         
-        TwoStateButton(string _active, string _inactive, Vec2f _pos);
+      //  TwoStateButton(string _active, string _inactive, Vec2f _pos);
         TwoStateButton(XmlTree xml);
         void press();
         void release();

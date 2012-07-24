@@ -25,10 +25,10 @@ namespace gallerytools {
         Image(string _file);
         Image(string _file, int _x, int _y);
         Image(string _file, Vec2f _pos);
-        void moveTo (int _x, int _y, bool _tween);
-        void moveTo (int _x, int _y);
-        void moveTo (Vec2f pos, bool _tween);
-        void moveTo (Vec2f pos);
+        void moveTo (int _x, int _y, bool _tween = false);
+       // void moveTo (int _x, int _y);
+        void moveTo (Vec2f pos, bool _tween = false);
+       // void moveTo (Vec2f pos);
         void setRate(float _rate);
         void fadeOut(float _fadeRate = 4.0f);
         void fadeIn(float _fadeRate = 4.0f);

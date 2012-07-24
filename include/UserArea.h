@@ -16,9 +16,9 @@
 #include <vector>
 //#include "cinder/Xml.h"
 #include "PhidgetConnector.h"
+#include "TwoStateButton.h"
 
-
-
+using namespace gallerytools;
 
 class UserArea
 {
@@ -34,8 +34,6 @@ public:
     Vec2f pos;
     char getKey();
     void nextMovie();
-    enum button_t {LEFT_BUTTON, MID_BUTTON, RIGHT_BUTTON};
-    void registerButton(button_t b, int serial, int index);
     
 private:
     char key;
@@ -43,7 +41,8 @@ private:
     Rectf vidRect;
     int state;
     bool flipped;
-    vector<Button::Button> buttons;
+  //  vector<Button::Button> buttons;
+    vector<TwoStateButton> buttons;
     vector<bool> buttonStates;
     string background;
     float angle;
