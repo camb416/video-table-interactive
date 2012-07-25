@@ -28,19 +28,19 @@ public:
     void update(); 
     void draw();
     
-    void loadMovieFile( const string &moviePath );
+  //  void loadMovieFile( const string &moviePath );
     //void loadMovieFile( const fs::path &path );
-    void fileDrop( FileDropEvent event );
+//    void fileDrop( FileDropEvent event );
     void nextMovie();
     
     
-    static const int        size = 3;
-    vector<string>          movieNames;
-    string                  moviePath;
+ //   static const int        size = 3;
+ //   vector<string>          movieNames;
+ //   string                  moviePath;
     int                     ind;
-	gl::Texture             mFrameTexture, mInfoTexture;
+	gl::Texture             mFrameTexture;
 	qtime::MovieGl          mMovie;
-    vector<qtime::MovieGl>  loadedMovies;
+    vector<qtime::MovieGl>  movies;
     Rectf                   drawRect;
  
 };

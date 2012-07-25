@@ -18,71 +18,42 @@ VideoPlayer::VideoPlayer()
 }
 
 VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
-{
-/*    ind = 0;
-    
-    movieNames = names;
-   
-    moviePath = movieNames.at(ind);
-    if ( ! moviePath.empty() )
-        loadMovieFile(moviePath);
-   
-    drawRect = r;       */
-    
+{    
     ind = 0;
+    
+    drawRect = r;
+    
+    // fill movies up
     for (int i = 0; i < names.size(); i++)
     {
         try {
             if (!names[i].empty())
-            {
-                loadedMovies.push_back(qtime::MovieGl( loadResource(names[i]) ) );
-                console() << "movie " << i   << " loaded" << endl;
-            }
+                movies.push_back(qtime::MovieGl( loadResource(names[i]) ) );
             else
                 console() << "movie name is empty." << endl;    }
         catch (...) { console() << "Unable to load movie titled " << names[i] << endl; }
     }
     
-  //  mMovie = loadedMovies[ind];
-    loadedMovies[ind].setLoop();
-    loadedMovies[ind].play();
-    loadedMovies[ind].stepForward();
+    mMovie = movies[ind];
+    mMovie.play();
+    mMovie.setLoop();
 }
 
 void VideoPlayer::nextMovie()
 {
     ind++;
-    if ( ind > loadedMovies.size() - 1)
+    if ( ind > movies.size() - 1)
         ind = 0;
-    //loadMovieFile( movieNames.at(ind));
-    
-    loadedMovies[ind].setLoop();
-    loadedMovies[ind].play();
-    loadedMovies[ind].stepForward();
+    mMovie.stop();
+    mMovie = movies[ind];
+    mMovie.play();
+    mMovie.setLoop();
 }
-
-/*void VideoPlayer::loadMovieFile( const string &moviePath )
-{
-    try {
-        mMovie = qtime::MovieGl( loadResource(moviePath) );
-        mMovie.setLoop();
-        mMovie.play();
-    }
-    catch ( ... ) {
-        console() << "Unable to load the movie. " << moviePath << std::endl;
-		mMovie.reset();
-    }
-}   */
 
 void VideoPlayer::update()
 {
-    
- //   if( mMovie )
-//		mFrameTexture = mMovie.getTexture();
-    if (loadedMovies[ind])
-        mFrameTexture = loadedMovies[ind].getTexture();
-    
-  //  console() << loadedMovies[ind].isPlaying() << endl;
+    if (mMovie)    
+        mFrameTexture = mMovie.getTexture();
 }
 
 void VideoPlayer::draw()
@@ -96,6 +67,7 @@ void VideoPlayer::draw()
         
         gl::draw( mFrameTexture, drawRect  );
         gl::popMatrices();
+        console() << "texture found" << endl;
     }
     else
         console() << "no texture" << endl;
