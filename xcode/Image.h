@@ -25,6 +25,7 @@ namespace gallerytools {
         Image(string _file);
         Image(string _file, int _x, int _y);
         Image(string _file, Vec2f _pos);
+        Image(gl::Texture _texture, Vec2f _pos);
         void moveTo (int _x, int _y, bool _tween = false);
        // void moveTo (int _x, int _y);
         void moveTo (Vec2f pos, bool _tween = false);

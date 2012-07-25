@@ -56,6 +56,20 @@ Image::Image(string _file, Vec2f _pos)
     fadeRate = 50.0f;
 }
 
+Image::Image(gl::Texture _texture, Vec2f _pos)
+{
+    texture = _texture;
+    x = _pos.x;
+    y = _pos.y;
+    dx = x;
+    dy = y;
+    
+    alpha = dAlpha = 1.0f;
+    hidden = false;
+    deg = 0;
+    moveRate = 30.0f;
+    fadeRate = 50.0f;
+}
 
 void Image::load(string _file)
 {

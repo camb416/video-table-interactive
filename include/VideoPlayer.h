@@ -16,10 +16,12 @@
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
+#include "Image.h"
 
 using namespace ci;
 using namespace ci::app;
 using namespace std;
+using namespace gallerytools;
 
 class VideoPlayer {
 public:
@@ -27,22 +29,19 @@ public:
     VideoPlayer( Rectf r, vector<string> movies );
     void update(); 
     void draw();
-    
-  //  void loadMovieFile( const string &moviePath );
-    //void loadMovieFile( const fs::path &path );
-//    void fileDrop( FileDropEvent event );
+
     void nextMovie();
     
     
- //   static const int        size = 3;
- //   vector<string>          movieNames;
- //   string                  moviePath;
+private:
     int                     ind;
 	gl::Texture             mFrameTexture;
 	qtime::MovieGl          mMovie;
     vector<qtime::MovieGl>  movies;
     Rectf                   drawRect;
- 
+    Image                   fadeTo, fadeFrom;
+    bool                    isFading;
+    bool                    firstFade;
 };
 
  #endif 

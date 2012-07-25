@@ -20,7 +20,7 @@ VideoPlayer::VideoPlayer()
 VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
 {    
     ind = 0;
-    
+    isFading = false;
     drawRect = r;
     
     // fill movies up
@@ -28,7 +28,12 @@ VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
     {
         try {
             if (!names[i].empty())
+            {
                 movies.push_back(qtime::MovieGl( loadResource(names[i]) ) );
+                movies[i].play();               // initial play/stop avoids lag when swapping videos
+                movies[i].stop();
+          //      movies[i].stepForward();
+            }
             else
                 console() << "movie name is empty." << endl;    }
         catch (...) { console() << "Unable to load movie titled " << names[i] << endl; }
@@ -45,7 +50,24 @@ void VideoPlayer::nextMovie()
     if ( ind > movies.size() - 1)
         ind = 0;
     mMovie.stop();
+    fadeFrom = Image( mMovie.getTexture(), Vec2f(0,0) );
     mMovie = movies[ind];
+    fadeTo = Image( mMovie.getTexture(), Vec2f(0,0) );
+    isFading = true;
+    firstFade = false;
+    
+    fadeFrom.fadeOut(20.0f);
+    
+  /*  while (fadeFrom.isFading()) { 
+        fadeFrom.update();
+        fadeFrom.draw();
+    }
+    fadeTo.fadeIn(20.0f);
+    while (fadeFrom.isFading()) {
+        fadeTo.update();
+        fadeTo.draw();
+    }   */
+    
     mMovie.play();
     mMovie.setLoop();
 }
@@ -58,7 +80,24 @@ void VideoPlayer::update()
 
 void VideoPlayer::draw()
 {
-	if( mFrameTexture ){
+    if (isFading && fadeFrom.isFading())
+    {
+        firstFade = true;
+        fadeFrom.update();
+        fadeFrom.draw();
+    }
+    else if (isFading && !fadeFrom.isFading() && firstFade)
+    {
+        fadeTo.fadeIn(20.0f);
+        firstFade = false;
+    }
+    else if (isFading && fadeTo.isFading())
+    {
+        fadeFrom.update();
+        fadeFrom.draw();
+    }
+             
+	else if( mFrameTexture ){
         gl::pushMatrices();
 
         // gl::translate(mFrameTexture.getWidth()/-2.0f,mFrameTexture.getHeight()/-2.0f);
