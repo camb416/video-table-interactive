@@ -40,16 +40,11 @@ void ProjectApp::setup()
     parseXML();
     mTexture = gl::Texture( loadImage( loadResource( background ) ) );
     
-    // seed a random number
-    srand ( time(NULL) );
-    
     pConnector.useEvents(false);
     pConnector.connect(148986);
 
     width = 1760.0;
     height = 960.0;
-    
-   // oldVal = false;
 }
 
 void ProjectApp::parseXML()
@@ -102,12 +97,8 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
-   
 	gl::clear( Color( 0, 0, 0) );
-	 gl::enableAlphaBlending();
-    
-   // if( mTexture )
-   //     gl::draw(mTexture, Rectf(0, 0, mTexture.getWidth(), mTexture.getHeight()));
+    gl::enableAlphaBlending();
     
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
         p->drawBackground();

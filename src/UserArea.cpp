@@ -21,12 +21,6 @@ UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2
     key = c;
     vidRect = vR;
     player = VideoPlayer( vR, videos );  
- 
-    /* generate random number between 0 and 627 (roughly 2*PI*100) */
-    frameCount = rand() % 628;
-    
-    cout << "the random frame is: " << frameCount << endl;
-    
 }
 
 UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)

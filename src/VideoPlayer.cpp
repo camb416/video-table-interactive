@@ -40,6 +40,7 @@ VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
     }
     
     mMovie = movies[ind];
+  //  mMovie.getMovieHandle().PreRollMovie();
     mMovie->play();
     mMovie->setLoop();
 }
@@ -59,6 +60,7 @@ void VideoPlayer::update()
 {
     if (&mMovie)    
         mFrameTexture = mMovie->getTexture();
+    console() << mMovie->isPlaying() << endl;
 }
 
 void VideoPlayer::draw()
@@ -71,7 +73,7 @@ void VideoPlayer::draw()
 
         gl::draw( mFrameTexture );
         gl::popMatrices();
-        console() << "texture found" << endl;
+       // console() << "texture found" << endl;
     }
     else
         console() << "no texture" << endl;
