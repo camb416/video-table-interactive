@@ -12,7 +12,7 @@
 	<video>m2.m4v</video>
 	<video>m3.mp4</video>
 </user_area>
-
+<!-- 
 <user_area key = "s" centerX = "960.0" centerY = "240.0" angle = "180">
     
     <button posX = "-240" posY = "200" angle = "0" device = "148986" sensor = "0">
@@ -65,5 +65,5 @@
     <video>m1.mp4</video>
 	<video>m2.m4v</video>
 	<video>m3.mp4</video>
-</user_area>
+</user_area> -->
 </project>
