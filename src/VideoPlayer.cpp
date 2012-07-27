@@ -29,10 +29,10 @@ VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
         try {
             if (!names[i].empty())
             {
-                movies.push_back(qtime::MovieGl( loadResource(names[i]) ) );
-                movies[i].play();               // initial play/stop avoids lag when swapping videos
-                movies[i].stop();
-          //      movies[i].stepForward();
+                movies.push_back(new qtime::MovieGl( loadResource(names[i]) ) );
+                movies.at(i)->play();               // initial play/stop avoids lag when swapping videos
+                movies.at(i)->stop();
+          //      movies.at(i)->stepForward();
             }
             else
                 console() << "movie name is empty." << endl;    }
@@ -40,8 +40,8 @@ VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
     }
     
     mMovie = movies[ind];
-    mMovie.play();
-    mMovie.setLoop();
+    mMovie->play();
+    mMovie->setLoop();
 }
 
 void VideoPlayer::nextMovie()
@@ -49,62 +49,27 @@ void VideoPlayer::nextMovie()
     ind++;
     if ( ind > movies.size() - 1)
         ind = 0;
-    mMovie.stop();
-    fadeFrom = Image( mMovie.getTexture(), Vec2f(0,0) );
     mMovie = movies[ind];
-    fadeTo = Image( mMovie.getTexture(), Vec2f(0,0) );
-    isFading = true;
-    firstFade = false;
     
-    fadeFrom.fadeOut(20.0f);
-    
-  /*  while (fadeFrom.isFading()) { 
-        fadeFrom.update();
-        fadeFrom.draw();
-    }
-    fadeTo.fadeIn(20.0f);
-    while (fadeFrom.isFading()) {
-        fadeTo.update();
-        fadeTo.draw();
-    }   */
-    
-    mMovie.play();
-    mMovie.setLoop();
+    mMovie->play();
+    mMovie->setLoop();
 }
 
 void VideoPlayer::update()
 {
-    if (mMovie)    
-        mFrameTexture = mMovie.getTexture();
+    if (&mMovie)    
+        mFrameTexture = mMovie->getTexture();
 }
 
 void VideoPlayer::draw()
 {
-    if (isFading && fadeFrom.isFading())
-    {
-        firstFade = true;
-        fadeFrom.update();
-        fadeFrom.draw();
-    }
-    else if (isFading && !fadeFrom.isFading() && firstFade)
-    {
-        fadeTo.fadeIn(20.0f);
-        firstFade = false;
-    }
-    else if (isFading && fadeTo.isFading())
-    {
-        fadeFrom.update();
-        fadeFrom.draw();
-    }
-             
-	else if( mFrameTexture ){
+	 if( mFrameTexture ){
         gl::pushMatrices();
-
-        // gl::translate(mFrameTexture.getWidth()/-2.0f,mFrameTexture.getHeight()/-2.0f);
         
         gl::translate(-320,-240);
-        
-        gl::draw( mFrameTexture, drawRect  );
+         //         gl::draw( mFrameTexture, drawRect  );
+
+        gl::draw( mFrameTexture );
         gl::popMatrices();
         console() << "texture found" << endl;
     }

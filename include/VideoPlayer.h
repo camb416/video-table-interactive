@@ -36,12 +36,13 @@ public:
 private:
     int                     ind;
 	gl::Texture             mFrameTexture;
-	qtime::MovieGl          mMovie;
-    vector<qtime::MovieGl>  movies;
+	qtime::MovieGl     *     mMovie;
+    vector<qtime::MovieGl *>  movies;
     Rectf                   drawRect;
     Image                   fadeTo, fadeFrom;
     bool                    isFading;
     bool                    firstFade;
+    float                   alpha, dAlpha;
 };
 
  #endif 
