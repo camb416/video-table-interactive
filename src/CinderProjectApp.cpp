@@ -29,8 +29,8 @@ public:
 
 private:
     void parseXML();
-    string background;
-    gl::Texture mTexture;
+    string background_str;
+    gl::Texture background_tex;
     float width, height;
     bool useTouch;
     
@@ -39,7 +39,7 @@ private:
 void ProjectApp::setup()
 {
     parseXML();
-    mTexture = gl::Texture( loadImage( loadResource( background ) ) );
+    background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
     
     if(useTouch){
         pConnector.useEvents(false);
@@ -55,11 +55,11 @@ void ProjectApp::parseXML()
     try {
         XmlTree doc(loadResource( "USER_AREAS.xml" ) );
         XmlTree areas = doc.getChild("project");
-        background = areas.getAttributeValue<string>("background");
-        mTexture = gl::Texture( loadImage( loadResource( background ) ) );
+        background_str = areas.getAttributeValue<string>("background");
+        background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
         
         //
-        // katie please fix this so it gets this string from the "usetouch" attribute of the <project> tag.
+        // katie: please fix this so it gets this string from the "usetouch" attribute of the <project> tag.
         //
         string useTouch_str = "false";//areas.getAttributeValue<string>("usetouch");
         //
@@ -91,8 +91,10 @@ void ProjectApp::parseXML()
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	settings->setWindowSize( 1760.0, 960.0 );
+	settings->setWindowSize( 1920,1200 );
 	settings->setFrameRate( 60.0f );
+    // katie: this doesn't work... probably needs to be in setup (also, have it work with the XML settings in <project>
+    setFullScreen(true);
 }
 
 void ProjectApp::keyDown( KeyEvent event )
@@ -119,7 +121,8 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
-	gl::clear( Color( 0, 0, 0) );
+    gl::draw(background_tex,getWindowBounds());
+	//gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
     
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
