@@ -41,9 +41,11 @@ void ProjectApp::setup()
     parseXML();
     mTexture = gl::Texture( loadImage( loadResource( background ) ) );
     
-    pConnector.useEvents(false);
-    pConnector.connect(148986);
-
+    if(useTouch){
+        pConnector.useEvents(false);
+        pConnector.connect(148986);
+    }
+    
     width = 1760.0;
     height = 960.0;
 }
@@ -56,8 +58,15 @@ void ProjectApp::parseXML()
         background = areas.getAttributeValue<string>("background");
         mTexture = gl::Texture( loadImage( loadResource( background ) ) );
         
-        string useTouch_str = doc.getAttributeValue<string>("usetouch");
+        //
+        // katie please fix this so it gets this string from the "usetouch" attribute of the <project> tag.
+        //
+        string useTouch_str = "false";//areas.getAttributeValue<string>("usetouch");
+        //
+        //
+        
         if(useTouch_str=="false" || useTouch_str=="no" || useTouch_str == "none" || useTouch_str == "0"){
+            console() << "looks like we don't want to use touch" << endl;
             useTouch = false;
         } else {
             useTouch = true;

@@ -47,19 +47,27 @@ VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
     
    // mMovie = movies[ind];
   //  mMovie.getMovieHandle().PreRollMovie();
-    movies.at(ind)->play();
-    movies.at(ind)->setLoop();
+    
+    
+    for(int i=0;i<movies.size();i++){
+        movies.at(i)->setLoop();
+         movies.at(i)->play();
+    }
+   
 }
 
 void VideoPlayer::nextMovie()
 {
+    console() << "incrementing movie" << endl;
+//   movies.at(ind)->stop();
     ind++;
-    if ( ind > movies.size() - 1)
+    if ( ind > movies.size() - 1){
         ind = 0;
+    }
   //  mMovie = movies[ind];
     
-    movies.at(ind)->play();
-    movies.at(ind)->setLoop();
+   // movies.at(ind)->play();
+   // movies.at(ind)->setLoop();
 }
 
 //play, pause, unload
@@ -75,9 +83,9 @@ void VideoPlayer::pause()
 
 void VideoPlayer::update()
 {
-    if (&movies.at(ind))    
-        mFrameTexture = movies.at(ind)->getTexture();
-    console() << "is current movie playing? " << movies.at(ind)->isPlaying() << endl;
+  //  if (&movies.at(ind))
+   //     mFrameTexture = movies.at(ind)->getTexture();
+  //  console() << "is current movie playing? " << movies.at(ind)->isPlaying() << endl;
 }
 
 void VideoPlayer::draw()
@@ -89,6 +97,8 @@ void VideoPlayer::draw()
          //         gl::draw( mFrameTexture, drawRect  );
 
          for(int i=0;i<movies.size();i++){
+             gl::Texture tex = movies.at(i)->getTexture();
+             if(tex){
             gl:: pushMatrices();
              gl::translate(i*100,0,0);
              if(i==ind){
@@ -98,6 +108,9 @@ void VideoPlayer::draw()
              }
         gl::draw( movies.at(i)->getTexture() );
             gl:: popMatrices();
+             } else {
+                 console() << "missing a texture" << endl;
+             }
          }
          gl::popMatrices();
        // console() << "texture found" << endl;
