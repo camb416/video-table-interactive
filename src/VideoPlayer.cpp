@@ -29,7 +29,10 @@ VideoPlayer::VideoPlayer( Rectf r, vector<string> names )
         try {
             if (!names[i].empty())
             {
+                buffers.push_back( Buffer( loadResource( names[i] ) ) );    
                 movies.push_back(new qtime::MovieGl( loadResource(names[i]) ) );
+                
+                //movies.push_back(new qtime::MovieGl( loadResource(names[i]) ) );
                 movies.at(i)->play();               // initial play/stop avoids lag when swapping videos
                 movies.at(i)->stop();
           //      movies.at(i)->stepForward();
@@ -54,6 +57,17 @@ void VideoPlayer::nextMovie()
     
     mMovie->play();
     mMovie->setLoop();
+}
+
+//play, pause, unload
+void VideoPlayer::play()
+{
+    mMovie->play();
+}
+
+void VideoPlayer::pause()
+{
+    mMovie->stop();
 }
 
 void VideoPlayer::update()
