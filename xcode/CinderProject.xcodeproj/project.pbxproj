@@ -17,21 +17,20 @@
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B029E8715A2475300FD18F5 /* UserArea.cpp */; };
 		1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */; };
-		1B08EE5415AF1D1B000D7325 /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B08EE5315AF1D1B000D7325 /* active.png */; };
-		1B08EE5615AF1D27000D7325 /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B08EE5515AF1D27000D7325 /* inactive.png */; };
-		1B08EE5815B464D0000D7325 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B08EE5715B464D0000D7325 /* background.jpg */; };
-		1B08EE5A15B46C57000D7325 /* area_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B08EE5915B46C57000D7325 /* area_background.jpg */; };
 		1B09CABC15A385920086B68B /* m1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABB15A385920086B68B /* m1.mp4 */; };
 		1B09CABE15A385990086B68B /* m2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABD15A385990086B68B /* m2.m4v */; };
 		1B09CAC015A385A10086B68B /* m3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABF15A385A10086B68B /* m3.mp4 */; };
 		1B0D993A15B86C9500FE7A94 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D993915B86C9500FE7A94 /* Image.cpp */; };
 		1B10281115BEF54D00956467 /* TwoStateButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B10281015BEF54D00956467 /* TwoStateButton.cpp */; };
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
-		1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1C426D15AB815C00CC936A /* Phidget21.framework */; };
-		1B1C428315AB815D00CC936A /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C426E15AB815C00CC936A /* README */; };
 		1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7C415ACA26100B2B72E /* Button.cpp */; };
-		1BB7A7DB15AE039D00B2B72E /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7DA15AE039C00B2B72E /* PhidgetConnector.cpp */; };
-		1BB7A7DD15AE069900B2B72E /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7DC15AE069900B2B72E /* PhidgetModel.cpp */; };
+		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
+		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
+		328DA9F815C6F92300E75A45 /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F415C6F92300E75A45 /* active.png */; };
+		328DA9F915C6F92300E75A45 /* area_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F515C6F92300E75A45 /* area_background.jpg */; };
+		328DA9FA15C6F92300E75A45 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F615C6F92300E75A45 /* background.jpg */; };
+		328DA9FB15C6F92300E75A45 /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F715C6F92300E75A45 /* inactive.png */; };
+		328DAA4415C6FDD600E75A45 /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328DAA2F15C6FDD600E75A45 /* Phidget21.framework */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -53,10 +52,6 @@
 		1B029E8E15A248D800FD18F5 /* UserArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserArea.h; path = ../include/UserArea.h; sourceTree = "<group>"; };
 		1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoPlayer.cpp; path = ../src/VideoPlayer.cpp; sourceTree = "<group>"; };
 		1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoPlayer.h; path = ../include/VideoPlayer.h; sourceTree = "<group>"; };
-		1B08EE5315AF1D1B000D7325 /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../../../Downloads/active.png; sourceTree = "<group>"; };
-		1B08EE5515AF1D27000D7325 /* inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inactive.png; path = ../../../Downloads/inactive.png; sourceTree = "<group>"; };
-		1B08EE5715B464D0000D7325 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../Downloads/background.jpg; sourceTree = "<group>"; };
-		1B08EE5915B46C57000D7325 /* area_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = area_background.jpg; path = ../../../Downloads/area_background.jpg; sourceTree = "<group>"; };
 		1B09CABB15A385920086B68B /* m1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m1.mp4; path = ../resources/m1.mp4; sourceTree = "<group>"; };
 		1B09CABD15A385990086B68B /* m2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = m2.m4v; path = ../resources/m2.m4v; sourceTree = "<group>"; };
 		1B09CABF15A385A10086B68B /* m3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m3.mp4; path = ../resources/m3.mp4; sourceTree = "<group>"; };
@@ -65,17 +60,20 @@
 		1B10280E15BEF54000956467 /* TwoStateButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoStateButton.h; sourceTree = "<group>"; };
 		1B10281015BEF54D00956467 /* TwoStateButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoStateButton.cpp; sourceTree = "<group>"; };
 		1B1C425C15A73FF200CC936A /* USER_AREAS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = USER_AREAS.xml; path = ../resources/USER_AREAS.xml; sourceTree = "<group>"; };
-		1B1C426A15AB815C00CC936A /* phidget21.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phidget21.h; sourceTree = "<group>"; };
-		1B1C426D15AB815C00CC936A /* Phidget21.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Phidget21.framework; path = ../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx/Phidget21.framework; sourceTree = "<group>"; };
-		1B1C426E15AB815C00CC936A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		1B1C428015AB815C00CC936A /* PhidgetConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetConnector.h; sourceTree = "<group>"; };
-		1B1C428115AB815C00CC936A /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
 		1BB7A7C215ACA24D00B2B72E /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../include/Button.h; sourceTree = "<group>"; };
 		1BB7A7C415ACA26100B2B72E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
-		1BB7A7DA15AE039C00B2B72E /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
-		1BB7A7DC15AE069900B2B72E /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
+		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
+		328DA9F415C6F92300E75A45 /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../resources/active.png; sourceTree = "<group>"; };
+		328DA9F515C6F92300E75A45 /* area_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = area_background.jpg; path = ../resources/area_background.jpg; sourceTree = "<group>"; };
+		328DA9F615C6F92300E75A45 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../resources/background.jpg; sourceTree = "<group>"; };
+		328DA9F715C6F92300E75A45 /* inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inactive.png; path = ../resources/inactive.png; sourceTree = "<group>"; };
+		328DAA2C15C6FDD600E75A45 /* phidget21.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phidget21.h; sourceTree = "<group>"; };
+		328DAA2F15C6FDD600E75A45 /* Phidget21.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Phidget21.framework; path = ../../Cinder/blocks/phidgets/lib/macosx/Phidget21.framework; sourceTree = "<group>"; };
+		328DAA4215C6FDD600E75A45 /* PhidgetConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetConnector.h; sourceTree = "<group>"; };
+		328DAA4315C6FDD600E75A45 /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -99,7 +97,7 @@
 				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
 				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
 				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
-				1B1C428215AB815D00CC936A /* Phidget21.framework in Frameworks */,
+				328DAA4415C6FDD600E75A45 /* Phidget21.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +120,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B1C426D15AB815C00CC936A /* Phidget21.framework */,
 				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
 				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
 				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
@@ -140,6 +137,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				328DAA2F15C6FDD600E75A45 /* Phidget21.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -158,55 +156,9 @@
 		1B1C426715AB812300CC936A /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				1B1C426815AB815C00CC936A /* phidgets */,
+				328DAA2915C6FDD600E75A45 /* phidgets */,
 			);
 			name = Blocks;
-			sourceTree = "<group>";
-		};
-		1B1C426815AB815C00CC936A /* phidgets */ = {
-			isa = PBXGroup;
-			children = (
-				1B1C426915AB815C00CC936A /* include */,
-				1B1C426B15AB815C00CC936A /* lib */,
-				1B1C426E15AB815C00CC936A /* README */,
-				1B1C427F15AB815C00CC936A /* src */,
-			);
-			name = phidgets;
-			path = ../../../Downloads/cinder_0.8.4_mac/blocks/phidgets;
-			sourceTree = "<group>";
-		};
-		1B1C426915AB815C00CC936A /* include */ = {
-			isa = PBXGroup;
-			children = (
-				1B1C426A15AB815C00CC936A /* phidget21.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		1B1C426B15AB815C00CC936A /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				1B1C426C15AB815C00CC936A /* macosx */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		1B1C426C15AB815C00CC936A /* macosx */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = macosx;
-			sourceTree = "<group>";
-		};
-		1B1C427F15AB815C00CC936A /* src */ = {
-			isa = PBXGroup;
-			children = (
-				1B1C428015AB815C00CC936A /* PhidgetConnector.h */,
-				1B1C428115AB815C00CC936A /* PhidgetModel.h */,
-				1BB7A7DA15AE039C00B2B72E /* PhidgetConnector.cpp */,
-				1BB7A7DC15AE069900B2B72E /* PhidgetModel.cpp */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CinderProject */ = {
@@ -238,11 +190,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				328DA9F415C6F92300E75A45 /* active.png */,
+				328DA9F515C6F92300E75A45 /* area_background.jpg */,
+				328DA9F615C6F92300E75A45 /* background.jpg */,
+				328DA9F715C6F92300E75A45 /* inactive.png */,
 				1B1C425C15A73FF200CC936A /* USER_AREAS.xml */,
-				1B08EE5915B46C57000D7325 /* area_background.jpg */,
-				1B08EE5715B464D0000D7325 /* background.jpg */,
-				1B08EE5515AF1D27000D7325 /* inactive.png */,
-				1B08EE5315AF1D1B000D7325 /* active.png */,
 				1B09CABF15A385A10086B68B /* m3.mp4 */,
 				1B09CABD15A385990086B68B /* m2.m4v */,
 				1B09CABB15A385920086B68B /* m1.mp4 */,
@@ -259,6 +211,51 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		328DAA2915C6FDD600E75A45 /* phidgets */ = {
+			isa = PBXGroup;
+			children = (
+				328DAA2B15C6FDD600E75A45 /* include */,
+				328DAA2D15C6FDD600E75A45 /* lib */,
+				328DAA4115C6FDD600E75A45 /* src */,
+			);
+			name = phidgets;
+			path = ../../Cinder/blocks/phidgets;
+			sourceTree = "<group>";
+		};
+		328DAA2B15C6FDD600E75A45 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				328DAA2C15C6FDD600E75A45 /* phidget21.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		328DAA2D15C6FDD600E75A45 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				328DAA2E15C6FDD600E75A45 /* macosx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		328DAA2E15C6FDD600E75A45 /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = macosx;
+			sourceTree = "<group>";
+		};
+		328DAA4115C6FDD600E75A45 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */,
+				3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */,
+				328DAA4215C6FDD600E75A45 /* PhidgetConnector.h */,
+				328DAA4315C6FDD600E75A45 /* PhidgetModel.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,11 +313,10 @@
 				1B09CABE15A385990086B68B /* m2.m4v in Resources */,
 				1B09CAC015A385A10086B68B /* m3.mp4 in Resources */,
 				1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */,
-				1B1C428315AB815D00CC936A /* README in Resources */,
-				1B08EE5415AF1D1B000D7325 /* active.png in Resources */,
-				1B08EE5615AF1D27000D7325 /* inactive.png in Resources */,
-				1B08EE5815B464D0000D7325 /* background.jpg in Resources */,
-				1B08EE5A15B46C57000D7325 /* area_background.jpg in Resources */,
+				328DA9F815C6F92300E75A45 /* active.png in Resources */,
+				328DA9F915C6F92300E75A45 /* area_background.jpg in Resources */,
+				328DA9FA15C6F92300E75A45 /* background.jpg in Resources */,
+				328DA9FB15C6F92300E75A45 /* inactive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,10 +331,10 @@
 				1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */,
 				1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */,
 				1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */,
-				1BB7A7DB15AE039D00B2B72E /* PhidgetConnector.cpp in Sources */,
-				1BB7A7DD15AE069900B2B72E /* PhidgetModel.cpp in Sources */,
 				1B0D993A15B86C9500FE7A94 /* Image.cpp in Sources */,
 				1B10281115BEF54D00956467 /* TwoStateButton.cpp in Sources */,
+				3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */,
+				3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +347,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx\"",
+					"\"$(SRCROOT)/../../Cinder/blocks/phidgets/lib/macosx\"",
+					"\"$(SRCROOT)/../../Cinder/blocks/phidgets/lib/macosx\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -379,7 +376,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Downloads/cinder_0.8.4_mac/blocks/phidgets/lib/macosx\"",
+					"\"$(SRCROOT)/../../Cinder/blocks/phidgets/lib/macosx\"",
+					"\"$(SRCROOT)/../../Cinder/blocks/phidgets/lib/macosx\"",
 				);
 				GCC_FAST_MATH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -406,13 +404,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
-				CINDER_PATH = "$(SOURCE_ROOT)/../../../Downloads/cinder_0.8.4_mac";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = "$(SOURCE_ROOT)/../../Cinder";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
 			};
 			name = Debug;
@@ -421,13 +419,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
-				CINDER_PATH = "$(SOURCE_ROOT)/../../../Downloads/cinder_0.8.4_mac";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = "$(SOURCE_ROOT)/../../Cinder";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
 			};
 			name = Release;

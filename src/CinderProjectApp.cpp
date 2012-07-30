@@ -32,6 +32,7 @@ private:
     string background;
     gl::Texture mTexture;
     float width, height;
+    bool useTouch;
     
 };
 
@@ -55,10 +56,22 @@ void ProjectApp::parseXML()
         background = areas.getAttributeValue<string>("background");
         mTexture = gl::Texture( loadImage( loadResource( background ) ) );
         
+        string useTouch_str = doc.getAttributeValue<string>("usetouch");
+        if(useTouch_str=="false" || useTouch_str=="no" || useTouch_str == "none" || useTouch_str == "0"){
+            useTouch = false;
+        } else {
+            useTouch = true;
+        }
+        
+        PhidgetConnector * pc;
+        if(useTouch){
+            pc = &pConnector;
+        } else {
+            pc = NULL;
+        }
         for( XmlTree::Iter area = areas.begin(); area!= areas.end(); ++area )
         {
             XmlTree a = *area;
-            PhidgetConnector *pc = &pConnector;
             mAreas.push_back( UserArea(a, pc) ) ;
         }
     }

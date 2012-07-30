@@ -1,7 +1,7 @@
 <? xml version = "1.0" ?>
 
-<project background = "background.jpg">
-<user_area key= "a" background = "area_background.jpg" centerX = "320.0" centerY = "240.0" angle = "180">
+<project background = "background.jpg" usetouch="false">
+<user_area key= "a" background = "area_background.jpg" centerX = "320.0" centerY = "240.0" angle = "0">
     
     <button posX = "-240" posY = "200" angle = "0" device = "148986" sensor = "7">
         <img id = "inactive">inactive.png</img>

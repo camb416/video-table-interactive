@@ -66,14 +66,14 @@ void UserArea::update()
         
         buttons[i].update();
         // is it pressed?
-        if (pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
+        if (pc!=NULL && pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
         {
             buttons[i].press();
             console()<<"button press"<<endl;
             buttonStates[i] = true;
         }
         // was it just pressed?
-        else if (buttonStates[i])
+        else if (pc!=NULL && buttonStates[i])
         {
             buttonStates[i] = false;
             nextMovie();
