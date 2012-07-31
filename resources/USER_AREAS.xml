@@ -1,6 +1,7 @@
 <? xml version = "1.0" ?>
 
-<project background = "background.jpg">
+<!-- katie: please implement usetouch, usefullscreen, screenwidth and screenheight into the application -->
+<project background = "background.jpg" usetouch="no" screenwidth="1920" screenheight="1200" usefullscreen="false">
 <user_area key= "a" background = "area_background.jpg" centerX = "320.0" centerY = "240.0" angle = "180">
     
     <button posX = "-240" posY = "200" angle = "0" device = "148986" sensor = "7">
@@ -8,9 +9,10 @@
         <img id = "active">active.png</img>
     </button>
 
-    <video>m1.mp4</video>
-	<video>m2.m4v</video>
-	<video>m3.mp4</video>
+    <!-- katie: please implement this positioning for the videos -->
+    <video posX="10" posY="10" >m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
 </user_area>
 
 <user_area key = "s" centerX = "960.0" centerY = "240.0" angle = "180">
@@ -20,10 +22,10 @@
         <img id = "active">active.png</img>
     </button>
 
-	<video>m1.mp4</video>
-	<video>m2.m4v</video>
-	<video>m3.mp4</video>
-    <video>m1.mp4</video>
+	<video>m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
+    <video>m1.mov</video>
 </user_area>
 
 <user_area key = "z" centerX = "320.0" centerY = "720.0" angle = "0">
@@ -38,9 +40,9 @@
         <img id = "active">active.png</img>
     </button>
 
-	<video>m1.mp4</video>
-	<video>m2.m4v</video>
-	<video>m3.mp4</video>
+	<video>m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
 </user_area>
 
 <user_area key = "x" centerX = "960.0" centerY = "720.0" angle = "0">
@@ -50,9 +52,9 @@
         <img id = "active">active.png</img>
     </button>
 
-	<video>m1.mp4</video>
-	<video>m2.m4v</video>
-	<video>m3.mp4</video>
+	<video>m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
 </user_area>
 
 <user_area key = "d" centerX = "1520" centerY = "480" angle = "270">
@@ -62,8 +64,8 @@
         <img id = "active">active.png</img>
     </button>
     
-    <video>m1.mp4</video>
-	<video>m2.m4v</video>
-	<video>m3.mp4</video>
-</user_area>
+    <video>m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
+</user_area> 
 </project>

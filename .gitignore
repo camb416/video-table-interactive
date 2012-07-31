@@ -1,5 +1,5 @@
-*.mp4
-*.m4v
-*.png
+# *.mp4
+# *.m4v
+# *.png
 xcode/build/*
 # xcode/CinderProject.xcodeproj/project.xcworkspace/xcuserdata/sysadmin.xcuserdatad/UserInterfaceState.xcuserstate

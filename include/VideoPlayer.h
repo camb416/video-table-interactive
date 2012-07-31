@@ -17,6 +17,7 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
 #include "Image.h"
+#include "cinder/Buffer.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -31,6 +32,9 @@ public:
     void draw();
 
     void nextMovie();
+    void play();
+    void pause();
+    void unload();
     
     
 private:
@@ -43,6 +47,8 @@ private:
     bool                    isFading;
     bool                    firstFade;
     float                   alpha, dAlpha;
+    Buffer                  mBuffer;
+    vector<Buffer>          buffers;
 };
 
  #endif 

@@ -29,27 +29,25 @@ public:
 
 private:
     void parseXML();
-    string background;
-    gl::Texture mTexture;
+    string background_str;
+    gl::Texture background_tex;
     float width, height;
+    bool useTouch;
     
 };
 
 void ProjectApp::setup()
 {
     parseXML();
-    mTexture = gl::Texture( loadImage( loadResource( background ) ) );
+    background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
     
-    // seed a random number
-    srand ( time(NULL) );
+    if(useTouch){
+        pConnector.useEvents(false);
+        pConnector.connect(148986);
+    }
     
-    pConnector.useEvents(false);
-    pConnector.connect(148986);
-
     width = 1760.0;
     height = 960.0;
-    
-   // oldVal = false;
 }
 
 void ProjectApp::parseXML()
@@ -57,13 +55,32 @@ void ProjectApp::parseXML()
     try {
         XmlTree doc(loadResource( "USER_AREAS.xml" ) );
         XmlTree areas = doc.getChild("project");
-        background = areas.getAttributeValue<string>("background");
-        mTexture = gl::Texture( loadImage( loadResource( background ) ) );
+        background_str = areas.getAttributeValue<string>("background");
+        background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
         
+        //
+        // katie: please fix this so it gets this string from the "usetouch" attribute of the <project> tag.
+        //
+        string useTouch_str = "false";//areas.getAttributeValue<string>("usetouch");
+        //
+        //
+        
+        if(useTouch_str=="false" || useTouch_str=="no" || useTouch_str == "none" || useTouch_str == "0"){
+            console() << "looks like we don't want to use touch" << endl;
+            useTouch = false;
+        } else {
+            useTouch = true;
+        }
+        
+        PhidgetConnector * pc;
+        if(useTouch){
+            pc = &pConnector;
+        } else {
+            pc = NULL;
+        }
         for( XmlTree::Iter area = areas.begin(); area!= areas.end(); ++area )
         {
             XmlTree a = *area;
-            PhidgetConnector *pc = &pConnector;
             mAreas.push_back( UserArea(a, pc) ) ;
         }
     }
@@ -74,8 +91,10 @@ void ProjectApp::parseXML()
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	settings->setWindowSize( 1760.0, 960.0 );
+	settings->setWindowSize( 1920,1200 );
 	settings->setFrameRate( 60.0f );
+    // katie: this doesn't work... probably needs to be in setup (also, have it work with the XML settings in <project>
+    setFullScreen(true);
 }
 
 void ProjectApp::keyDown( KeyEvent event )
@@ -102,12 +121,9 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
-   
-	gl::clear( Color( 0, 0, 0) );
-	 gl::enableAlphaBlending();
-    
-   // if( mTexture )
-   //     gl::draw(mTexture, Rectf(0, 0, mTexture.getWidth(), mTexture.getHeight()));
+    gl::draw(background_tex,getWindowBounds());
+	//gl::clear( Color( 0, 0, 0) );
+    gl::enableAlphaBlending();
     
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
         p->drawBackground();

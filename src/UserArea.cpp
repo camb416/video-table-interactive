@@ -21,12 +21,6 @@ UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2
     key = c;
     vidRect = vR;
     player = VideoPlayer( vR, videos );  
- 
-    /* generate random number between 0 and 627 (roughly 2*PI*100) */
-    frameCount = rand() % 628;
-    
-    cout << "the random frame is: " << frameCount << endl;
-    
 }
 
 UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)
@@ -72,14 +66,14 @@ void UserArea::update()
         
         buttons[i].update();
         // is it pressed?
-        if (pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
+        if (pc!=NULL && pc->getBool(buttons.at(i).getDevice(), buttons.at(i).getSensor()))
         {
             buttons[i].press();
             console()<<"button press"<<endl;
             buttonStates[i] = true;
         }
         // was it just pressed?
-        else if (buttonStates[i])
+        else if (pc!=NULL && buttonStates[i])
         {
             buttonStates[i] = false;
             nextMovie();
