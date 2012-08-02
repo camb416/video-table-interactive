@@ -12,7 +12,7 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/ImageIo.h"
 #include "cinder/app/AppBasic.h"
-#include "gallery/GalleryHelper.h"
+#include "GalleryHelper.h"
 #include <iostream>
 #include <cmath>
 
