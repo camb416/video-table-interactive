@@ -11,7 +11,7 @@
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
-#include "gallery/GalleryHelper.h"
+#include "GalleryHelper.h"
 
 
 VideoPlayer::VideoPlayer()

@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "TwoStateButton.h"
-#include "gallery/GalleryHelper.h"
+#include "GalleryHelper.h"
 using namespace gallerytools;
 
 /* TwoStateButton::TwoStateButton(string _active, string _inactive, Vec2f _pos)

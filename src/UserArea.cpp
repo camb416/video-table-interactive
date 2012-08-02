@@ -9,7 +9,7 @@
 #include <iostream>
 #include "UserArea.h"
 #include "Button.h"
-#include "gallery/GalleryHelper.h"
+#include "GalleryHelper.h"
 using namespace gallerytools;
 
 UserArea::UserArea()

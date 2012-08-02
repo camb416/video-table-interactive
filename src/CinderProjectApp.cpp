@@ -8,7 +8,7 @@
 #include "cinder/Xml.h"
 #include <queue>
 #include "PhidgetConnector.h"
-#include "gallery/GalleryHelper.h"
+#include "GalleryHelper.h"
 
 #include "UserArea.h"
 
