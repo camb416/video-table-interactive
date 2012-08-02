@@ -29,8 +29,8 @@ public:
     UserArea(XmlTree area, PhidgetConnector *pc_);
     
     void update();
-    void draw();
-    void drawBackground();
+    void draw(bool _debug = false);
+    void drawBackground(bool _debug = false);
     Vec2f pos;
     char getKey();
     void nextMovie();

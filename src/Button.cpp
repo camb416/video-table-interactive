@@ -60,7 +60,7 @@ void Button::update()
     alpha2 += (dAlpha2 - alpha2) / 4.0f;
 }
 
-void Button::draw()
+void Button::draw(bool _debug)
 {
   //  ColorT myColor = ColorT(255,0,0);
     

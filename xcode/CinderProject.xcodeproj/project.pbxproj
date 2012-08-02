@@ -13,17 +13,19 @@
 		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
-		00BAE65A0E7ED9C10018A608 /* CinderProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* CinderProjectApp.cpp */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
-		1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B029E8715A2475300FD18F5 /* UserArea.cpp */; };
-		1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */; };
 		1B09CABC15A385920086B68B /* m1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABB15A385920086B68B /* m1.mp4 */; };
 		1B09CABE15A385990086B68B /* m2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABD15A385990086B68B /* m2.m4v */; };
 		1B09CAC015A385A10086B68B /* m3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABF15A385A10086B68B /* m3.mp4 */; };
-		1B0D993A15B86C9500FE7A94 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D993915B86C9500FE7A94 /* Image.cpp */; };
-		1B10281115BEF54D00956467 /* TwoStateButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B10281015BEF54D00956467 /* TwoStateButton.cpp */; };
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
-		1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7A7C415ACA26100B2B72E /* Button.cpp */; };
+		320B33D515C985CB003AB00F /* area_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B33D415C985CB003AB00F /* area_background.png */; };
+		320B342315CB128D003AB00F /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341D15CB128D003AB00F /* Button.cpp */; };
+		320B342415CB128D003AB00F /* CinderProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341E15CB128D003AB00F /* CinderProjectApp.cpp */; };
+		320B342515CB128D003AB00F /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341F15CB128D003AB00F /* Image.cpp */; };
+		320B342615CB128D003AB00F /* TwoStateButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342015CB128D003AB00F /* TwoStateButton.cpp */; };
+		320B342715CB128D003AB00F /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342115CB128D003AB00F /* UserArea.cpp */; };
+		320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342215CB128D003AB00F /* VideoPlayer.cpp */; };
+		320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */; };
 		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
 		3238F00115C71DFF001BB4A1 /* m1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00015C71DFF001BB4A1 /* m1.mov */; };
@@ -47,26 +49,29 @@
 		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		00BAE6590E7ED9C10018A608 /* CinderProjectApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CinderProjectApp.cpp; path = ../src/CinderProjectApp.cpp; sourceTree = SOURCE_ROOT; };
 		00CCAF14116A9FEE008396D5 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CinderApp.icns; sourceTree = SOURCE_ROOT; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1B029E8715A2475300FD18F5 /* UserArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserArea.cpp; path = ../src/UserArea.cpp; sourceTree = "<group>"; };
 		1B029E8E15A248D800FD18F5 /* UserArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserArea.h; path = ../include/UserArea.h; sourceTree = "<group>"; };
-		1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoPlayer.cpp; path = ../src/VideoPlayer.cpp; sourceTree = "<group>"; };
 		1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoPlayer.h; path = ../include/VideoPlayer.h; sourceTree = "<group>"; };
 		1B09CABB15A385920086B68B /* m1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m1.mp4; path = ../resources/m1.mp4; sourceTree = "<group>"; };
 		1B09CABD15A385990086B68B /* m2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = m2.m4v; path = ../resources/m2.m4v; sourceTree = "<group>"; };
 		1B09CABF15A385A10086B68B /* m3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m3.mp4; path = ../resources/m3.mp4; sourceTree = "<group>"; };
-		1B0D993715B86A6100FE7A94 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
-		1B0D993915B86C9500FE7A94 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
-		1B10280E15BEF54000956467 /* TwoStateButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoStateButton.h; sourceTree = "<group>"; };
-		1B10281015BEF54D00956467 /* TwoStateButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoStateButton.cpp; sourceTree = "<group>"; };
 		1B1C425C15A73FF200CC936A /* USER_AREAS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = USER_AREAS.xml; path = ../resources/USER_AREAS.xml; sourceTree = "<group>"; };
 		1BB7A7C215ACA24D00B2B72E /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../include/Button.h; sourceTree = "<group>"; };
-		1BB7A7C415ACA26100B2B72E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		320B33D415C985CB003AB00F /* area_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = area_background.png; path = ../resources/area_background.png; sourceTree = "<group>"; };
+		320B340515CB0025003AB00F /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../include/Image.h; sourceTree = SOURCE_ROOT; };
+		320B341015CB10A4003AB00F /* TwoStateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoStateButton.h; path = ../include/TwoStateButton.h; sourceTree = "<group>"; };
+		320B341D15CB128D003AB00F /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
+		320B341E15CB128D003AB00F /* CinderProjectApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CinderProjectApp.cpp; path = ../src/CinderProjectApp.cpp; sourceTree = "<group>"; };
+		320B341F15CB128D003AB00F /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
+		320B342015CB128D003AB00F /* TwoStateButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TwoStateButton.cpp; path = ../src/TwoStateButton.cpp; sourceTree = "<group>"; };
+		320B342115CB128D003AB00F /* UserArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserArea.cpp; path = ../src/UserArea.cpp; sourceTree = "<group>"; };
+		320B342215CB128D003AB00F /* VideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoPlayer.cpp; path = ../src/VideoPlayer.cpp; sourceTree = "<group>"; };
+		320B342915CB1641003AB00F /* GalleryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryHelper.h; path = ../src/gallery/GalleryHelper.h; sourceTree = "<group>"; };
+		320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GalleryHelper.cpp; path = ../src/GalleryHelper.cpp; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		3238F00015C71DFF001BB4A1 /* m1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m1.mov; path = ../resources/m1.mov; sourceTree = "<group>"; };
@@ -113,12 +118,13 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				00BAE6590E7ED9C10018A608 /* CinderProjectApp.cpp */,
-				1BB7A7C415ACA26100B2B72E /* Button.cpp */,
-				1B029E8F15A24AAB00FD18F5 /* VideoPlayer.cpp */,
-				1B029E8715A2475300FD18F5 /* UserArea.cpp */,
-				1B0D993915B86C9500FE7A94 /* Image.cpp */,
-				1B10281015BEF54D00956467 /* TwoStateButton.cpp */,
+				320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */,
+				320B341D15CB128D003AB00F /* Button.cpp */,
+				320B341E15CB128D003AB00F /* CinderProjectApp.cpp */,
+				320B341F15CB128D003AB00F /* Image.cpp */,
+				320B342015CB128D003AB00F /* TwoStateButton.cpp */,
+				320B342115CB128D003AB00F /* UserArea.cpp */,
+				320B342215CB128D003AB00F /* VideoPlayer.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -183,12 +189,13 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				320B342915CB1641003AB00F /* GalleryHelper.h */,
+				320B340515CB0025003AB00F /* Image.h */,
 				32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */,
 				1BB7A7C215ACA24D00B2B72E /* Button.h */,
+				320B341015CB10A4003AB00F /* TwoStateButton.h */,
 				1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */,
 				1B029E8E15A248D800FD18F5 /* UserArea.h */,
-				1B0D993715B86A6100FE7A94 /* Image.h */,
-				1B10280E15BEF54000956467 /* TwoStateButton.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				320B33D415C985CB003AB00F /* area_background.png */,
 				3238F00415C71E6B001BB4A1 /* m3.mov */,
 				3238F00215C71E45001BB4A1 /* m2.mov */,
 				3238F00015C71DFF001BB4A1 /* m1.mov */,
@@ -329,6 +337,7 @@
 				3238F00115C71DFF001BB4A1 /* m1.mov in Resources */,
 				3238F00315C71E45001BB4A1 /* m2.mov in Resources */,
 				3238F00515C71E6B001BB4A1 /* m3.mov in Resources */,
+				320B33D515C985CB003AB00F /* area_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00BAE65A0E7ED9C10018A608 /* CinderProjectApp.cpp in Sources */,
-				1B029E8815A2475300FD18F5 /* UserArea.cpp in Sources */,
-				1B029E9015A24AAB00FD18F5 /* VideoPlayer.cpp in Sources */,
-				1BB7A7C515ACA26100B2B72E /* Button.cpp in Sources */,
-				1B0D993A15B86C9500FE7A94 /* Image.cpp in Sources */,
-				1B10281115BEF54D00956467 /* TwoStateButton.cpp in Sources */,
 				3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */,
 				3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */,
+				320B342315CB128D003AB00F /* Button.cpp in Sources */,
+				320B342415CB128D003AB00F /* CinderProjectApp.cpp in Sources */,
+				320B342515CB128D003AB00F /* Image.cpp in Sources */,
+				320B342615CB128D003AB00F /* TwoStateButton.cpp in Sources */,
+				320B342715CB128D003AB00F /* UserArea.cpp in Sources */,
+				320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */,
+				320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +430,10 @@
 				CINDER_PATH = "$(SOURCE_ROOT)/../../Cinder";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					../src,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
@@ -435,7 +448,10 @@
 				CINDER_PATH = "$(SOURCE_ROOT)/../../Cinder";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					../src,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";

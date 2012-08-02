@@ -6,11 +6,12 @@
 //  Copyright (c) 2012 American Museum of Natural History. All rights reserved.
 //
 
-#include <iostream> 
+#include <iostream>
 #include "VideoPlayer.h"
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
+#include "gallery/GalleryHelper.h"
 
 
 VideoPlayer::VideoPlayer()
@@ -94,17 +95,20 @@ void VideoPlayer::update()
   //  console() << "is current movie playing? " << movies.at(ind)->isPlaying() << endl;
 }
 
-void VideoPlayer::draw()
+
+
+void VideoPlayer::draw(char _align, bool _debug)
 {
 //	 if( mFrameTexture ){
         gl::pushMatrices();
-        
-        gl::translate(-320,-240);
+    // gl::Texture * texPtr = &movies.at(ind)->getTexture();
+        //    gl::translate(-320,-240);
          //         gl::draw( mFrameTexture, drawRect  );
 
        //  for(int i=0;i<movies.size();i++){
              gl::Texture tex = movies.at(ind)->getTexture();
-             if(tex){
+             
+    if(tex){
           //  gl:: pushMatrices();
            //  gl::translate(i*100,0,0);
            //  if(i==ind){
@@ -112,7 +116,19 @@ void VideoPlayer::draw()
            //  } else {
                  gl::color(255,255,255);
            //  }
+        gl::pushMatrices();
+        GalleryHelper::alignElement(_align,movies.at(ind)->getTexture().getBounds());
         gl::draw( movies.at(ind)->getTexture() );
+        gl::popMatrices();
+                 if(_debug){
+                     gl::color(255,255,255);
+                     gl::drawStrokedCircle(Vec2f(0,0),20);
+                     gl::color(0,0,0);
+                     gl::drawSolidCircle(Vec2f(0,0),10);
+                     gl::color(1.0f,0.5f,0.25f);
+                     gl::drawSolidCircle(Vec2f(0,0),5);
+                     
+                 }
           //  gl:: popMatrices();
              } else {
                  console() << "missing a texture" << endl;

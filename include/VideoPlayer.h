@@ -29,7 +29,7 @@ public:
     VideoPlayer();
     VideoPlayer( Rectf r, vector<string> movies );
     void update(); 
-    void draw();
+    void draw(char _align, bool _debug);
 
     void nextMovie();
     void play();

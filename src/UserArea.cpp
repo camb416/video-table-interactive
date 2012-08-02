@@ -9,6 +9,8 @@
 #include <iostream>
 #include "UserArea.h"
 #include "Button.h"
+#include "gallery/GalleryHelper.h"
+using namespace gallerytools;
 
 UserArea::UserArea()
 {
@@ -29,7 +31,8 @@ UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)
     angle = area.getAttributeValue<float>( "angle" );
     key = area.getAttributeValue<char>( "key" );
     
-    background = "area_background.jpg";
+    //background =
+    background = "area_background.png";
     mTexture = gl::Texture( loadImage( loadResource( background ) ) );
     
     vector<string> videos;
@@ -83,7 +86,7 @@ void UserArea::update()
     
 }
 
-void UserArea::draw()
+void UserArea::draw(bool _debug)
 {
     gl::pushMatrices();
     
@@ -92,16 +95,16 @@ void UserArea::draw()
 
   //  gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);
     gl::color(Color(255,255,255));
-    player.draw();
+    player.draw(CENTER,_debug);
 
     for (int i = 0; i < buttons.size(); i++)
-        buttons[i].draw();
+        buttons[i].draw(_debug);
     
     gl::popMatrices();
     
 }
 
-void UserArea::drawBackground()
+void UserArea::drawBackground(bool _debug)
 {
      gl::color(Color(255,255,255));
     gl::pushMatrices();

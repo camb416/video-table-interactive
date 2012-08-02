@@ -25,7 +25,7 @@ public:
     Button();
     Button(XmlTree xml);
     //Button(XmlTree xml, void (*f)());
-    void draw();
+    void draw(bool _debug = false);
     void press();
     void release();
     void update();

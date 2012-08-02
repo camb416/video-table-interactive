@@ -8,6 +8,7 @@
 #include "cinder/Xml.h"
 #include <queue>
 #include "PhidgetConnector.h"
+#include "gallery/GalleryHelper.h"
 
 #include "UserArea.h"
 
@@ -33,11 +34,13 @@ private:
     gl::Texture background_tex;
     float width, height;
     bool useTouch;
+    int debugState;
     
 };
 
 void ProjectApp::setup()
 {
+    debugState = DEVELOPMENT;
     parseXML();
     background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
     
@@ -99,9 +102,19 @@ void ProjectApp::prepareSettings( Settings *settings )
 
 void ProjectApp::keyDown( KeyEvent event )
 {
-	if( event.getChar() == 'f' ) {
-		setFullScreen( ! isFullScreen() );
-	}
+    switch(event.getChar()){
+            case 'f':
+            case 'F':
+                setFullScreen( ! isFullScreen() );
+            break;
+            case ' ':
+            debugState++;
+            if(debugState>2){
+                debugState = 0;
+            }
+            break;
+    }
+
     
     //iterate, if key pressed matches player key, change video of that player
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
@@ -121,14 +134,15 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
+    bool debugDrawFlag = debugState != 0;
     gl::draw(background_tex,getWindowBounds());
 	//gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
     
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-        p->drawBackground();
+        p->drawBackground(debugDrawFlag);
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-        p->draw();  
+        p->draw(debugDrawFlag);
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );
