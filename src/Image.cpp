@@ -166,12 +166,18 @@ void Image::update()
     alpha += (dAlpha - alpha) / fadeRate;
 }
 
-void Image::draw(char _align,bool _debug)
+void Image::draw(char _align,bool _debug){
+    // deprecated
+    // put a cout here?
+    draw(_align,Vec2f(1.0f,1.0f),_debug);
+}
+
+void Image::draw(char _align,Vec2f _scale, bool _debug)
 {
     gl::pushMatrices();
     if (texture && !hidden) {
         
-        gl::translate(x, y);
+        gl::translate(x*_scale.x, y*_scale.y);
         gl::rotate(deg);
         /*
         gl::translate(-texture.getWidth()/2,
@@ -180,13 +186,18 @@ void Image::draw(char _align,bool _debug)
         gl::color(ColorA(255, 255, 255, alpha));
         gl::pushMatrices();
         GalleryHelper::alignElement(_align,texture.getBounds());
-        gl::draw( texture, Vec2f( 0, 0 ) );
+      //  gl::draw( texture, Vec2f( 0, 0 ) );
+        
+        Rectf texRect = Rectf(0.0f,0.0f,_scale.x*texture.getWidth(),_scale.y*texture.getHeight());
+        
+        gl::draw(texture, texRect );
         if(_debug){
         gl::color(1.0f,1.0f,1.0f);
-        Rectf aRect =texture.getBounds();
-        gl::drawStrokedRect(aRect);
-        gl::drawLine(aRect.getLowerLeft(),aRect.getUpperRight());
-        gl::drawLine(aRect.getLowerRight(),aRect.getUpperLeft());
+        //Rectf aRect =texture.getBounds();
+        //    Rectf aRect = Rectf(0.0f,0.0f,text)
+        gl::drawStrokedRect(texRect);
+        gl::drawLine(texRect.getLowerLeft(),texRect.getUpperRight());
+        gl::drawLine(texRect.getLowerRight(),texRect.getUpperLeft());
         }
         gl::popMatrices();
         if(_debug){

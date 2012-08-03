@@ -29,8 +29,8 @@ public:
     VideoPlayer();
     VideoPlayer( Rectf r, vector<string> movies );
     void update(); 
-    void draw(char _align, bool _debug);
-
+    void draw(char _align=CENTER, bool _debug=false);
+    void draw(char _align=CENTER, Vec2f _scale=Vec2f(1.0f,1.0f), bool _debug=false);
     void nextMovie();
     void play();
     void pause();

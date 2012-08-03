@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/Image.cpp"
-         timestampString = "365703178.193603"
+         timestampString = "365711891.846196"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "169"
-         endingLineNumber = "169">
+         startingLineNumber = "175"
+         endingLineNumber = "175">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

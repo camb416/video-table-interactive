@@ -95,9 +95,11 @@ void VideoPlayer::update()
   //  console() << "is current movie playing? " << movies.at(ind)->isPlaying() << endl;
 }
 
+void VideoPlayer::draw(char _align, bool _debug){
+    draw(_align,Vec2f(1.0f,1.0f),_debug);
+}
 
-
-void VideoPlayer::draw(char _align, bool _debug)
+void VideoPlayer::draw(char _align, Vec2f _scale, bool _debug)
 {
 //	 if( mFrameTexture ){
     
@@ -117,8 +119,9 @@ void VideoPlayer::draw(char _align, bool _debug)
                  gl::color(255,255,255);
            //  }
         gl::pushMatrices();
-        GalleryHelper::alignElement(_align,movies.at(ind)->getTexture().getBounds());
-        gl::draw( movies.at(ind)->getTexture() );
+        Rectf texRect = Rectf(0.0f,0.0f,movies.at(ind)->getTexture().getWidth()*_scale.x,movies.at(ind)->getTexture().getHeight()*_scale.y);
+        GalleryHelper::alignElement(_align,Area(texRect));
+        gl::draw( movies.at(ind)->getTexture(),texRect );
         gl::popMatrices();
                  if(_debug){
                      gl::color(255,255,255);

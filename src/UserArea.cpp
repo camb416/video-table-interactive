@@ -107,9 +107,9 @@ void UserArea::draw(bool _debug, Vec2f _scale)
 
   //  gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);
     gl::color(Color(255,255,255));
-    bg_img.draw(CENTER,_debug);
-    activeArea_img.draw(CENTER,_debug);
-    player.draw(CENTER,_debug);
+    bg_img.draw(CENTER,_scale,_debug);
+    activeArea_img.draw(CENTER,_scale,_debug);
+    player.draw(CENTER,_scale,_debug);
 
     for (int i = 0; i < buttons.size(); i++){
         buttons[i].draw(_debug);
