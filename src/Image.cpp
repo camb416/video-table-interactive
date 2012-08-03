@@ -15,7 +15,6 @@ using namespace std;
 
 using namespace gallerytools;
 
-Image::Image(){ }
 
 /*Image::Image(string _file)
  {
@@ -26,6 +25,11 @@ Image::Image(){ }
  deg = 0;
  moveRate = 30.0f;
  }   */
+
+Image::Image(){
+    x = y = dx = dy = deg = 0;
+    alpha = dAlpha = 1.0f;
+}
 
 Image::Image(string _file, int _x, int _y)
 {
@@ -74,9 +78,10 @@ Image::Image(gl::Texture _texture, Vec2f _pos)
 
 void Image::load(string _file)
 {
+    path_str = _file;
     try {
-        texture = gl::Texture( loadImage( loadResource( _file ) ) );
-    } catch(...) { console()<<"Unable to load image."<<endl; }
+        texture = gl::Texture( loadImage( loadResource( path_str ) ) );
+    } catch(...) { console()<<"Unable to load image: "<< path_str << "." << endl; }
 }
 
 /**
@@ -165,13 +170,21 @@ void Image::draw(char _align,bool _debug)
         
         gl::translate(x, y);
         gl::rotate(deg);
-        
+        /*
         gl::translate(-texture.getWidth()/2,
                       -texture.getHeight()/2 );
+        */
         gl::color(ColorA(255, 255, 255, alpha));
         gl::pushMatrices();
         GalleryHelper::alignElement(_align,texture.getBounds());
         gl::draw( texture, Vec2f( 0, 0 ) );
+        if(_debug){
+        gl::color(1.0f,1.0f,1.0f);
+        Rectf aRect =texture.getBounds();
+        gl::drawStrokedRect(aRect);
+        gl::drawLine(aRect.getLowerLeft(),aRect.getUpperRight());
+        gl::drawLine(aRect.getLowerRight(),aRect.getUpperLeft());
+        }
         gl::popMatrices();
         if(_debug){
             gl::color(255,255,255);

@@ -54,7 +54,8 @@ void ProjectApp::setup()
 }
 
 void ProjectApp::parseXML()
-{    
+{
+    mAreas.clear();
     try {
         XmlTree doc(loadResource( "USER_AREAS.xml" ) );
         XmlTree areas = doc.getChild("project");
@@ -113,6 +114,10 @@ void ProjectApp::keyDown( KeyEvent event )
                 debugState = 0;
             }
             break;
+            case 's':
+            case 'S':
+            parseXML();
+            break;
     }
 
     
@@ -139,8 +144,8 @@ void ProjectApp::draw()
 	//gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
     
-    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-        p->drawBackground(debugDrawFlag);
+    //for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
+       // p->drawBackground(debugDrawFlag);
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
         p->draw(debugDrawFlag);
 }

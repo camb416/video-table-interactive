@@ -31,8 +31,12 @@ UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)
     angle = area.getAttributeValue<float>( "angle" );
     key = area.getAttributeValue<char>( "key" );
     
-    //background =
+    
+    // this should be loading from the XML.
     background = "area_background.png";
+    
+    
+    bg_img.load(background);
     mTexture = gl::Texture( loadImage( loadResource( background ) ) );
     
     vector<string> videos;
@@ -95,17 +99,23 @@ void UserArea::draw(bool _debug)
 
   //  gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);
     gl::color(Color(255,255,255));
-    player.draw(CENTER,_debug);
+    bg_img.draw(CENTER,_debug);
+ //   player.draw(CENTER,_debug);
 
-    for (int i = 0; i < buttons.size(); i++)
+    for (int i = 0; i < buttons.size(); i++){
         buttons[i].draw(_debug);
+    }
+    
+
     
     gl::popMatrices();
+    
     
 }
 
 void UserArea::drawBackground(bool _debug)
 {
+    cout << "soon to be deprecated function: do not use drawBackground()" << endl;
      gl::color(Color(255,255,255));
     gl::pushMatrices();
     

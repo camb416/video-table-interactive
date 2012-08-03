@@ -100,7 +100,7 @@ void VideoPlayer::update()
 void VideoPlayer::draw(char _align, bool _debug)
 {
 //	 if( mFrameTexture ){
-        gl::pushMatrices();
+    
     // gl::Texture * texPtr = &movies.at(ind)->getTexture();
         //    gl::translate(-320,-240);
          //         gl::draw( mFrameTexture, drawRect  );
@@ -134,7 +134,7 @@ void VideoPlayer::draw(char _align, bool _debug)
                  console() << "missing a texture" << endl;
              }
        //  }
-         gl::popMatrices();
+      
        // console() << "texture found" << endl;
   //  }
   //  else

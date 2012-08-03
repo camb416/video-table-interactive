@@ -48,6 +48,7 @@ namespace gallerytools {
         Vec2f getPosition();
         
     private:
+        string path_str;
         gl::Texture texture;
         int x, y, dx, dy, deg;
         bool tween, hidden;

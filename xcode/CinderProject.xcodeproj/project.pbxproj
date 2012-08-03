@@ -70,8 +70,8 @@
 		320B342015CB128D003AB00F /* TwoStateButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TwoStateButton.cpp; path = ../src/TwoStateButton.cpp; sourceTree = "<group>"; };
 		320B342115CB128D003AB00F /* UserArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserArea.cpp; path = ../src/UserArea.cpp; sourceTree = "<group>"; };
 		320B342215CB128D003AB00F /* VideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoPlayer.cpp; path = ../src/VideoPlayer.cpp; sourceTree = "<group>"; };
-		320B342915CB1641003AB00F /* GalleryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryHelper.h; path = ../src/gallery/GalleryHelper.h; sourceTree = "<group>"; };
 		320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GalleryHelper.cpp; path = ../src/GalleryHelper.cpp; sourceTree = "<group>"; };
+		320B342D15CC128E003AB00F /* GalleryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GalleryHelper.h; path = ../include/GalleryHelper.h; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		3238F00015C71DFF001BB4A1 /* m1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m1.mov; path = ../resources/m1.mov; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				320B342915CB1641003AB00F /* GalleryHelper.h */,
+				320B342D15CC128E003AB00F /* GalleryHelper.h */,
 				320B340515CB0025003AB00F /* Image.h */,
 				32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */,
 				1BB7A7C215ACA24D00B2B72E /* Button.h */,

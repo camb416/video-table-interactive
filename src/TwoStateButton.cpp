@@ -73,6 +73,6 @@ void TwoStateButton::update()
 
 void TwoStateButton::draw(bool _debug)
 {
-    active.draw(TOP_RIGHT,_debug);
+    active.draw(CENTER,_debug);
     inactive.draw(CENTER,_debug);
 }

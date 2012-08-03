@@ -17,6 +17,7 @@
 //#include "cinder/Xml.h"
 #include "PhidgetConnector.h"
 #include "TwoStateButton.h"
+#include "Image.h"
 
 using namespace gallerytools;
 
@@ -36,6 +37,7 @@ public:
     void nextMovie();
     
 private:
+    Image bg_img;
     char key;
     VideoPlayer player;
     Rectf vidRect;
