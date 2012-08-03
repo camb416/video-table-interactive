@@ -29,6 +29,9 @@ using namespace gallerytools;
 Image::Image(){
     x = y = dx = dy = deg = 0;
     alpha = dAlpha = 1.0f;
+    hidden = false;
+    moveRate = 30.0f;
+    fadeRate = 30.0f;
 }
 
 Image::Image(string _file, int _x, int _y)

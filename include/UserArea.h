@@ -38,6 +38,7 @@ public:
     
 private:
     Image bg_img;
+    Image activeArea_img;
     char key;
     VideoPlayer player;
     Rectf vidRect;
@@ -50,6 +51,8 @@ private:
     float angle;
     int frameCount;
     PhidgetConnector *pc;
+    
+    // is this still being used?
     gl::Texture mTexture;
 };
 

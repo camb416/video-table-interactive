@@ -26,6 +26,7 @@
 		320B342715CB128D003AB00F /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342115CB128D003AB00F /* UserArea.cpp */; };
 		320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342215CB128D003AB00F /* VideoPlayer.cpp */; };
 		320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */; };
+		320B342F15CC2EC9003AB00F /* active_area.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B342E15CC2EC9003AB00F /* active_area.png */; };
 		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
 		3238F00115C71DFF001BB4A1 /* m1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00015C71DFF001BB4A1 /* m1.mov */; };
@@ -72,6 +73,7 @@
 		320B342215CB128D003AB00F /* VideoPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoPlayer.cpp; path = ../src/VideoPlayer.cpp; sourceTree = "<group>"; };
 		320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GalleryHelper.cpp; path = ../src/GalleryHelper.cpp; sourceTree = "<group>"; };
 		320B342D15CC128E003AB00F /* GalleryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GalleryHelper.h; path = ../include/GalleryHelper.h; sourceTree = "<group>"; };
+		320B342E15CC2EC9003AB00F /* active_area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active_area.png; path = ../resources/active_area.png; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		3238F00015C71DFF001BB4A1 /* m1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m1.mov; path = ../resources/m1.mov; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				320B342E15CC2EC9003AB00F /* active_area.png */,
 				320B33D415C985CB003AB00F /* area_background.png */,
 				3238F00415C71E6B001BB4A1 /* m3.mov */,
 				3238F00215C71E45001BB4A1 /* m2.mov */,
@@ -338,6 +341,7 @@
 				3238F00315C71E45001BB4A1 /* m2.mov in Resources */,
 				3238F00515C71E6B001BB4A1 /* m3.mov in Resources */,
 				320B33D515C985CB003AB00F /* area_background.png in Resources */,
+				320B342F15CC2EC9003AB00F /* active_area.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
