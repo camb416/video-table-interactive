@@ -27,6 +27,8 @@
 		320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342215CB128D003AB00F /* VideoPlayer.cpp */; };
 		320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */; };
 		320B342F15CC2EC9003AB00F /* active_area.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B342E15CC2EC9003AB00F /* active_area.png */; };
+		320B343215CC5E62003AB00F /* Recipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343015CC5E62003AB00F /* Recipe.cpp */; };
+		320B343515CC5F48003AB00F /* CookStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343315CC5F48003AB00F /* CookStep.cpp */; };
 		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
 		3238F00115C71DFF001BB4A1 /* m1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00015C71DFF001BB4A1 /* m1.mov */; };
@@ -74,6 +76,10 @@
 		320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GalleryHelper.cpp; path = ../src/GalleryHelper.cpp; sourceTree = "<group>"; };
 		320B342D15CC128E003AB00F /* GalleryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GalleryHelper.h; path = ../include/GalleryHelper.h; sourceTree = "<group>"; };
 		320B342E15CC2EC9003AB00F /* active_area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active_area.png; path = ../resources/active_area.png; sourceTree = "<group>"; };
+		320B343015CC5E62003AB00F /* Recipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Recipe.cpp; path = ../src/Recipe.cpp; sourceTree = "<group>"; };
+		320B343115CC5E62003AB00F /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = ../include/Recipe.h; sourceTree = "<group>"; };
+		320B343315CC5F48003AB00F /* CookStep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CookStep.cpp; path = ../src/CookStep.cpp; sourceTree = "<group>"; };
+		320B343415CC5F48003AB00F /* CookStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CookStep.h; path = ../include/CookStep.h; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		3238F00015C71DFF001BB4A1 /* m1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m1.mov; path = ../resources/m1.mov; sourceTree = "<group>"; };
@@ -120,12 +126,14 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				320B343315CC5F48003AB00F /* CookStep.cpp */,
 				320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */,
 				320B341D15CB128D003AB00F /* Button.cpp */,
 				320B341E15CB128D003AB00F /* CinderProjectApp.cpp */,
 				320B341F15CB128D003AB00F /* Image.cpp */,
 				320B342015CB128D003AB00F /* TwoStateButton.cpp */,
 				320B342115CB128D003AB00F /* UserArea.cpp */,
+				320B343015CC5E62003AB00F /* Recipe.cpp */,
 				320B342215CB128D003AB00F /* VideoPlayer.cpp */,
 			);
 			name = Source;
@@ -191,6 +199,8 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				320B343115CC5E62003AB00F /* Recipe.h */,
+				320B343415CC5F48003AB00F /* CookStep.h */,
 				320B342D15CC128E003AB00F /* GalleryHelper.h */,
 				320B340515CB0025003AB00F /* Image.h */,
 				32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */,
@@ -361,6 +371,8 @@
 				320B342715CB128D003AB00F /* UserArea.cpp in Sources */,
 				320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */,
 				320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */,
+				320B343215CC5E62003AB00F /* Recipe.cpp in Sources */,
+				320B343515CC5F48003AB00F /* CookStep.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

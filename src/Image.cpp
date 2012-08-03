@@ -79,12 +79,17 @@ Image::Image(gl::Texture _texture, Vec2f _pos)
     fadeRate = 50.0f;
 }
 
-void Image::load(string _file)
+int Image::load(string _file)
 {
     path_str = _file;
     try {
         texture = gl::Texture( loadImage( loadResource( path_str ) ) );
-    } catch(...) { console()<<"Unable to load image: "<< path_str << "." << endl; }
+    
+    } catch(...) {
+        console()<<"Unable to load image: "<< path_str << "." << endl;
+        return -1;
+    }
+    return 0;
 }
 
 /**

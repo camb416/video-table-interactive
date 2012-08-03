@@ -37,7 +37,7 @@ namespace gallerytools {
         bool isFading();
         void hide();
         void show();
-        void load(string file);      
+        int load(string file);
         void setRotation(int _deg);
         void update();
         
