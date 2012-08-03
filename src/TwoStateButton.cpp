@@ -71,8 +71,10 @@ void TwoStateButton::update()
     inactive.update();
 }
 
-void TwoStateButton::draw(bool _debug)
+
+
+void TwoStateButton::draw(bool _debug, Vec2f _scale)
 {
-    active.draw(CENTER,_debug);
-    inactive.draw(CENTER,_debug);
+    active.draw(CENTER,_scale,_debug);
+    inactive.draw(CENTER,_scale,_debug);
 }

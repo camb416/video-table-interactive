@@ -98,21 +98,21 @@ void UserArea::update()
     
 }
 
-void UserArea::draw(bool _debug)
+void UserArea::draw(bool _debug, Vec2f _scale)
 {
     gl::pushMatrices();
     
-    gl::translate(pos.x,pos.y);
+    gl::translate(pos.x*_scale.x,pos.y*_scale.y);
     gl::rotate(angle);
 
   //  gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);
     gl::color(Color(255,255,255));
-    bg_img.draw(CENTER,_debug);
-    activeArea_img.draw(CENTER,_debug);
-    player.draw(CENTER,_debug);
+    bg_img.draw(CENTER,_scale,_debug);
+    activeArea_img.draw(CENTER,_scale,_debug);
+    player.draw(CENTER,_scale,_debug);
 
     for (int i = 0; i < buttons.size(); i++){
-        buttons[i].draw(_debug);
+        buttons[i].draw(_debug, _scale);
     }
     
 
