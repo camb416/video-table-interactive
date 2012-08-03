@@ -3,9 +3,28 @@
 <!-- katie: please implement usetouch, usefullscreen, screenwidth and screenheight into the application -->
 <project background = "background.jpg" usetouch="no" screenwidth="1920" screenheight="1200" usefullscreen="false">
 
+    <user_area key= "2" background = "area_background.png" centerX = "480" centerY = "900" angle = "0">
+    
+    <button posX = "-356" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+    <button posX = "0" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+    <button posX = "356" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
 
+    <!-- katie: please implement this positioning for the videos -->
+    <video posX="10" posY="10" >m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
+</user_area>
 
-<user_area key = "3" centerX = "480" centerY = "300" angle = "0">
+<user_area key = "3" centerX = "480" centerY = "300" angle = "180">
     
     <button posX = "-356" posY = "176" angle = "0" device = "148986" sensor = "7">
         <img id = "inactive">inactive.png</img>
@@ -26,6 +45,43 @@
     <video>m1.mov</video>
 </user_area>
 
+<user_area key = "1" centerX = "1440" centerY = "300" angle = "180">
     
+    <button posX = "-272" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+    <button posX = "0" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+    <button posX = "272" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+	<video>m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
+</user_area>
+
+<user_area key = "4" centerX = "1440" centerY = "900" angle = "0">
     
+    <button posX = "-356" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+    <button posX = "0" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+    <button posX = "356" posY = "176" angle = "0" device = "148986" sensor = "7">
+        <img id = "inactive">inactive.png</img>
+        <img id = "active">active.png</img>
+    </button>
+
+	<video>m1.mov</video>
+	<video>m2.mov</video>
+	<video>m3.mov</video>
+</user_area>
+
 </project>
