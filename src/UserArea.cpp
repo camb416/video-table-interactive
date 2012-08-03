@@ -98,11 +98,11 @@ void UserArea::update()
     
 }
 
-void UserArea::draw(bool _debug)
+void UserArea::draw(bool _debug, Vec2f _scale)
 {
     gl::pushMatrices();
     
-    gl::translate(pos.x,pos.y);
+    gl::translate(pos.x*_scale.x,pos.y*_scale.y);
     gl::rotate(angle);
 
   //  gl::rotate(angle + sin(((float)frameCount)/150.0f)*7.5f);

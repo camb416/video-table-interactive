@@ -35,6 +35,8 @@ private:
     float width, height;
     bool useTouch;
     int debugState;
+    Vec2f defaultWindowSize;
+    Vec2f windowScale;
     
 };
 
@@ -49,8 +51,10 @@ void ProjectApp::setup()
         pConnector.connect(148986);
     }
     
-    width = 1760.0;
-    height = 960.0;
+    // get these from the XML
+    setWindowSize(defaultWindowSize.x, defaultWindowSize.y);
+//    width = 1920.0;
+ //   height = 1200.0;
 }
 
 void ProjectApp::parseXML()
@@ -68,6 +72,10 @@ void ProjectApp::parseXML()
         string useTouch_str = "false";//areas.getAttributeValue<string>("usetouch");
         //
         //
+        float scrW = areas.getAttributeValue<float>("screenwidth");
+        float scrH = areas.getAttributeValue<float>("screenheight");
+
+        defaultWindowSize = Vec2f(scrW,scrH);
         
         if(useTouch_str=="false" || useTouch_str=="no" || useTouch_str == "none" || useTouch_str == "0"){
             console() << "looks like we don't want to use touch" << endl;
@@ -95,7 +103,7 @@ void ProjectApp::parseXML()
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	settings->setWindowSize( 1920,1200 );
+	// settings->setWindowSize( 1920,1200 );
 	settings->setFrameRate( 60.0f );
     // katie: this doesn't work... probably needs to be in setup (also, have it work with the XML settings in <project>
     setFullScreen(true);
@@ -132,9 +140,14 @@ void ProjectApp::update()
     
     pConnector.updateKits();
     
+    Area curWindowSizeA = getWindowBounds();
+    Vec2f curWindowSize = Vec2f(curWindowSizeA.getWidth(),curWindowSizeA.getHeight());
+    windowScale = curWindowSize/defaultWindowSize;
+    
     // Update UserAreas
-    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
+    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){
          p->update();
+    }
 }
 
 void ProjectApp::draw()
@@ -146,8 +159,9 @@ void ProjectApp::draw()
     
     //for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
        // p->drawBackground(debugDrawFlag);
-    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-        p->draw(debugDrawFlag);
+    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){
+        p->draw(debugDrawFlag, windowScale);
+    }
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );

@@ -30,7 +30,7 @@ public:
     UserArea(XmlTree area, PhidgetConnector *pc_);
     
     void update();
-    void draw(bool _debug = false);
+    void draw(bool _debug = false, Vec2f _scale = Vec2f(1.0f,1.0f));
     void drawBackground(bool _debug = false);
     Vec2f pos;
     char getKey();
