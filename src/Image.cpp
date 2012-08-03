@@ -185,10 +185,12 @@ void Image::draw(char _align,Vec2f _scale, bool _debug)
         */
         gl::color(ColorA(255, 255, 255, alpha));
         gl::pushMatrices();
-        GalleryHelper::alignElement(_align,texture.getBounds());
-      //  gl::draw( texture, Vec2f( 0, 0 ) );
         
         Rectf texRect = Rectf(0.0f,0.0f,_scale.x*texture.getWidth(),_scale.y*texture.getHeight());
+
+        GalleryHelper::alignElement(_align,Area(texRect));
+      //  gl::draw( texture, Vec2f( 0, 0 ) );
+        
         
         gl::draw(texture, texRect );
         if(_debug){

@@ -23,7 +23,8 @@ namespace gallerytools {
         void press();
         void release();
         void update();
-        void draw(bool _debug = false);
+
+        void draw(bool _debug = false, Vec2f _scale=Vec2f(1.0f,1.0f));
         int getSensor();
         int getDevice();
         

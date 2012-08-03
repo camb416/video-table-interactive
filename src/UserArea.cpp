@@ -112,7 +112,7 @@ void UserArea::draw(bool _debug, Vec2f _scale)
     player.draw(CENTER,_scale,_debug);
 
     for (int i = 0; i < buttons.size(); i++){
-        buttons[i].draw(_debug);
+        buttons[i].draw(_debug, _scale);
     }
     
 
