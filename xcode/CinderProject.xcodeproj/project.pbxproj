@@ -29,6 +29,7 @@
 		320B342F15CC2EC9003AB00F /* active_area.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B342E15CC2EC9003AB00F /* active_area.png */; };
 		320B343215CC5E62003AB00F /* Recipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343015CC5E62003AB00F /* Recipe.cpp */; };
 		320B343515CC5F48003AB00F /* CookStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343315CC5F48003AB00F /* CookStep.cpp */; };
+		320B343715CC64F6003AB00F /* RECIPES.plist in Resources */ = {isa = PBXBuildFile; fileRef = 320B343615CC64F6003AB00F /* RECIPES.plist */; };
 		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
 		3238F00115C71DFF001BB4A1 /* m1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00015C71DFF001BB4A1 /* m1.mov */; };
@@ -80,6 +81,7 @@
 		320B343115CC5E62003AB00F /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = ../include/Recipe.h; sourceTree = "<group>"; };
 		320B343315CC5F48003AB00F /* CookStep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CookStep.cpp; path = ../src/CookStep.cpp; sourceTree = "<group>"; };
 		320B343415CC5F48003AB00F /* CookStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CookStep.h; path = ../include/CookStep.h; sourceTree = "<group>"; };
+		320B343615CC64F6003AB00F /* RECIPES.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RECIPES.plist; path = ../resources/RECIPES.plist; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
 		3238F00015C71DFF001BB4A1 /* m1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m1.mov; path = ../resources/m1.mov; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				328DA9F615C6F92300E75A45 /* background.jpg */,
 				328DA9F715C6F92300E75A45 /* inactive.png */,
 				1B1C425C15A73FF200CC936A /* USER_AREAS.xml */,
+				320B343615CC64F6003AB00F /* RECIPES.plist */,
 				1B09CABF15A385A10086B68B /* m3.mp4 */,
 				1B09CABD15A385990086B68B /* m2.m4v */,
 				1B09CABB15A385920086B68B /* m1.mp4 */,
@@ -352,6 +355,7 @@
 				3238F00515C71E6B001BB4A1 /* m3.mov in Resources */,
 				320B33D515C985CB003AB00F /* area_background.png in Resources */,
 				320B342F15CC2EC9003AB00F /* active_area.png in Resources */,
+				320B343715CC64F6003AB00F /* RECIPES.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

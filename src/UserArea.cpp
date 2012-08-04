@@ -27,6 +27,8 @@ UserArea::UserArea(char c, Rectf vR, vector<string> videos, float angle_in, Vec2
 
 UserArea::UserArea(XmlTree area, PhidgetConnector *pc_)
 {
+    
+    // okay so if theres attributes aren't here, it bugs out it would seem?
     pos = Vec2f(area.getAttributeValue<float>( "centerX" ), area.getAttributeValue<float>( "centerY" ));
     angle = area.getAttributeValue<float>( "angle" );
     key = area.getAttributeValue<char>( "key" );
