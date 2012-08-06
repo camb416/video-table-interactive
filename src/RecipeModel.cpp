@@ -78,6 +78,15 @@ cookStepModel RecipeModel::getCookStep(int _whichStep){
         return emptyCookStep;
     }
 }
+int RecipeModel::trace(){
+    console() << title_str << " =====V===== " << endl;
+    console() << "menu image: " << img_menu << ", end image: " << img_end << endl;
+    for(int i=0;i<cookSteps.size();i++){
+        cookStepModel csm = cookSteps.at(i);
+        console() << csm.img << " : " << csm.video << " : " << csm.btn << endl;
+    }
+    return 0;
+}
 
 bool RecipeModel::isLoaded() {
     return bLoaded;
