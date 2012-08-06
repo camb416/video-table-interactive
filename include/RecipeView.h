@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __CinderProject__Recipe__
-#define __CinderProject__Recipe__
+#ifndef __CinderProject__RecipeView__
+#define __CinderProject__RecipeView__
 
 #include "Image.h"
 #include "CookStep.h"

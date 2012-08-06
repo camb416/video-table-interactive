@@ -27,8 +27,7 @@
 		320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342215CB128D003AB00F /* VideoPlayer.cpp */; };
 		320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */; };
 		320B342F15CC2EC9003AB00F /* active_area.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B342E15CC2EC9003AB00F /* active_area.png */; };
-		320B343215CC5E62003AB00F /* Recipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343015CC5E62003AB00F /* Recipe.cpp */; };
-		320B343515CC5F48003AB00F /* CookStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343315CC5F48003AB00F /* CookStep.cpp */; };
+		320B343215CC5E62003AB00F /* RecipeView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343015CC5E62003AB00F /* RecipeView.cpp */; };
 		320B343715CC64F6003AB00F /* RECIPES.plist in Resources */ = {isa = PBXBuildFile; fileRef = 320B343615CC64F6003AB00F /* RECIPES.plist */; };
 		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
@@ -40,6 +39,8 @@
 		328DA9FA15C6F92300E75A45 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F615C6F92300E75A45 /* background.jpg */; };
 		328DA9FB15C6F92300E75A45 /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F715C6F92300E75A45 /* inactive.png */; };
 		328DAA4415C6FDD600E75A45 /* Phidget21.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328DAA2F15C6FDD600E75A45 /* Phidget21.framework */; };
+		3295E55415D01A1800B63297 /* RecipeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E55215D01A1800B63297 /* RecipeModel.cpp */; };
+		329B28B615D00EC40021F656 /* Cookbook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* Cookbook.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -77,10 +78,8 @@
 		320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GalleryHelper.cpp; path = ../src/GalleryHelper.cpp; sourceTree = "<group>"; };
 		320B342D15CC128E003AB00F /* GalleryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GalleryHelper.h; path = ../include/GalleryHelper.h; sourceTree = "<group>"; };
 		320B342E15CC2EC9003AB00F /* active_area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active_area.png; path = ../resources/active_area.png; sourceTree = "<group>"; };
-		320B343015CC5E62003AB00F /* Recipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Recipe.cpp; path = ../src/Recipe.cpp; sourceTree = "<group>"; };
-		320B343115CC5E62003AB00F /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = ../include/Recipe.h; sourceTree = "<group>"; };
-		320B343315CC5F48003AB00F /* CookStep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CookStep.cpp; path = ../src/CookStep.cpp; sourceTree = "<group>"; };
-		320B343415CC5F48003AB00F /* CookStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CookStep.h; path = ../include/CookStep.h; sourceTree = "<group>"; };
+		320B343015CC5E62003AB00F /* RecipeView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RecipeView.cpp; path = ../src/RecipeView.cpp; sourceTree = "<group>"; };
+		320B343115CC5E62003AB00F /* RecipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeView.h; path = ../include/RecipeView.h; sourceTree = "<group>"; };
 		320B343615CC64F6003AB00F /* RECIPES.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RECIPES.plist; path = ../resources/RECIPES.plist; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
@@ -95,6 +94,10 @@
 		328DAA2F15C6FDD600E75A45 /* Phidget21.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Phidget21.framework; path = ../../Cinder/blocks/phidgets/lib/macosx/Phidget21.framework; sourceTree = "<group>"; };
 		328DAA4215C6FDD600E75A45 /* PhidgetConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetConnector.h; sourceTree = "<group>"; };
 		328DAA4315C6FDD600E75A45 /* PhidgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhidgetModel.h; sourceTree = "<group>"; };
+		3295E55215D01A1800B63297 /* RecipeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RecipeModel.cpp; path = ../src/RecipeModel.cpp; sourceTree = "<group>"; };
+		3295E55315D01A1800B63297 /* RecipeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeModel.h; path = ../src/RecipeModel.h; sourceTree = "<group>"; };
+		329B28B415D00EC40021F656 /* Cookbook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cookbook.cpp; path = ../src/Cookbook.cpp; sourceTree = "<group>"; };
+		329B28B515D00EC40021F656 /* Cookbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cookbook.h; path = ../src/Cookbook.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -128,14 +131,15 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				320B343315CC5F48003AB00F /* CookStep.cpp */,
+				3295E55215D01A1800B63297 /* RecipeModel.cpp */,
 				320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */,
 				320B341D15CB128D003AB00F /* Button.cpp */,
 				320B341E15CB128D003AB00F /* CinderProjectApp.cpp */,
+				329B28B415D00EC40021F656 /* Cookbook.cpp */,
 				320B341F15CB128D003AB00F /* Image.cpp */,
 				320B342015CB128D003AB00F /* TwoStateButton.cpp */,
 				320B342115CB128D003AB00F /* UserArea.cpp */,
-				320B343015CC5E62003AB00F /* Recipe.cpp */,
+				320B343015CC5E62003AB00F /* RecipeView.cpp */,
 				320B342215CB128D003AB00F /* VideoPlayer.cpp */,
 			);
 			name = Source;
@@ -201,8 +205,8 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				320B343115CC5E62003AB00F /* Recipe.h */,
-				320B343415CC5F48003AB00F /* CookStep.h */,
+				320B343115CC5E62003AB00F /* RecipeView.h */,
+				3295E55315D01A1800B63297 /* RecipeModel.h */,
 				320B342D15CC128E003AB00F /* GalleryHelper.h */,
 				320B340515CB0025003AB00F /* Image.h */,
 				32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */,
@@ -210,6 +214,7 @@
 				320B341015CB10A4003AB00F /* TwoStateButton.h */,
 				1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */,
 				1B029E8E15A248D800FD18F5 /* UserArea.h */,
+				329B28B515D00EC40021F656 /* Cookbook.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -375,8 +380,9 @@
 				320B342715CB128D003AB00F /* UserArea.cpp in Sources */,
 				320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */,
 				320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */,
-				320B343215CC5E62003AB00F /* Recipe.cpp in Sources */,
-				320B343515CC5F48003AB00F /* CookStep.cpp in Sources */,
+				320B343215CC5E62003AB00F /* RecipeView.cpp in Sources */,
+				329B28B615D00EC40021F656 /* Cookbook.cpp in Sources */,
+				3295E55415D01A1800B63297 /* RecipeModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

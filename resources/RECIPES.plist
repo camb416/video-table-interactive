@@ -2,7 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>videoPath</key>
-	<string>m1.mov</string>
+	<key>Recipes</key>
+	<dict>
+		<key>Tamales</key>
+		<dict>
+			<key>menu-image</key>
+			<string>tamales_menu.png</string>
+			<key>end-image</key>
+			<string>tamales_end.png</string>
+			<key>Steps</key>
+			<dict>
+				<key>prepare</key>
+				<dict>
+					<key>start-image</key>
+					<string>tamales_prep_start.png</string>
+					<key>video</key>
+					<string>tamales_prep.mov</string>
+				</dict>
+				<key>chop</key>
+				<dict>
+					<key>start-image</key>
+					<string>tamales_prep_start.png</string>
+					<key>video</key>
+					<string>tamales_prep.mov</string>
+				</dict>
+				<key>cook</key>
+				<dict>
+					<key>start-image</key>
+					<string>tamales_prep_start.png</string>
+					<key>video</key>
+					<string>tamales_prep.mov</string>
+				</dict>
+				<key>eat</key>
+				<dict>
+					<key>start-image</key>
+					<string>tamales_prep_start.png</string>
+					<key>video</key>
+					<string>tamales_prep.mov</string>
+				</dict>
+				<key>clean</key>
+				<dict>
+					<key>start-image</key>
+					<string>tamales_prep_start.png</string>
+					<key>video</key>
+					<string>tamales_prep.mov</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

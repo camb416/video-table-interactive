@@ -9,7 +9,7 @@
 #include <queue>
 #include "PhidgetConnector.h"
 #include "GalleryHelper.h"
-
+#include "Cookbook.h"
 #include "UserArea.h"
 
 using namespace ci;
@@ -24,6 +24,8 @@ public:
     void prepareSettings( Settings *settings );
 	void update();
 	void draw();
+    
+    Cookbook cookbook;
     
     vector<UserArea> mAreas;
     PhidgetConnector pConnector;    // the Phidget Connector object.
@@ -45,6 +47,8 @@ void ProjectApp::setup()
     debugState = DEVELOPMENT;
     parseXML();
     background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
+    
+    cookbook.setup();
     
     if(useTouch){
         pConnector.useEvents(false);
