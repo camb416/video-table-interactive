@@ -10,11 +10,13 @@
 #define __CinderProject__RecipeModel__
 
 #include "cinder/Xml.h"
+#include "cinder/app/AppBasic.h"
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace ci;
+using namespace cinder::app;
 using namespace std;
 
 struct cookStepModel{
@@ -30,13 +32,18 @@ public:
     int load(string _plist);
     int pretendLoad();
     bool isLoaded();
+    string getMenuImage();
+    string getEndImage();
+    cookStepModel getCookStep(int _whichStep = 0);
 
 private:
     bool bLoaded;
+    string title_str;
     XmlTree plist;
     vector<cookStepModel> cookSteps;
     string img_menu;
     string img_end;
+    cookStepModel emptyCookStep;
 };
 
 

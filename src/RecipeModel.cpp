@@ -27,6 +27,7 @@ int RecipeModel::pretendLoad(){
     // populate img_menu, img_end, cookSteps
     // if anything fails, write what failed to console, then return -1, if success return 0
     // if success, bLoaded = true;
+    title_str = "Chicken and Waffles";
     img_menu = "img_menu.png";
     img_end = "img_end.png";
     
@@ -48,6 +49,36 @@ int RecipeModel::pretendLoad(){
     bLoaded = true;
     return 0;
 }
+
+string RecipeModel::getMenuImage(){
+    if(!bLoaded){
+        console() << "requesting a menu image from an unloaded recipe: " << title_str << "." << endl;
+        return "ERROR";
+    } else {
+        return img_menu;
+    }
+}
+string RecipeModel::getEndImage(){
+    if(!bLoaded){
+        console() << "requesting an end image from an unloaded recipe: " << title_str << "." << endl;
+        return "ERROR";
+    } else {
+        return img_end;
+    }
+}
+cookStepModel RecipeModel::getCookStep(int _whichStep){
+    if(!bLoaded){
+        console() << "requesting a cookstep from an unloaded recipe: " << title_str << "." << endl;
+        return emptyCookStep;
+    }
+    if(_whichStep>-1 && _whichStep<cookSteps.size()){
+        return cookSteps.at(_whichStep);
+    } else {
+        console() << "a cookstep out of range: " << title_str << " : " << _whichStep << " / " << cookSteps.size() << "." << endl;
+        return emptyCookStep;
+    }
+}
+
 bool RecipeModel::isLoaded() {
     return bLoaded;
 }
