@@ -23,10 +23,7 @@ int RecipeModel::load(string _plist){
     return -1;
 }
 int RecipeModel::pretendLoad(){
-    // load the xml here into plist
-    // populate img_menu, img_end, cookSteps
-    // if anything fails, write what failed to console, then return -1, if success return 0
-    // if success, bLoaded = true;
+
     title_str = "Chicken and Waffles";
     img_menu = "img_menu.png";
     img_end = "img_end.png";

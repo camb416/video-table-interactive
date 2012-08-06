@@ -44,8 +44,12 @@ private:
 
 void ProjectApp::setup()
 {
-    debugState = DEVELOPMENT;
+    //debugState = DEVELOPMENT;
     
+    model.pretendSetup();
+    model.trace();
+    
+    /*
     model.setup("APP.plist","RECIPES.plist");
     
     parseXML();
@@ -64,6 +68,7 @@ void ProjectApp::setup()
     setWindowSize(defaultWindowSize.x, defaultWindowSize.y);
 //    width = 1920.0;
  //   height = 1200.0;
+     */
 }
 
 void ProjectApp::parseXML()
@@ -146,7 +151,7 @@ void ProjectApp::keyDown( KeyEvent event )
 
 void ProjectApp::update()
 {
-    
+    /*
     pConnector.updateKits();
     
     Area curWindowSizeA = getWindowBounds();
@@ -157,10 +162,12 @@ void ProjectApp::update()
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){
          p->update();
     }
+     */
 }
 
 void ProjectApp::draw()
 {
+    /*
     bool debugDrawFlag = debugState != 0;
     gl::draw(background_tex,getWindowBounds());
 	//gl::clear( Color( 0, 0, 0) );
@@ -171,6 +178,7 @@ void ProjectApp::draw()
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){
         p->draw(debugDrawFlag, windowScale);
     }
+     */
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );

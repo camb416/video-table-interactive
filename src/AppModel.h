@@ -21,15 +21,13 @@ using namespace cinder;
 
 class AppModel{
 public:
-    // not implemented yet
-    //   Cookbook();
-    //   ~Cookbook();
+    
     int setup(string _appFilePath, string _contentFilePath);
     int pretendSetup();
-vector<RecipeModel> recipes;
+    vector<RecipeModel> recipes;
     int trace();
 private:
     bool bLoaded;
-
+    
 };
 #endif /* defined(__CinderProject__Settings__) */

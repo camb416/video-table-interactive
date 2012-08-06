@@ -44,7 +44,7 @@ int AppModel::pretendSetup(){
 }
 int AppModel::trace(){
     if(bLoaded){
-    console() << "APPMODEL: " << endl;
+        console() << "APPMODEL: " << endl;
     for(int i=0;i<recipes.size();i++){
         recipes.at(i).trace();
     }
