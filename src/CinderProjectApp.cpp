@@ -11,6 +11,7 @@
 #include "GalleryHelper.h"
 #include "AppModel.h"
 #include "UserArea.h"
+#include "RecipeView.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -40,6 +41,8 @@ private:
     Vec2f defaultWindowSize;
     Vec2f windowScale;
     
+    RecipeView  * myRecipeView;
+    
 };
 
 void ProjectApp::setup()
@@ -48,6 +51,12 @@ void ProjectApp::setup()
     
     model.pretendSetup();
     model.trace();
+    
+    int numRecipes = model.recipes.size();
+  
+    myRecipeView = new RecipeView(model.recipes.at(0));
+    
+    console() << "there are " << numRecipes << " recipes.";
     
     /*
     model.setup("APP.plist","RECIPES.plist");
@@ -125,6 +134,9 @@ void ProjectApp::prepareSettings( Settings *settings )
 
 void ProjectApp::keyDown( KeyEvent event )
 {
+    
+    myRecipeView->moveForward();
+    
     switch(event.getChar()){
             case 'f':
             case 'F':
@@ -151,6 +163,7 @@ void ProjectApp::keyDown( KeyEvent event )
 
 void ProjectApp::update()
 {
+    myRecipeView->update();
     /*
     pConnector.updateKits();
     
@@ -167,12 +180,14 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
+    gl::clear( Color( 0, 0, 0) );
+    gl::enableAlphaBlending();
+
+    myRecipeView->draw(getWindowCenter());
     /*
     bool debugDrawFlag = debugState != 0;
     gl::draw(background_tex,getWindowBounds());
-	//gl::clear( Color( 0, 0, 0) );
-    gl::enableAlphaBlending();
-    
+	    
     //for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
        // p->drawBackground(debugDrawFlag);
     for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){

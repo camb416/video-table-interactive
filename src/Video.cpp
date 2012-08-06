@@ -1,12 +1,12 @@
 //
-//  Image.cpp
-//  ImageTest
+//  Video.cpp
+//  VideoTest
 //
 //  Created by Cameron Browning on 7/19/12.
 //  Copyright (c) 2012 American Museum of Natural History. All rights reserved.
 //
 
-#include "Image.h"
+#include "Video.h"
 
 
 using namespace ci::app;
@@ -16,7 +16,7 @@ using namespace std;
 using namespace gallerytools;
 
 
-/*Image::Image(string _file)
+/*Video::Video(string _file)
  {
  load(_file);
  x = y = dx = dy = 0.0f;
@@ -26,7 +26,7 @@ using namespace gallerytools;
  moveRate = 30.0f;
  }   */
 
-Image::Image(){
+Video::Video(){
     x = y = dx = dy = deg = 0;
     alpha = dAlpha = 1.0f;
     hidden = false;
@@ -34,7 +34,7 @@ Image::Image(){
     fadeRate = 30.0f;
 }
 
-Image::Image(string _file, int _x, int _y)
+Video::Video(string _file, int _x, int _y)
 {
     load(_file);
     x = _x;
@@ -49,7 +49,7 @@ Image::Image(string _file, int _x, int _y)
     fadeRate = 30.0f;
 }
 
-Image::Image(string _file, Vec2f _pos)
+Video::Video(string _file, Vec2f _pos)
 {
     load(_file);
     x = _pos.x;
@@ -64,7 +64,7 @@ Image::Image(string _file, Vec2f _pos)
     fadeRate = 50.0f;
 }
 
-Image::Image(gl::Texture _texture, Vec2f _pos)
+Video::Video(gl::Texture _texture, Vec2f _pos)
 {
     texture = _texture;
     x = _pos.x;
@@ -79,14 +79,15 @@ Image::Image(gl::Texture _texture, Vec2f _pos)
     fadeRate = 50.0f;
 }
 
-int Image::load(string _file)
+int Video::load(string _file)
 {
     path_str = _file;
     try {
-        texture = gl::Texture( loadImage( loadResource( path_str ) ) );
-    
+        
+        video = qtime::MovieGl( loadFile( loadResource( path_str ) ) );
+        
     } catch(...) {
-        console()<<"Unable to load image: "<< path_str << "." << endl;
+        console()<<"Unable to load Video: "<< path_str << "." << endl;
         return -1;
     }
     return 0;
@@ -94,11 +95,11 @@ int Image::load(string _file)
 
 /**
  *  moveTo can take an x, y coord pair or a Vec2f.
- *  The boolean dictates whether the image tweens to
+ *  The boolean dictates whether the Video tweens to
  *  its new location or moves immediately. If no boolean
  *  is given, it is assumed to be false.
  */
-void Image::moveTo(int _x, int _y, bool _tween)
+void Video::moveTo(int _x, int _y, bool _tween)
 {
     tween = _tween;
     if (!tween) {
@@ -112,57 +113,57 @@ void Image::moveTo(int _x, int _y, bool _tween)
 }
 
 /*
- void Image::moveTo(int _x, int _y)
+ void Video::moveTo(int _x, int _y)
  {
  tween = false;
  x = _x;
  y = _y;
  }   */
 
-void Image::moveTo (Vec2f pos, bool _tween)
+void Video::moveTo (Vec2f pos, bool _tween)
 {
     moveTo( pos.x, pos.y, _tween );
 }
 /*
- void Image::moveTo (Vec2f pos)
+ void Video::moveTo (Vec2f pos)
  {
  moveTo( pos.x, pos.y );
  }   */
 
-void Image::hide()
+void Video::hide()
 {
     alpha = dAlpha = 0.0f;
-   // hidden = true;
+    // hidden = true;
 }
 
-void Image::show()
+void Video::show()
 {
     hidden = false;
 }
 
-void Image::fadeOut(float _fadeRate)
+void Video::fadeOut(float _fadeRate)
 {
     fadeRate = _fadeRate;
     dAlpha = 0.0f;
 }
 
-void Image::fadeIn(float _fadeRate)
+void Video::fadeIn(float _fadeRate)
 {
     fadeRate = _fadeRate;
     dAlpha = 1.0f;
 }
 
-bool Image::isFading()
+bool Video::isFading()
 {
     return abs(dAlpha - alpha) > .01;
 }
 
-void Image::setRotation(int _deg)
+void Video::setRotation(int _deg)
 {
     deg = _deg;
 }
 
-void Image::update()
+void Video::update()
 {
     if (tween) {
         x += (dx - x) / moveRate;
@@ -172,13 +173,13 @@ void Image::update()
     alpha += (dAlpha - alpha) / fadeRate;
 }
 
-void Image::draw(char _align,bool _debug){
+void Video::draw(char _align,bool _debug){
     // deprecated
     // put a cout here?
     draw(_align,Vec2f(1.0f,1.0f),_debug);
 }
 
-void Image::draw(char _align,Vec2f _scale, bool _debug)
+void Video::draw(char _align,Vec2f _scale, bool _debug)
 {
     gl::pushMatrices();
     if (texture && !hidden) {
@@ -186,26 +187,26 @@ void Image::draw(char _align,Vec2f _scale, bool _debug)
         gl::translate(x*_scale.x, y*_scale.y);
         gl::rotate(deg);
         /*
-        gl::translate(-texture.getWidth()/2,
-                      -texture.getHeight()/2 );
-        */
+         gl::translate(-texture.getWidth()/2,
+         -texture.getHeight()/2 );
+         */
         gl::color(ColorA(255, 255, 255, alpha));
         gl::pushMatrices();
         
         Rectf texRect = Rectf(0.0f,0.0f,_scale.x*texture.getWidth(),_scale.y*texture.getHeight());
-
+        
         GalleryHelper::alignElement(_align,Area(texRect));
-      //  gl::draw( texture, Vec2f( 0, 0 ) );
+        //  gl::draw( texture, Vec2f( 0, 0 ) );
         
         
         gl::draw(texture, texRect );
         if(_debug){
-        gl::color(1.0f,1.0f,1.0f);
-        //Rectf aRect =texture.getBounds();
-        //    Rectf aRect = Rectf(0.0f,0.0f,text)
-        gl::drawStrokedRect(texRect);
-        gl::drawLine(texRect.getLowerLeft(),texRect.getUpperRight());
-        gl::drawLine(texRect.getLowerRight(),texRect.getUpperLeft());
+            gl::color(1.0f,1.0f,1.0f);
+            //Rectf aRect =texture.getBounds();
+            //    Rectf aRect = Rectf(0.0f,0.0f,text)
+            gl::drawStrokedRect(texRect);
+            gl::drawLine(texRect.getLowerLeft(),texRect.getUpperRight());
+            gl::drawLine(texRect.getLowerRight(),texRect.getUpperLeft());
         }
         gl::popMatrices();
         if(_debug){
@@ -224,7 +225,7 @@ void Image::draw(char _align,Vec2f _scale, bool _debug)
     gl::color(1.0f,1.0f,1.0f);
 }
 
-void Image::border()
+void Video::border()
 {
     Rectf r = Rectf( x - texture.getWidth()/2,
                     y - texture.getHeight()/2,
@@ -234,22 +235,22 @@ void Image::border()
     gl::drawSolidRect(r);
 }
 
-int Image::getRotation()
+int Video::getRotation()
 {
     return deg;
 }
 
-int Image::getX()
+int Video::getX()
 {
     return x;
 }
 
-int Image::getY()
+int Video::getY()
 {
     return y;
 }
 
-Vec2f Image::getPosition()
+Vec2f Video::getPosition()
 {
     return Vec2f(x, y);
 }

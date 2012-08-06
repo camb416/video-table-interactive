@@ -36,6 +36,7 @@ public:
     string getEndImage();
     cookStepModel getCookStep(int _whichStep = 0);
     int trace();
+    int getNumSteps();
 
 private:
     bool bLoaded;

@@ -75,6 +75,11 @@ cookStepModel RecipeModel::getCookStep(int _whichStep){
         return emptyCookStep;
     }
 }
+
+int RecipeModel::getNumSteps(){
+    return cookSteps.size();
+}
+
 int RecipeModel::trace(){
     console() << title_str << " =====V===== " << endl;
     console() << "menu image: " << img_menu << ", end image: " << img_end << endl;

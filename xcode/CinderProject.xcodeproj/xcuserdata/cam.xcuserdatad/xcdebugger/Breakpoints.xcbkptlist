@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/Image.cpp"
-         timestampString = "365716475.923171"
+         timestampString = "365980663.091438"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "180"
-         endingLineNumber = "180">
+         startingLineNumber = "181"
+         endingLineNumber = "181">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -45,12 +45,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/CinderProjectApp.cpp"
-         timestampString = "365971771.876428"
+         timestampString = "365978210.007838"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "162"
-         endingLineNumber = "162"
+         startingLineNumber = "175"
+         endingLineNumber = "175"
          landmarkName = "ProjectApp::update()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/Image.cpp"
+         timestampString = "365980663.091438"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "176"
+         endingLineNumber = "176"
+         landmarkName = "Image::draw(char _align,bool _debug)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
