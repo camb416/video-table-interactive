@@ -33,15 +33,15 @@ int RecipeModel::pretendLoad(){
     cookStepModel ck;
     ck.img = "ckimg0.png";
     ck.btn = "ckbtn0.png";
-    ck.video = "ckvid0.png";
+    ck.video = "ck0.m4v";
     cookSteps.push_back(ck);
     ck.img = "ckimg1.png";
     ck.btn = "ckbtn1.png";
-    ck.video = "ckvid1.png";
+    ck.video = "ck1.m4v";
     cookSteps.push_back(ck);
     ck.img = "ckimg2.png";
     ck.btn = "ckbtn2.png";
-    ck.video = "ckvid2.png";
+    ck.video = "ck2.m4v";
     cookSteps.push_back(ck);
     
     
