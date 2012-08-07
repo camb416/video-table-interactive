@@ -17,6 +17,7 @@
 #include "cinder/Font.h"
 #include "Resources.h"
 #include "Image.h"
+#include "Video.h"
 #include "CookStep.h"
 #include "RecipeModel.h"
 #include "cinder/qtime/QuickTime.h"
@@ -44,7 +45,7 @@ private:
    // gallerytools::Image menu_img;
     vector<CookStep> steps;
     gl::Texture text_texture;
-    qtime::MovieGl video;
+    gallerytools::Video video;
     
 };
 

@@ -56,6 +56,7 @@
 		3295E57615D0645500B63297 /* ck1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57315D0645500B63297 /* ck1.m4v */; };
 		3295E57715D0645500B63297 /* ck2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57415D0645500B63297 /* ck2.m4v */; };
 		3295E57A15D06CB000B63297 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E57815D06CB000B63297 /* Video.cpp */; };
+		3295E57C15D075D200B63297 /* SETTINGS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57B15D075D200B63297 /* SETTINGS.plist */; };
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
@@ -129,6 +130,7 @@
 		3295E57415D0645500B63297 /* ck2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = ck2.m4v; path = ../resources/ck2.m4v; sourceTree = "<group>"; };
 		3295E57815D06CB000B63297 /* Video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Video.cpp; path = ../src/Video.cpp; sourceTree = "<group>"; };
 		3295E57915D06CB000B63297 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Video.h; path = ../src/Video.h; sourceTree = "<group>"; };
+		3295E57B15D075D200B63297 /* SETTINGS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SETTINGS.plist; path = ../resources/SETTINGS.plist; sourceTree = "<group>"; };
 		329B28B415D00EC40021F656 /* AppModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppModel.cpp; path = ../src/AppModel.cpp; sourceTree = "<group>"; };
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				328DA9F715C6F92300E75A45 /* inactive.png */,
 				1B1C425C15A73FF200CC936A /* USER_AREAS.xml */,
 				320B343615CC64F6003AB00F /* RECIPES.plist */,
+				3295E57B15D075D200B63297 /* SETTINGS.plist */,
 				1B09CABF15A385A10086B68B /* m3.mp4 */,
 				1B09CABD15A385990086B68B /* m2.m4v */,
 				1B09CABB15A385920086B68B /* m1.mp4 */,
@@ -426,6 +429,7 @@
 				3295E57515D0645500B63297 /* ck0.m4v in Resources */,
 				3295E57615D0645500B63297 /* ck1.m4v in Resources */,
 				3295E57715D0645500B63297 /* ck2.m4v in Resources */,
+				3295E57C15D075D200B63297 /* SETTINGS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

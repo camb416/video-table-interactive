@@ -52,8 +52,9 @@ void RecipeView::moveForward(){
 
 void RecipeView::update(){
     img.update();
+    video.update();
     if(stepState==1){
-        if(video.isDone()) moveForward();
+      //  if(video.isDone()) moveForward();
     }
     
     char buffer [50];
@@ -69,8 +70,7 @@ void RecipeView::update(){
         // moved from video to new start image
         // load both the image and the video for the new step
         img.load(recipeModel.getCookStep(curStep).img);
-        console() << "Loaded a vid..." << endl;
-        video = qtime::MovieGl( loadResource(recipeModel.getCookStep(curStep).video));
+        video.load(recipeModel.getCookStep(curStep).video);
         prevStep = curStep;
     }
     if(prevStepState!=stepState){
@@ -80,8 +80,7 @@ void RecipeView::update(){
         if(stepState==1){
             video.fadeIn();
             img.fadeOut();
-            console() << "playing a vid..." << endl;
-   video.play();
+            video.play();
         } else {
             img.fadeIn();
             video.fadeOut();
@@ -103,11 +102,9 @@ void RecipeView::draw(Vec2f pos){
     if(stepState==0){
     img.draw(CENTER,true);
     } else {
-       // console() << "drawing a vid" << endl;
-        gl::Texture tex = video.getTexture();
-        try{
-            if(tex) gl::draw(tex);
-        } catch(...){ console() << "buggy" << endl; }
+       video.draw();
+        
+      
     }
     // gl::translate(20,20,0);
    // menu_img.draw(CENTER,true);

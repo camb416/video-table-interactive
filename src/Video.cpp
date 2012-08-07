@@ -84,13 +84,22 @@ int Video::load(string _file)
     path_str = _file;
     try {
         
-        video = qtime::MovieGl( loadFile( loadResource( path_str ) ) );
+        video = qtime::MovieGl( loadResource( path_str  ) );
         
     } catch(...) {
         console()<<"Unable to load Video: "<< path_str << "." << endl;
         return -1;
     }
     return 0;
+}
+bool Video::isDone(){
+    return video.isDone();
+}
+void Video::play(){
+    video.play();
+}
+void Video::stop(){
+    video.stop();
 }
 
 /**
@@ -149,6 +158,7 @@ void Video::fadeOut(float _fadeRate)
 
 void Video::fadeIn(float _fadeRate)
 {
+    hidden = false;
     fadeRate = _fadeRate;
     dAlpha = 1.0f;
 }
@@ -165,7 +175,11 @@ void Video::setRotation(int _deg)
 
 void Video::update()
 {
-    if (tween) {
+    if(video){
+        
+    texture = video.getTexture();
+    }
+        if (tween) {
         x += (dx - x) / moveRate;
         y += (dy - y) / moveRate;
     }

@@ -43,7 +43,7 @@ namespace gallerytools {
         void setRotation(int _deg);
         void update();
         
-        void draw(char _align,Vec2f _scale = Vec2f(1.0f,1.0f),bool _debug = false);
+        void draw(char _align = CENTER,Vec2f _scale = Vec2f(1.0f,1.0f),bool _debug = false);
         // legacy support
         void draw(char _align,bool _debug = false);
         
@@ -51,6 +51,9 @@ namespace gallerytools {
         int  getX();
         int  getY();
         Vec2f getPosition();
+        bool isDone();
+        void play();
+        void stop();
         
     private:
         string path_str;
