@@ -24,9 +24,15 @@ public:
     
     int setup(string _appFilePath, string _contentFilePath);
     int pretendSetup();
-    vector<RecipeModel> recipes;
+   // vector<RecipeModel> recipes;
     int trace();
+    void parseRecipes(XmlTree _root);
+    
+    vector<RecipeModel> recipes;
+    
 private:
+    
+
     bool bLoaded;
     
 };

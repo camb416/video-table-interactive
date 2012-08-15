@@ -19,10 +19,10 @@ using namespace ci;
 using namespace cinder::app;
 using namespace std;
 
-struct cookStepModel{
+struct CookStepModel{
     string img;
     string video;
-    string btn;
+    string name;
 };
 
 class RecipeModel{
@@ -30,22 +30,31 @@ public:
     RecipeModel();
     ~RecipeModel();
     int load(string _plist);
-    int pretendLoad();
-    bool isLoaded();
-    string getMenuImage();
-    string getEndImage();
-    cookStepModel getCookStep(int _whichStep = 0);
+    int testCase();
+  //  bool isLoaded();
+    int save();
+  //  string getMenuImage();
+  //  string getEndImage();
+    CookStepModel getCookStep(int _whichStep = 0);
     int trace();
     int getNumSteps();
+    
+    // for parity with PlistReader
+    string name;
+    vector<CookStepModel> steps;
+    
 
 private:
-    bool bLoaded;
-    string title_str;
-    XmlTree plist;
-    vector<cookStepModel> cookSteps;
-    string img_menu;
-    string img_end;
-    cookStepModel emptyCookStep;
+ //   bool bLoaded;
+   // string title_str;
+  //  XmlTree plist;
+    
+    // deprecate me
+    vector<CookStepModel> cookSteps;
+  
+    //  string img_menu;
+  //  string img_end;
+    CookStepModel emptyCookStep;
 };
 
 

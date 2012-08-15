@@ -142,12 +142,14 @@ void Video::moveTo (Vec2f pos, bool _tween)
 void Video::hide()
 {
     alpha = dAlpha = 0.0f;
+    hidden = true;
     // hidden = true;
 }
 
 void Video::show()
 {
     hidden = false;
+    alpha = dAlpha = 1.0f;
 }
 
 void Video::fadeOut(float _fadeRate)

@@ -54,7 +54,7 @@ void RecipeView::update(){
     img.update();
     video.update();
     if(stepState==1){
-      //  if(video.isDone()) moveForward();
+        if(video.isDone()) moveForward();
     }
     
     char buffer [50];
@@ -78,12 +78,16 @@ void RecipeView::update(){
         //
         
         if(stepState==1){
-            video.fadeIn();
-            img.fadeOut();
+           // video.fadeIn();
+            video.show();
+            img.hide();
+            // img.fadeOut();
             video.play();
         } else {
-            img.fadeIn();
-            video.fadeOut();
+            //img.fadeIn();
+            //video.fadeOut();
+            img.show();
+            video.hide();
         }
      //   if(prevStepState==-1)  video.stop();
         prevStepState = stepState;
@@ -100,9 +104,9 @@ void RecipeView::draw(Vec2f pos){
     
     gl::translate(pos);
     if(stepState==0){
-    img.draw(CENTER,true);
+    img.draw(TOP_LEFT,true);
     } else {
-       video.draw();
+       video.draw(TOP_LEFT,true);
         
       
     }

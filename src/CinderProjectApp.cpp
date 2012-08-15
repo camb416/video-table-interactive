@@ -28,6 +28,8 @@ public:
     
     AppModel model;
     
+    
+    
     vector<UserArea> mAreas;
     PhidgetConnector pConnector;    // the Phidget Connector object.
 
@@ -40,21 +42,29 @@ private:
     int debugState;
     Vec2f defaultWindowSize;
     Vec2f windowScale;
+    vector<RecipeView> recipeViews;
     
-    RecipeView  * myRecipeView;
+    // RecipeView  * myRecipeView;
     
 };
 
 void ProjectApp::setup()
 {
     //debugState = DEVELOPMENT;
+   
+    
+    //console() << "loading settings... " << (model.setup("APP.plist","RECIPES.plist")==0 ? "OK." : "Error.") << endl;
     
     model.pretendSetup();
     model.trace();
     
+     
     int numRecipes = model.recipes.size();
   
-    myRecipeView = new RecipeView(model.recipes.at(0));
+  //  myRecipeView = new RecipeView(model.recipes.at(0));
+    for(int i=0;i<model.recipes.size();i++){
+        recipeViews.push_back(RecipeView(model.recipes.at(i)));
+    }
     
     console() << "there are " << numRecipes << " recipes.";
     
@@ -126,16 +136,18 @@ void ProjectApp::parseXML()
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	// settings->setWindowSize( 1920,1200 );
+	 settings->setWindowSize( 1920,1200 );
 	settings->setFrameRate( 60.0f );
     // katie: this doesn't work... probably needs to be in setup (also, have it work with the XML settings in <project>
-    setFullScreen(true);
+    // setFullScreen(true);
 }
 
 void ProjectApp::keyDown( KeyEvent event )
 {
     
-    myRecipeView->moveForward();
+    for(int i=0;i<recipeViews.size();i++){
+        recipeViews.at(i).moveForward();
+    }
     
     switch(event.getChar()){
             case 'f':
@@ -163,7 +175,10 @@ void ProjectApp::keyDown( KeyEvent event )
 
 void ProjectApp::update()
 {
-    myRecipeView->update();
+    for(int i=0;i<recipeViews.size();i++){
+    //myRecipeView->update();
+        recipeViews.at(i).update();
+    }
     /*
     pConnector.updateKits();
     
@@ -183,7 +198,10 @@ void ProjectApp::draw()
     gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
 
-    myRecipeView->draw(getWindowCenter());
+//    myRecipeView->draw(Vec2f(100,100));
+    for(int i=0;i<recipeViews.size();i++){
+        recipeViews.at(i).draw(Vec2f(100*i,100*i));
+    }
     /*
     bool debugDrawFlag = debugState != 0;
     gl::draw(background_tex,getWindowBounds());

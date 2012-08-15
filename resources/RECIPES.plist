@@ -6,46 +6,42 @@
 	<dict>
 		<key>Tamales</key>
 		<dict>
-			<key>menu-image</key>
-			<string>tamales_menu.png</string>
-			<key>end-image</key>
-			<string>tamales_end.png</string>
 			<key>Steps</key>
 			<dict>
 				<key>prepare</key>
 				<dict>
-					<key>start-image</key>
-					<string>tamales_prep_start.png</string>
+					<key>img</key>
+					<string>ckimg0.png</string>
 					<key>video</key>
-					<string>tamales_prep.mov</string>
+					<string>sample.mov</string>
 				</dict>
 				<key>chop</key>
 				<dict>
-					<key>start-image</key>
-					<string>tamales_prep_start.png</string>
+					<key>img</key>
+					<string>ckimg1.png</string>
 					<key>video</key>
-					<string>tamales_prep.mov</string>
+					<string>sample.mov</string>
 				</dict>
 				<key>cook</key>
 				<dict>
-					<key>start-image</key>
-					<string>tamales_prep_start.png</string>
+					<key>img</key>
+					<string>ckimg2.png</string>
 					<key>video</key>
-					<string>tamales_prep.mov</string>
+					<string>sample.mov</string>
 				</dict>
 				<key>eat</key>
 				<dict>
-					<key>start-image</key>
-					<string>tamales_prep_start.png</string>
+					<key>img</key>
+					<string>ckimg3.png</string>
 					<key>video</key>
-					<string>tamales_prep.mov</string>
+					<string>sample.mov</string>
 				</dict>
 				<key>clean</key>
 				<dict>
-					<key>start-image</key>
-					<string>tamales_prep_start.png</string>
+					<key>img</key>
+					<string>ckimg4.png</string>
 					<key>video</key>
-					<string>tamales_prep.mov</string>
+					<string>sample.mov</string>
 				</dict>
 			</dict>
 		</dict>

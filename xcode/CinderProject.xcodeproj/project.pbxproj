@@ -52,11 +52,11 @@
 		3295E56A15D04F7000B63297 /* img_end.png in Resources */ = {isa = PBXBuildFile; fileRef = 3295E55E15D04F7000B63297 /* img_end.png */; };
 		3295E56B15D04F7000B63297 /* img_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3295E55F15D04F7000B63297 /* img_menu.png */; };
 		3295E56C15D04F7000B63297 /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 3295E56015D04F7000B63297 /* inactive.png */; };
-		3295E57515D0645500B63297 /* ck0.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57215D0645500B63297 /* ck0.m4v */; };
-		3295E57615D0645500B63297 /* ck1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57315D0645500B63297 /* ck1.m4v */; };
-		3295E57715D0645500B63297 /* ck2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57415D0645500B63297 /* ck2.m4v */; };
 		3295E57A15D06CB000B63297 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E57815D06CB000B63297 /* Video.cpp */; };
 		3295E57C15D075D200B63297 /* SETTINGS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3295E57B15D075D200B63297 /* SETTINGS.plist */; };
+		3295E57F15D1620500B63297 /* NewUserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E57D15D1620500B63297 /* NewUserArea.cpp */; };
+		3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E59415DBFD3900B63297 /* PlistReader.cpp */; };
+		3295E5A015DC478E00B63297 /* sample.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3295E59F15DC478E00B63297 /* sample.mov */; };
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
@@ -131,6 +131,11 @@
 		3295E57815D06CB000B63297 /* Video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Video.cpp; path = ../src/Video.cpp; sourceTree = "<group>"; };
 		3295E57915D06CB000B63297 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Video.h; path = ../src/Video.h; sourceTree = "<group>"; };
 		3295E57B15D075D200B63297 /* SETTINGS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SETTINGS.plist; path = ../resources/SETTINGS.plist; sourceTree = "<group>"; };
+		3295E57D15D1620500B63297 /* NewUserArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewUserArea.cpp; path = ../src/NewUserArea.cpp; sourceTree = "<group>"; };
+		3295E57E15D1620500B63297 /* NewUserArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewUserArea.h; path = ../src/NewUserArea.h; sourceTree = "<group>"; };
+		3295E59215DBFD2E00B63297 /* PlistReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlistReader.h; path = ../include/PlistReader.h; sourceTree = "<group>"; };
+		3295E59415DBFD3900B63297 /* PlistReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlistReader.cpp; path = ../src/PlistReader.cpp; sourceTree = "<group>"; };
+		3295E59F15DC478E00B63297 /* sample.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample.mov; sourceTree = "<group>"; };
 		329B28B415D00EC40021F656 /* AppModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppModel.cpp; path = ../src/AppModel.cpp; sourceTree = "<group>"; };
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
@@ -166,6 +171,8 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3295E59415DBFD3900B63297 /* PlistReader.cpp */,
+				3295E57D15D1620500B63297 /* NewUserArea.cpp */,
 				3295E57815D06CB000B63297 /* Video.cpp */,
 				320B343015CC5E62003AB00F /* RecipeView.cpp */,
 				3295E55215D01A1800B63297 /* RecipeModel.cpp */,
@@ -241,6 +248,7 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				3295E59215DBFD2E00B63297 /* PlistReader.h */,
 				320B343115CC5E62003AB00F /* RecipeView.h */,
 				3295E55315D01A1800B63297 /* RecipeModel.h */,
 				320B342D15CC128E003AB00F /* GalleryHelper.h */,
@@ -252,6 +260,7 @@
 				1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */,
 				1B029E8E15A248D800FD18F5 /* UserArea.h */,
 				329B28B515D00EC40021F656 /* AppModel.h */,
+				3295E57E15D1620500B63297 /* NewUserArea.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3295E59F15DC478E00B63297 /* sample.mov */,
 				3295E57215D0645500B63297 /* ck0.m4v */,
 				3295E57315D0645500B63297 /* ck1.m4v */,
 				3295E57415D0645500B63297 /* ck2.m4v */,
@@ -426,10 +436,8 @@
 				3295E56A15D04F7000B63297 /* img_end.png in Resources */,
 				3295E56B15D04F7000B63297 /* img_menu.png in Resources */,
 				3295E56C15D04F7000B63297 /* inactive.png in Resources */,
-				3295E57515D0645500B63297 /* ck0.m4v in Resources */,
-				3295E57615D0645500B63297 /* ck1.m4v in Resources */,
-				3295E57715D0645500B63297 /* ck2.m4v in Resources */,
 				3295E57C15D075D200B63297 /* SETTINGS.plist in Resources */,
+				3295E5A015DC478E00B63297 /* sample.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +461,8 @@
 				329B28B615D00EC40021F656 /* AppModel.cpp in Sources */,
 				3295E55415D01A1800B63297 /* RecipeModel.cpp in Sources */,
 				3295E57A15D06CB000B63297 /* Video.cpp in Sources */,
+				3295E57F15D1620500B63297 /* NewUserArea.cpp in Sources */,
+				3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

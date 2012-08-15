@@ -132,11 +132,12 @@ void Image::moveTo (Vec2f pos, bool _tween)
 void Image::hide()
 {
     alpha = dAlpha = 0.0f;
-   // hidden = true;
+    hidden = true;
 }
 
 void Image::show()
 {
+    alpha = dAlpha = 1.0f;
     hidden = false;
 }
 
