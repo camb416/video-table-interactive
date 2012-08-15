@@ -41,11 +41,13 @@ private:
     int prevStep;
     int prevStepState;
  //   int reload();
-    gallerytools::Image img;
+   // gallerytools::Image img;
    // gallerytools::Image menu_img;
     vector<CookStep> steps;
     gl::Texture text_texture;
-    gallerytools::Video video;
+   // gallerytools::Video video;
+    vector<gallerytools::Image> images;
+    vector<gallerytools::Video> videos;
     
 };
 

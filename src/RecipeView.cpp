@@ -23,8 +23,20 @@ RecipeView::RecipeView(RecipeModel _model){
     stepState = 0;
     prevStepState = -1;
     prevStep = -1;
-    img.load(recipeModel.getCookStep().img);
-    img.hide();
+    
+    
+    console() << "this recipemodel has this many steps: " << recipeModel.getNumSteps() << "." << endl;
+    for(int i=0;i<recipeModel.getNumSteps();i++){
+        console() << "wtf: " << i << endl;
+        gallerytools::Image anImage;
+        anImage.load(recipeModel.getCookStep(i).img);
+        anImage.hide();
+        images.push_back(anImage);
+        gallerytools::Video aVideo;
+        aVideo.load(recipeModel.getCookStep(i).video);
+        aVideo.hide();
+        videos.push_back(aVideo);
+    }
     
     string normalFont( "Arial" );
     
@@ -51,10 +63,16 @@ void RecipeView::moveForward(){
 }
 
 void RecipeView::update(){
-    img.update();
-    video.update();
+    //img.update();
+    for(int i=0;i<videos.size();i++){
+        if(i!=curStep){
+            videos.at(i).stop();
+        }
+    }
+    
     if(stepState==1){
-        if(video.isDone()) moveForward();
+        videos.at(curStep).update();
+        if(videos.at(curStep).isDone()) moveForward();
     }
     
     char buffer [50];
@@ -69,9 +87,15 @@ void RecipeView::update(){
     if(prevStep!=curStep){
         // moved from video to new start image
         // load both the image and the video for the new step
-        img.load(recipeModel.getCookStep(curStep).img);
-        video.load(recipeModel.getCookStep(curStep).video);
+
+      //  videos.at(curStep).stop();
+     //   videos.at(curStep).hide();
+        
         prevStep = curStep;
+        
+      //  videos.at(curStep).show();
+     //   videos.at(curStep).play();
+        
     }
     if(prevStepState!=stepState){
         // moved from start image to video
@@ -79,15 +103,17 @@ void RecipeView::update(){
         
         if(stepState==1){
            // video.fadeIn();
-            video.show();
-            img.hide();
+            
+            videos.at(curStep).show();
+            images.at(curStep).hide();
             // img.fadeOut();
-            video.play();
+            videos.at(curStep).play();
         } else {
             //img.fadeIn();
             //video.fadeOut();
-            img.show();
-            video.hide();
+            images.at(curStep).show();
+            videos.at(curStep).hide();
+            videos.at(curStep).stop();
         }
      //   if(prevStepState==-1)  video.stop();
         prevStepState = stepState;
@@ -104,9 +130,11 @@ void RecipeView::draw(Vec2f pos){
     
     gl::translate(pos);
     if(stepState==0){
-    img.draw(TOP_LEFT,true);
+    
+        images.at(curStep).draw(TOP_LEFT,true);
     } else {
-       video.draw(TOP_LEFT,true);
+      
+        videos.at(curStep).draw(TOP_LEFT,true);
         
       
     }

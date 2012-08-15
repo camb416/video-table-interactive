@@ -49,9 +49,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "190"
-         endingLineNumber = "190"
-         landmarkName = "ProjectApp::update()"
-         landmarkType = "5">
+         endingLineNumber = "190">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -115,7 +113,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "62"
          endingLineNumber = "62"
-         landmarkName = "ProjectApp::setup()"
+         landmarkName = "ProjectApp::parseXML()"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -259,6 +257,110 @@
          startingLineNumber = "114"
          endingLineNumber = "114"
          landmarkName = "AppModel::parseRecipes(XmlTree _root)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/RecipeView.cpp"
+         timestampString = "366761211.136416"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "RecipeView::RecipeView(RecipeModel _model)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/RecipeView.cpp"
+         timestampString = "366763564.532596"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "144"
+         endingLineNumber = "144"
+         landmarkName = "RecipeView::draw(Vec2f pos)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/RecipeView.cpp"
+         timestampString = "366763564.532596"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
+         landmarkName = "RecipeView::update()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/RecipeView.cpp"
+         timestampString = "366763564.532596"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
+         landmarkName = "RecipeView::draw(Vec2f pos)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/VideoPlayer.cpp"
+         timestampString = "366761940.920026"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
+         landmarkName = "VideoPlayer::draw(char _align, Vec2f _scale, bool _debug)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/VideoPlayer.cpp"
+         timestampString = "366761949.988267"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "124"
+         endingLineNumber = "124"
+         landmarkName = "VideoPlayer::draw(char _align, Vec2f _scale, bool _debug)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/VideoPlayer.cpp"
+         timestampString = "366761957.43166"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
+         landmarkName = "VideoPlayer::draw(char _align, Vec2f _scale, bool _debug)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/RecipeView.cpp"
+         timestampString = "366763564.532596"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
+         landmarkName = "RecipeView::update()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
