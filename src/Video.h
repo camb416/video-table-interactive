@@ -54,6 +54,7 @@ namespace gallerytools {
         bool isDone();
         void play();
         void stop();
+        void pause();
         
     private:
         string path_str;

@@ -182,7 +182,7 @@ void Image::draw(char _align,bool _debug){
 void Image::draw(char _align,Vec2f _scale, bool _debug)
 {
     gl::pushMatrices();
-    if (texture && !hidden) {
+    if (texture) {
         
         gl::translate(x*_scale.x, y*_scale.y);
         gl::rotate(deg);

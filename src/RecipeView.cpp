@@ -64,14 +64,19 @@ void RecipeView::moveForward(){
 
 void RecipeView::update(){
     //img.update();
+    // for(int i=0;i<videos.size();i++){
+      //  if(i!=curStep){
+       //     console() << "stopping video " << i << endl;
+     //       videos.at(i).stop();
+       // }
+   // }
     for(int i=0;i<videos.size();i++){
         if(i!=curStep){
-            videos.at(i).stop();
+                      // videos.at(i).stop();
         }
     }
-    
     if(stepState==1){
-        videos.at(curStep).update();
+       videos.at(curStep).update();
         if(videos.at(curStep).isDone()) moveForward();
     }
     
@@ -90,7 +95,7 @@ void RecipeView::update(){
 
       //  videos.at(curStep).stop();
      //   videos.at(curStep).hide();
-        
+       if(prevStep>-1) videos.at(prevStep).stop();
         prevStep = curStep;
         
       //  videos.at(curStep).show();
@@ -109,6 +114,7 @@ void RecipeView::update(){
             // img.fadeOut();
             videos.at(curStep).play();
         } else {
+            console() << "// does this ever even happen?" << endl;
             //img.fadeIn();
             //video.fadeOut();
             images.at(curStep).show();
@@ -130,12 +136,25 @@ void RecipeView::draw(Vec2f pos){
     
     gl::translate(pos);
     if(stepState==0){
-    
-        images.at(curStep).draw(TOP_LEFT,true);
+        //for(int i=0;i<images.size();i++){
+        //    if(i==curStep && stepState==0){
+        //        gl::color(1.0f,0.0f,0.0f);
+        //    } else {
+                gl::color(1.0f,1.0f,1.0f);
+        //    }
+            images.at(curStep).draw(TOP_LEFT,true);
+         //   gl::translate(25.0f,25.0f,0.0f);
+     //   }
     } else {
-      
-        videos.at(curStep).draw(TOP_LEFT,true);
-        
+        // for(int i=0;i<videos.size();i++){
+        //    if(i==curStep && stepState!=0){
+        //        gl::color(1.0f,0.0f,0.0f);
+        //    } else {
+                gl::color(1.0f,1.0f,1.0f);
+        //    }
+            videos.at(curStep).draw(TOP_LEFT,true);
+        //      gl::translate(25.0f,25.0f,0.0f);
+      //  }
       
     }
     // gl::translate(20,20,0);

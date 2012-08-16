@@ -100,6 +100,10 @@ void Video::play(){
 }
 void Video::stop(){
     video.stop();
+    video.seekToStart();
+}
+void Video::pause(){
+    video.stop();
 }
 
 /**
@@ -198,7 +202,7 @@ void Video::draw(char _align,bool _debug){
 void Video::draw(char _align,Vec2f _scale, bool _debug)
 {
     gl::pushMatrices();
-    if (texture && !hidden) {
+    if (texture) {
         
         gl::translate(x*_scale.x, y*_scale.y);
         gl::rotate(deg);
