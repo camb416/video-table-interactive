@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>background</key>
-	<string></string>
+	<string>backplate.jpg</string>
 	<key>User Areas</key>
 	<dict>
 		<key>bottom-left</key>
