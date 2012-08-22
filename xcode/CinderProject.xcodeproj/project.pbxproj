@@ -14,9 +14,6 @@
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
-		1B09CABC15A385920086B68B /* m1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABB15A385920086B68B /* m1.mp4 */; };
-		1B09CABE15A385990086B68B /* m2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABD15A385990086B68B /* m2.m4v */; };
-		1B09CAC015A385A10086B68B /* m3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B09CABF15A385A10086B68B /* m3.mp4 */; };
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
 		320B33D515C985CB003AB00F /* area_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B33D415C985CB003AB00F /* area_background.png */; };
 		320B342315CB128D003AB00F /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341D15CB128D003AB00F /* Button.cpp */; };
@@ -31,9 +28,6 @@
 		320B343715CC64F6003AB00F /* RECIPES.plist in Resources */ = {isa = PBXBuildFile; fileRef = 320B343615CC64F6003AB00F /* RECIPES.plist */; };
 		3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
-		3238F00115C71DFF001BB4A1 /* m1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00015C71DFF001BB4A1 /* m1.mov */; };
-		3238F00315C71E45001BB4A1 /* m2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00215C71E45001BB4A1 /* m2.mov */; };
-		3238F00515C71E6B001BB4A1 /* m3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3238F00415C71E6B001BB4A1 /* m3.mov */; };
 		328DA9F815C6F92300E75A45 /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F415C6F92300E75A45 /* active.png */; };
 		328DA9F915C6F92300E75A45 /* area_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F515C6F92300E75A45 /* area_background.jpg */; };
 		328DA9FA15C6F92300E75A45 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328DA9F615C6F92300E75A45 /* background.jpg */; };
@@ -58,6 +52,7 @@
 		3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E59415DBFD3900B63297 /* PlistReader.cpp */; };
 		3295E5A015DC478E00B63297 /* sample.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3295E59F15DC478E00B63297 /* sample.mov */; };
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
+		32CD143415E55ECF00829F89 /* backplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143315E55ECF00829F89 /* backplate.png */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -76,9 +71,6 @@
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1B029E8E15A248D800FD18F5 /* UserArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserArea.h; path = ../include/UserArea.h; sourceTree = "<group>"; };
 		1B029E9115A24ABC00FD18F5 /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoPlayer.h; path = ../include/VideoPlayer.h; sourceTree = "<group>"; };
-		1B09CABB15A385920086B68B /* m1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m1.mp4; path = ../resources/m1.mp4; sourceTree = "<group>"; };
-		1B09CABD15A385990086B68B /* m2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = m2.m4v; path = ../resources/m2.m4v; sourceTree = "<group>"; };
-		1B09CABF15A385A10086B68B /* m3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = m3.mp4; path = ../resources/m3.mp4; sourceTree = "<group>"; };
 		1B1C425C15A73FF200CC936A /* USER_AREAS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = USER_AREAS.xml; path = ../resources/USER_AREAS.xml; sourceTree = "<group>"; };
 		1BB7A7C215ACA24D00B2B72E /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../include/Button.h; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -100,9 +92,6 @@
 		320B343615CC64F6003AB00F /* RECIPES.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RECIPES.plist; path = ../resources/RECIPES.plist; sourceTree = "<group>"; };
 		3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetConnector.cpp; sourceTree = "<group>"; };
 		3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhidgetModel.cpp; sourceTree = "<group>"; };
-		3238F00015C71DFF001BB4A1 /* m1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m1.mov; path = ../resources/m1.mov; sourceTree = "<group>"; };
-		3238F00215C71E45001BB4A1 /* m2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m2.mov; path = ../resources/m2.mov; sourceTree = "<group>"; };
-		3238F00415C71E6B001BB4A1 /* m3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = m3.mov; path = ../resources/m3.mov; sourceTree = "<group>"; };
 		328DA9F415C6F92300E75A45 /* active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = active.png; path = ../resources/active.png; sourceTree = "<group>"; };
 		328DA9F515C6F92300E75A45 /* area_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = area_background.jpg; path = ../resources/area_background.jpg; sourceTree = "<group>"; };
 		328DA9F615C6F92300E75A45 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../resources/background.jpg; sourceTree = "<group>"; };
@@ -125,9 +114,6 @@
 		3295E55E15D04F7000B63297 /* img_end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_end.png; path = ../resources/img_end.png; sourceTree = "<group>"; };
 		3295E55F15D04F7000B63297 /* img_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_menu.png; path = ../resources/img_menu.png; sourceTree = "<group>"; };
 		3295E56015D04F7000B63297 /* inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inactive.png; path = ../resources/inactive.png; sourceTree = "<group>"; };
-		3295E57215D0645500B63297 /* ck0.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = ck0.m4v; path = ../resources/ck0.m4v; sourceTree = "<group>"; };
-		3295E57315D0645500B63297 /* ck1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = ck1.m4v; path = ../resources/ck1.m4v; sourceTree = "<group>"; };
-		3295E57415D0645500B63297 /* ck2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = ck2.m4v; path = ../resources/ck2.m4v; sourceTree = "<group>"; };
 		3295E57815D06CB000B63297 /* Video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Video.cpp; path = ../src/Video.cpp; sourceTree = "<group>"; };
 		3295E57915D06CB000B63297 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Video.h; path = ../src/Video.h; sourceTree = "<group>"; };
 		3295E57B15D075D200B63297 /* SETTINGS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SETTINGS.plist; path = ../resources/SETTINGS.plist; sourceTree = "<group>"; };
@@ -139,6 +125,7 @@
 		329B28B415D00EC40021F656 /* AppModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppModel.cpp; path = ../src/AppModel.cpp; sourceTree = "<group>"; };
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
+		32CD143315E55ECF00829F89 /* backplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backplate.png; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -268,10 +255,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32CD143315E55ECF00829F89 /* backplate.png */,
 				3295E59F15DC478E00B63297 /* sample.mov */,
-				3295E57215D0645500B63297 /* ck0.m4v */,
-				3295E57315D0645500B63297 /* ck1.m4v */,
-				3295E57415D0645500B63297 /* ck2.m4v */,
 				3295E55515D04F6F00B63297 /* active_area.png */,
 				3295E55615D04F6F00B63297 /* active.png */,
 				3295E55715D04F6F00B63297 /* area_background.jpg */,
@@ -286,9 +271,6 @@
 				3295E56015D04F7000B63297 /* inactive.png */,
 				320B342E15CC2EC9003AB00F /* active_area.png */,
 				320B33D415C985CB003AB00F /* area_background.png */,
-				3238F00415C71E6B001BB4A1 /* m3.mov */,
-				3238F00215C71E45001BB4A1 /* m2.mov */,
-				3238F00015C71DFF001BB4A1 /* m1.mov */,
 				328DA9F415C6F92300E75A45 /* active.png */,
 				328DA9F515C6F92300E75A45 /* area_background.jpg */,
 				328DA9F615C6F92300E75A45 /* background.jpg */,
@@ -296,9 +278,6 @@
 				1B1C425C15A73FF200CC936A /* USER_AREAS.xml */,
 				320B343615CC64F6003AB00F /* RECIPES.plist */,
 				3295E57B15D075D200B63297 /* SETTINGS.plist */,
-				1B09CABF15A385A10086B68B /* m3.mp4 */,
-				1B09CABD15A385990086B68B /* m2.m4v */,
-				1B09CABB15A385920086B68B /* m1.mp4 */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
@@ -410,17 +389,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
-				1B09CABC15A385920086B68B /* m1.mp4 in Resources */,
-				1B09CABE15A385990086B68B /* m2.m4v in Resources */,
-				1B09CAC015A385A10086B68B /* m3.mp4 in Resources */,
 				1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */,
 				328DA9F815C6F92300E75A45 /* active.png in Resources */,
 				328DA9F915C6F92300E75A45 /* area_background.jpg in Resources */,
 				328DA9FA15C6F92300E75A45 /* background.jpg in Resources */,
 				328DA9FB15C6F92300E75A45 /* inactive.png in Resources */,
-				3238F00115C71DFF001BB4A1 /* m1.mov in Resources */,
-				3238F00315C71E45001BB4A1 /* m2.mov in Resources */,
-				3238F00515C71E6B001BB4A1 /* m3.mov in Resources */,
 				320B33D515C985CB003AB00F /* area_background.png in Resources */,
 				320B342F15CC2EC9003AB00F /* active_area.png in Resources */,
 				320B343715CC64F6003AB00F /* RECIPES.plist in Resources */,
@@ -438,6 +411,7 @@
 				3295E56C15D04F7000B63297 /* inactive.png in Resources */,
 				3295E57C15D075D200B63297 /* SETTINGS.plist in Resources */,
 				3295E5A015DC478E00B63297 /* sample.mov in Resources */,
+				32CD143415E55ECF00829F89 /* backplate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
