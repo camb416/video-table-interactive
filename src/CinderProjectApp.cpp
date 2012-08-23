@@ -28,8 +28,6 @@ public:
     
     AppModel model;
     
-    
-    
     vector<UserArea> mAreas;
     PhidgetConnector pConnector;    // the Phidget Connector object.
 
@@ -42,10 +40,8 @@ private:
     int debugState;
     Vec2f defaultWindowSize;
     Vec2f windowScale;
+    
     vector<RecipeView> recipeViews;
-    
-    // RecipeView  * myRecipeView;
-    
 };
 
 void ProjectApp::setup()
@@ -55,7 +51,9 @@ void ProjectApp::setup()
     
     //console() << "loading settings... " << (model.setup("APP.plist","RECIPES.plist")==0 ? "OK." : "Error.") << endl;
     
-    model.pretendSetup();
+    model.setup("SETTINGS.plist","RECIPES.plist");
+    // model.pretendSetup();
+    
     model.trace();
     
      

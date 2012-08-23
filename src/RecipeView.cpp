@@ -76,8 +76,10 @@ void RecipeView::update(){
         }
     }
     if(stepState==1){
-       videos.at(curStep).update();
-        if(videos.at(curStep).isDone()) moveForward();
+        if(videos.size()>curStep){
+            videos.at(curStep).update();
+            if(videos.at(curStep).isDone()) moveForward();
+        }
     }
     
     char buffer [50];
@@ -109,17 +111,17 @@ void RecipeView::update(){
         if(stepState==1){
            // video.fadeIn();
             
-            videos.at(curStep).show();
-            images.at(curStep).hide();
+          if(videos.size()>curStep)    videos.at(curStep).show();
+          if(images.size()>curStep)  images.at(curStep).hide();
             // img.fadeOut();
-            videos.at(curStep).play();
+           if(videos.size()>curStep)   videos.at(curStep).play();
         } else {
             console() << "// does this ever even happen?" << endl;
             //img.fadeIn();
             //video.fadeOut();
-            images.at(curStep).show();
-            videos.at(curStep).hide();
-            videos.at(curStep).stop();
+           if(images.size()>curStep) images.at(curStep).show();
+          if(videos.size()>curStep)  videos.at(curStep).hide();
+          if(videos.size()>curStep)  videos.at(curStep).stop();
         }
      //   if(prevStepState==-1)  video.stop();
         prevStepState = stepState;
@@ -142,7 +144,7 @@ void RecipeView::draw(Vec2f pos){
         //    } else {
                 gl::color(1.0f,1.0f,1.0f);
         //    }
-            images.at(curStep).draw(TOP_LEFT,true);
+          if(images.size()>curStep) images.at(curStep).draw(TOP_LEFT,true);
          //   gl::translate(25.0f,25.0f,0.0f);
      //   }
     } else {
@@ -152,7 +154,7 @@ void RecipeView::draw(Vec2f pos){
         //    } else {
                 gl::color(1.0f,1.0f,1.0f);
         //    }
-            videos.at(curStep).draw(TOP_LEFT,true);
+          if(videos.size()>curStep)  videos.at(curStep).draw(TOP_LEFT,true);
         //      gl::translate(25.0f,25.0f,0.0f);
       //  }
       

@@ -26,15 +26,13 @@ struct CookStepModel{
 };
 
 class RecipeModel{
+    
 public:
     RecipeModel();
     ~RecipeModel();
     int load(string _plist);
     int testCase();
-  //  bool isLoaded();
     int save();
-  //  string getMenuImage();
-  //  string getEndImage();
     CookStepModel getCookStep(int _whichStep = 0);
     int trace();
     int getNumSteps();
@@ -45,16 +43,8 @@ public:
     
 
 private:
- //   bool bLoaded;
-   // string title_str;
-  //  XmlTree plist;
-    
-    // deprecate me
-    vector<CookStepModel> cookSteps;
-  
-    //  string img_menu;
-  //  string img_end;
     CookStepModel emptyCookStep;
+    
 };
 
 
