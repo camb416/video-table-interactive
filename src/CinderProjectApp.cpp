@@ -33,7 +33,7 @@ public:
 
 private:
     void parseXML();
-    string background_str;
+
     gl::Texture background_tex;
     float width, height;
     bool useTouch;
@@ -60,10 +60,18 @@ void ProjectApp::setup()
     int numRecipes = model.recipes.size();
   
   //  myRecipeView = new RecipeView(model.recipes.at(0));
+    
+    for(int i=0;i<model.areas.size();i++){
+        string thisRecipe_str = model.areas.at(i).recipe;
+        UserAreaModel theUserAreaModel = model.areas.at(i);
+        RecipeModel theRecipeModel = model.getRecipeModel(thisRecipe_str);
+        recipeViews.push_back(RecipeView(theUserAreaModel, theRecipeModel));
+    }
+   /*
     for(int i=0;i<model.recipes.size();i++){
         recipeViews.push_back(RecipeView(model.recipes.at(i)));
     }
-    
+    */
     console() << "there are " << numRecipes << " recipes.";
     
     /*
@@ -72,7 +80,7 @@ void ProjectApp::setup()
     parseXML();
     
     
-    background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
+    
     
     
     
@@ -86,10 +94,12 @@ void ProjectApp::setup()
 //    width = 1920.0;
  //   height = 1200.0;
      */
+    background_tex = gl::Texture( loadImage( loadResource( model.backgroundPath ) ) );
 }
 
 void ProjectApp::parseXML()
 {
+    /*
     mAreas.clear();
     try {
         XmlTree doc(loadResource( "USER_AREAS.xml" ) );
@@ -130,6 +140,7 @@ void ProjectApp::parseXML()
     catch ( ... ) {
         console() << "Unable to load XML document. Check for syntax errors." << endl;
     }
+     */
 }
 
 void ProjectApp::prepareSettings( Settings *settings )
@@ -144,7 +155,7 @@ void ProjectApp::keyDown( KeyEvent event )
 {
     
     for(int i=0;i<recipeViews.size();i++){
-        recipeViews.at(i).moveForward();
+       recipeViews.at(i).moveForward();
     }
     
     switch(event.getChar()){
@@ -195,10 +206,11 @@ void ProjectApp::draw()
 {
     gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
-
+    gl::color(1.0f,1.0f,1.0f);
+gl::draw(background_tex,getWindowBounds());
 //    myRecipeView->draw(Vec2f(100,100));
     for(int i=0;i<recipeViews.size();i++){
-        recipeViews.at(i).draw(Vec2f(100*i,100*i));
+        recipeViews.at(i).draw();
     }
     /*
     bool debugDrawFlag = debugState != 0;

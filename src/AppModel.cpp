@@ -136,6 +136,8 @@ void AppModel::parseSettings(XmlTree _root){
                                         uam.y = atof(baby->getValue().c_str());
                                     } else if(bottomLevelKey.compare("r")==0){
                                         uam.r = atof(baby->getValue().c_str());
+                                    }else if(bottomLevelKey.compare("recipe")==0){
+                                        uam.recipe = baby->getValue();
                                     }
                                 } else if(topLevelKey.compare("Sensor Boards")==0) {
                                     tsm.sensor = atoi(baby->getValue().c_str());
@@ -175,6 +177,19 @@ void AppModel::parseSettings(XmlTree _root){
         }
     }
 }
+
+RecipeModel AppModel::getRecipeModel(string _recipeTitle){
+    
+    for(int i=0;i<recipes.size();i++){
+        console() << "comparing: " << recipes.at(i).name << " to: " << _recipeTitle << ", result: " << recipes.at(i).name.compare(_recipeTitle) << endl;
+        if(recipes.at(i).name.compare(_recipeTitle)==0){
+            return recipes.at(i);
+        }
+    }
+    console() << "couldn't find the requested recipe model: " << _recipeTitle << endl;
+    return RecipeModel();
+}
+
 
 void AppModel::parseRecipes(XmlTree _root){
     XmlTree t = _root.getChild("dict/dict");

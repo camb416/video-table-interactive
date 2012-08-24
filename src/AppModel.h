@@ -21,6 +21,7 @@ using namespace cinder;
 
 struct UserAreaModel{
     string name;
+    string recipe;
     float x;
     float y;
     float r;
@@ -40,6 +41,8 @@ public:
     int trace();
     void parseRecipes(XmlTree _root);
     void parseSettings(XmlTree _root);
+    
+    RecipeModel getRecipeModel(string _recipeTitle);
     
     vector<RecipeModel> recipes;
     vector<UserAreaModel> areas;

@@ -19,7 +19,7 @@
 #include "Image.h"
 #include "Video.h"
 #include "CookStep.h"
-#include "RecipeModel.h"
+#include "AppModel.h"
 #include "cinder/qtime/QuickTime.h"
 #include <iostream>
 #include <vector>
@@ -30,17 +30,22 @@ class RecipeView{
 public:
     int state;
     RecipeView(RecipeModel _model);
-    void draw(Vec2f pos);
+    RecipeView(UserAreaModel _area, RecipeModel _recipe);
+    void draw();
     void update();
     void moveForward();
     
 private:
+    Vec2f pos;
+    float rotation;
     RecipeModel recipeModel;
+    UserAreaModel areaModel;
     int curStep;
     int stepState;
     int prevStep;
     int prevStepState;
- //   int reload();
+    int align;
+   // int reload();
    // gallerytools::Image img;
    // gallerytools::Image menu_img;
     vector<CookStep> steps;

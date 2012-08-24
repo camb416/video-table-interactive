@@ -8,10 +8,12 @@
 	<dict>
 		<key>bottom-left</key>
 		<dict>
+			<key>recipe</key>
+			<string>Tamales</string>
 			<key>x</key>
-			<real>0.25</real>
+			<integer>0</integer>
 			<key>y</key>
-			<real>0.75</real>
+			<integer>1200</integer>
 			<key>r</key>
 			<integer>0</integer>
 			<key>back-button</key>
@@ -42,48 +44,14 @@
 				<string>d</string>
 			</dict>
 		</dict>
-		<key>bottom-right</key>
-		<dict>
-			<key>x</key>
-			<real>0.75</real>
-			<key>y</key>
-			<real>0.25</real>
-			<key>r</key>
-			<integer>0</integer>
-			<key>back-button</key>
-			<dict>
-				<key>x</key>
-				<integer>0</integer>
-				<key>y</key>
-				<integer>0</integer>
-				<key>keymap</key>
-				<string>f</string>
-			</dict>
-			<key>select-button</key>
-			<dict>
-				<key>x</key>
-				<integer>0</integer>
-				<key>y</key>
-				<integer>0</integer>
-				<key>keymap</key>
-				<string>g</string>
-			</dict>
-			<key>forward-button</key>
-			<dict>
-				<key>x</key>
-				<integer>0</integer>
-				<key>y</key>
-				<integer>0</integer>
-				<key>keymap</key>
-				<string>h</string>
-			</dict>
-		</dict>
 		<key>top-left</key>
 		<dict>
+			<key>recipe</key>
+			<string>Salmon</string>
 			<key>x</key>
-			<real>0.25</real>
+			<integer>0</integer>
 			<key>y</key>
-			<real>0.25</real>
+			<integer>0</integer>
 			<key>r</key>
 			<integer>180</integer>
 			<key>back-button</key>
@@ -116,10 +84,12 @@
 		</dict>
 		<key>top-right</key>
 		<dict>
+			<key>recipe</key>
+			<string>Grits</string>
 			<key>x</key>
-			<real>0.75</real>
+			<integer>1920</integer>
 			<key>y</key>
-			<real>0.25</real>
+			<integer>0</integer>
 			<key>r</key>
 			<integer>180</integer>
 			<key>back-button</key>
@@ -148,6 +118,44 @@
 				<integer>0</integer>
 				<key>keymap</key>
 				<string>y</string>
+			</dict>
+		</dict>
+		<key>bottom-right</key>
+		<dict>
+			<key>recipe</key>
+			<string>Eggs</string>
+			<key>x</key>
+			<integer>1920</integer>
+			<key>y</key>
+			<integer>1200</integer>
+			<key>r</key>
+			<integer>0</integer>
+			<key>back-button</key>
+			<dict>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>0</integer>
+				<key>keymap</key>
+				<string>f</string>
+			</dict>
+			<key>select-button</key>
+			<dict>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>0</integer>
+				<key>keymap</key>
+				<string>g</string>
+			</dict>
+			<key>forward-button</key>
+			<dict>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>0</integer>
+				<key>keymap</key>
+				<string>h</string>
 			</dict>
 		</dict>
 	</dict>

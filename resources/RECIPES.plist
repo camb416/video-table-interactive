@@ -15,34 +15,6 @@
 					<key>video</key>
 					<string>sample.mov</string>
 				</dict>
-				<key>chop</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg1.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>cook</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg2.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>eat</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg3.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>clean</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg4.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
 			</dict>
 		</dict>
 		<key>Eggs</key>
@@ -52,7 +24,7 @@
 				<key>prepare</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg0.png</string>
+					<string>ckimg1.png</string>
 					<key>video</key>
 					<string>sample.mov</string>
 				</dict>
@@ -60,27 +32,6 @@
 				<dict>
 					<key>img</key>
 					<string>ckimg1.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>cook</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg2.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>eat</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg3.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>clean</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg4.png</string>
 					<key>video</key>
 					<string>sample.mov</string>
 				</dict>
@@ -111,30 +62,16 @@
 					<key>video</key>
 					<string>sample.mov</string>
 				</dict>
-				<key>eat</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg3.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>clean</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg4.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
 			</dict>
 		</dict>
-		<key>Chicken and Waffles</key>
+		<key>Grits</key>
 		<dict>
 			<key>Steps</key>
 			<dict>
 				<key>prepare</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg0.png</string>
+					<string>ckimg2.png</string>
 					<key>video</key>
 					<string>sample.mov</string>
 				</dict>
@@ -156,13 +93,6 @@
 				<dict>
 					<key>img</key>
 					<string>ckimg3.png</string>
-					<key>video</key>
-					<string>sample.mov</string>
-				</dict>
-				<key>clean</key>
-				<dict>
-					<key>img</key>
-					<string>ckimg4.png</string>
 					<key>video</key>
 					<string>sample.mov</string>
 				</dict>
