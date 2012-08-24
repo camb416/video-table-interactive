@@ -49,12 +49,16 @@ void ProjectApp::setup()
     //debugState = DEVELOPMENT;
    
     
-    //console() << "loading settings... " << (model.setup("APP.plist","RECIPES.plist")==0 ? "OK." : "Error.") << endl;
     
     model.setup("SETTINGS.plist","RECIPES.plist");
-    // model.pretendSetup();
     
-    model.trace();
+    // implement fullscreen test here...
+    setFullScreen(model.isFullScreen);
+    
+    // doubt these still work
+    // model.pretendSetup();
+    // model.trace();
+    
     
      
     int numRecipes = model.recipes.size();
@@ -99,56 +103,15 @@ void ProjectApp::setup()
 
 void ProjectApp::parseXML()
 {
-    /*
-    mAreas.clear();
-    try {
-        XmlTree doc(loadResource( "USER_AREAS.xml" ) );
-        XmlTree areas = doc.getChild("project");
-        background_str = areas.getAttributeValue<string>("background");
-        background_tex = gl::Texture( loadImage( loadResource( background_str ) ) );
-        
-        //
-        // katie: please fix this so it gets this string from the "usetouch" attribute of the <project> tag.
-        //
-        string useTouch_str = "false";//areas.getAttributeValue<string>("usetouch");
-        //
-        //
-        float scrW = areas.getAttributeValue<float>("screenwidth");
-        float scrH = areas.getAttributeValue<float>("screenheight");
-
-        defaultWindowSize = Vec2f(scrW,scrH);
-        
-        if(useTouch_str=="false" || useTouch_str=="no" || useTouch_str == "none" || useTouch_str == "0"){
-            console() << "looks like we don't want to use touch" << endl;
-            useTouch = false;
-        } else {
-            useTouch = true;
-        }
-        
-        PhidgetConnector * pc;
-        if(useTouch){
-            pc = &pConnector;
-        } else {
-            pc = NULL;
-        }
-        for( XmlTree::Iter area = areas.begin(); area!= areas.end(); ++area )
-        {
-            XmlTree a = *area;
-            mAreas.push_back( UserArea(a, pc) ) ;
-        }
-    }
-    catch ( ... ) {
-        console() << "Unable to load XML document. Check for syntax errors." << endl;
-    }
-     */
+    console() << "ProjectApp::parseXML has been deprecated" << endl;
 }
 
 void ProjectApp::prepareSettings( Settings *settings )
 {
-	 settings->setWindowSize( 1920,1200 );
+    settings->setWindowSize( 1920,1200 );
+    
+    // maybe lowering might smooth things out?
 	settings->setFrameRate( 60.0f );
-    // katie: this doesn't work... probably needs to be in setup (also, have it work with the XML settings in <project>
-    // setFullScreen(true);
 }
 
 void ProjectApp::keyDown( KeyEvent event )
@@ -169,10 +132,6 @@ void ProjectApp::keyDown( KeyEvent event )
                 debugState = 0;
             }
             break;
-            case 's':
-            case 'S':
-            parseXML();
-            break;
     }
 
     
@@ -185,21 +144,11 @@ void ProjectApp::keyDown( KeyEvent event )
 void ProjectApp::update()
 {
     for(int i=0;i<recipeViews.size();i++){
-    //myRecipeView->update();
         recipeViews.at(i).update();
     }
-    /*
-    pConnector.updateKits();
-    
-    Area curWindowSizeA = getWindowBounds();
-    Vec2f curWindowSize = Vec2f(curWindowSizeA.getWidth(),curWindowSizeA.getHeight());
-    windowScale = curWindowSize/defaultWindowSize;
-    
-    // Update UserAreas
-    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){
-         p->update();
-    }
-     */
+  
+//    pConnector.updateKits();
+
 }
 
 void ProjectApp::draw()
@@ -207,21 +156,10 @@ void ProjectApp::draw()
     gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
     gl::color(1.0f,1.0f,1.0f);
-gl::draw(background_tex,getWindowBounds());
-//    myRecipeView->draw(Vec2f(100,100));
+    gl::draw(background_tex,getWindowBounds());
     for(int i=0;i<recipeViews.size();i++){
         recipeViews.at(i).draw();
     }
-    /*
-    bool debugDrawFlag = debugState != 0;
-    gl::draw(background_tex,getWindowBounds());
-	    
-    //for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-       // p->drawBackground(debugDrawFlag);
-    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p){
-        p->draw(debugDrawFlag, windowScale);
-    }
-     */
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );
