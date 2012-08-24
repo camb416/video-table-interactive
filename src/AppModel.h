@@ -19,16 +19,33 @@
 using namespace std;
 using namespace cinder;
 
+struct UserAreaModel{
+    string name;
+    float x;
+    float y;
+    float r;
+};
+struct TouchSensorModel{
+    int board;
+    int sensor;
+    char keymap;
+};
+
 class AppModel{
 public:
     
     int setup(string _appFilePath, string _contentFilePath);
     int pretendSetup();
-   // vector<RecipeModel> recipes;
+
     int trace();
     void parseRecipes(XmlTree _root);
+    void parseSettings(XmlTree _root);
     
     vector<RecipeModel> recipes;
+    vector<UserAreaModel> areas;
+    vector<TouchSensorModel> sensors;
+    
+    string backgroundPath;
     
 private:
     
