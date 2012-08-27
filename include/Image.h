@@ -13,6 +13,7 @@
 #include "cinder/ImageIo.h"
 #include "cinder/app/AppBasic.h"
 #include "GalleryHelper.h"
+#include "cinder/Timeline.h"
 #include <iostream>
 #include <cmath>
 
@@ -41,6 +42,9 @@ namespace gallerytools {
         void setRotation(int _deg);
         void update();
         
+        void boingScaleIn();
+        void boingScaleOut();
+        
         void draw(char _align,Vec2f _scale = Vec2f(1.0f,1.0f),bool _debug = false);
         // legacy support
         void draw(char _align,bool _debug = false);
@@ -54,8 +58,12 @@ namespace gallerytools {
         string path_str;
         gl::Texture texture;
         int x, y, dx, dy, deg;
+        
+        Anim<float> xscale,yscale;
+        Anim<float> opacity;
+        
         bool tween, hidden;
-        float alpha, dAlpha;
+        Anim<float> alpha, dAlpha;
         float moveRate, fadeRate;
         void border();
     };

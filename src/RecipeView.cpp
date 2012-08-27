@@ -52,6 +52,14 @@ RecipeView::RecipeView(RecipeModel _model){
     
 }
 
+int RecipeView::getKeyFunction(char _aChar){
+    if(areaModel.back_btn.keymap==_aChar) return 0;
+    if(areaModel.select_btn.keymap == _aChar) return 1;
+    if(areaModel.fwd_btn.keymap == _aChar) return 2;
+    
+    return -1;
+}
+
 RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
     recipeModel = _recipe;
     areaModel = _area;
@@ -89,6 +97,12 @@ RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
         aVideo.hide();
         videos.push_back(aVideo);
     }
+    back_btn.load(areaModel.back_btn.path);
+    back_btn.moveTo(areaModel.back_btn.x,areaModel.back_btn.y,false);
+    fwd_btn.load(areaModel.fwd_btn.path);
+    fwd_btn.moveTo(areaModel.fwd_btn.x,areaModel.fwd_btn.y,false);
+    select_btn.load(areaModel.select_btn.path);
+    select_btn.moveTo(areaModel.select_btn.x,areaModel.select_btn.y,false);
     
     string normalFont( "Arial" );
     
@@ -103,8 +117,7 @@ RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
     
 }
 
-
-void RecipeView::moveForward(){
+void RecipeView::forwardRelease(){
     //stepState++;
     if(++stepState>1){
         stepState = 0;
@@ -112,18 +125,40 @@ void RecipeView::moveForward(){
             curStep = 0;
         }
     }
-  //  img.load(recipeModel.getCookStep(curStep).img);
+    //  img.load(recipeModel.getCookStep(curStep).img);
+    fwd_btn.boingScaleOut();
+}
+
+void RecipeView::backwardRelease(){
+    //stepState++;
+    if(--stepState<0){
+        stepState = 1;
+        if(--curStep<0){
+            curStep = recipeModel.getNumSteps()-1;
+        }
+    }
+    back_btn.boingScaleOut();
+    //  img.load(recipeModel.getCookStep(curStep).img);
+}
+void RecipeView::selectRelease(){
+    select_btn.boingScaleOut();
+}
+
+void RecipeView::forwardPress(){
+// forward button press
+    fwd_btn.boingScaleIn();
+}
+
+void RecipeView::backwardPress(){
+    // backward button press
+    back_btn.boingScaleIn();
+}
+void RecipeView::selectPress(){
+       select_btn.boingScaleIn();
 }
 
 void RecipeView::update(){
-    //img.update();
-    // for(int i=0;i<videos.size();i++){
-      //  if(i!=curStep){
-       //     console() << "stopping video " << i << endl;
-     //       videos.at(i).stop();
-       // }
-   // }
-    for(int i=0;i<videos.size();i++){
+      for(int i=0;i<videos.size();i++){
         if(i!=curStep){
                       // videos.at(i).stop();
         }
@@ -131,7 +166,7 @@ void RecipeView::update(){
     if(stepState==1){
         if(videos.size()>curStep){
             videos.at(curStep).update();
-            if(videos.at(curStep).isDone()) moveForward();
+            if(videos.at(curStep).isDone()) forwardRelease();
         }
     }
     
@@ -222,6 +257,11 @@ void RecipeView::draw(){
     }
     // gl::translate(20,20,0);
    // menu_img.draw(CENTER,true);
+    back_btn.draw(CENTER,true);
+    select_btn.draw(CENTER,true);
+    fwd_btn.draw(CENTER,true);
+    
+    
     Rectf texRect = Rectf(0.0f,0.0f,text_texture.getWidth(),text_texture.getHeight());
     GalleryHelper::alignElement(align,Area(texRect));
     gl::draw(text_texture);

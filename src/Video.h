@@ -43,6 +43,8 @@ namespace gallerytools {
         void setRotation(int _deg);
         void update();
         
+        
+        
         void draw(char _align = CENTER,Vec2f _scale = Vec2f(1.0f,1.0f),bool _debug = false);
         // legacy support
         void draw(char _align,bool _debug = false);

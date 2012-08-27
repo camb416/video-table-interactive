@@ -23,27 +23,27 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>64</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>a</string>
 			</dict>
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>128</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>s</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>192</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>d</string>
 			</dict>
@@ -61,27 +61,27 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>q</string>
 			</dict>
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>-128</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>w</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>-192</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>e</string>
 			</dict>
@@ -99,27 +99,27 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>64</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>r</string>
 			</dict>
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>128</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>t</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>192</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>y</string>
 			</dict>
@@ -137,27 +137,27 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>f</string>
 			</dict>
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>-128</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>g</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>-192</integer>
 				<key>y</key>
-				<integer>0</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>h</string>
 			</dict>

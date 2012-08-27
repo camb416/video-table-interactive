@@ -9,8 +9,10 @@
 #ifndef __CinderProject__RecipeModel__
 #define __CinderProject__RecipeModel__
 
+
 #include "cinder/Xml.h"
 #include "cinder/app/AppBasic.h"
+#include "ButtonModel.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -40,6 +42,9 @@ public:
     // for parity with PlistReader
     string name;
     vector<CookStepModel> steps;
+    ButtonModel back_btn;
+    ButtonModel select_btn;
+    ButtonModel fwd_btn;
     
 
 private:

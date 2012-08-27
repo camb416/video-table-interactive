@@ -88,6 +88,7 @@ void AppModel::parseSettings(XmlTree _root){
     
     UserAreaModel uam;
     TouchSensorModel tsm;
+    ButtonModel bm;
     
     string topLevelKey = "";
     for( XmlTree::Iter child = t.begin(); child != t.end(); ++child ){
@@ -136,7 +137,7 @@ void AppModel::parseSettings(XmlTree _root){
                             if(babyTag.compare("key")==0){
                                 bottomLevelKey = baby->getValue();
                             } else if(babyTag.compare("dict")!=0){
-                              //  console() << "BABY LEVEL: " << baby->getValue() << " : " << bottomLevelKey << " : " << midLevelKey << ", " << topLevelKey << endl;
+                                console() << "BABY LEVEL: " << baby->getValue() << " : " << bottomLevelKey << " : " << midLevelKey << ", " << topLevelKey << endl;
                                 
                                 if(topLevelKey.compare("User Areas")==0){
                                     if(bottomLevelKey.compare("x")==0){
@@ -147,6 +148,8 @@ void AppModel::parseSettings(XmlTree _root){
                                         uam.r = atof(baby->getValue().c_str());
                                     }else if(bottomLevelKey.compare("recipe")==0){
                                         uam.recipe = baby->getValue();
+                                    } else if(bottomLevelKey.compare("button")>0){
+                                        bm = ButtonModel();
                                     }
                                 } else if(topLevelKey.compare("Sensor Boards")==0) {
                                     tsm.sensor = atoi(baby->getValue().c_str());
@@ -168,10 +171,29 @@ void AppModel::parseSettings(XmlTree _root){
                                     if(zygoteTag.compare("key")==0){
                                         easyModeKey = zygote->getValue();
                                     } else {
-                                      //  console() << "ZYGOTE LEVEL: " << zygote->getValue() << ": " << easyModeKey << " : " << bottomLevelKey << " : " << midLevelKey << ", " << topLevelKey << endl;
+                                        string zValue = zygote->getValue();
+                                        console() << "ZYGOTE LEVEL: " << zValue << ": " << easyModeKey << " : " << bottomLevelKey << " : " << midLevelKey << ", " << topLevelKey << endl;
+                                        if(easyModeKey.compare("x")==0){
+                                            bm.x = atoi(zValue.c_str());
+                                        } else if(easyModeKey.compare("y")==0){
+                                            bm.y = atoi(zValue.c_str());
+                                        } else if(easyModeKey.compare("keymap")==0){
+                                            console() << "here's a keymap::: " << zValue << endl;
+                                            bm.keymap = zValue[0];
+                                            console() << "again::: " << bm.keymap << endl;
+                                        }
                                     }
                                 }
-
+                                bm.path = buttonPath;
+                                if(bottomLevelKey.compare("back-button")==0){
+                                    uam.back_btn = bm;
+                                } else if(bottomLevelKey.compare("select-button")==0){
+                                    uam.select_btn = bm;
+                                } else if(bottomLevelKey.compare("forward-button")==0){
+                                    uam.fwd_btn = bm;
+                                } else {
+                                    console() << "couldn't find this button in the ua model... " << easyModeKey << endl;
+                                }
                             }
                             
                         

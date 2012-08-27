@@ -12,6 +12,7 @@
 #include "cinder/Utilities.h"
 #include "cinder/app/AppBasic.h"
 #include "cinder/Xml.h"
+#include "ButtonModel.h"
 #include "RecipeModel.h"
 #include <vector>
 #include <iostream>
@@ -19,11 +20,7 @@
 using namespace std;
 using namespace cinder;
 
-struct ButtonModel{
-    string path;
-    float x;
-    float y;
-};
+
 
 struct UserAreaModel{
     string name;
@@ -31,6 +28,9 @@ struct UserAreaModel{
     float x;
     float y;
     float r;
+    ButtonModel back_btn;
+    ButtonModel select_btn;
+    ButtonModel fwd_btn;
 };
 struct TouchSensorModel{
     int board;

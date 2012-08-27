@@ -54,6 +54,7 @@
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
 		32CD143715E55F9F00829F89 /* backplate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143615E55F9F00829F89 /* backplate.jpg */; };
 		32CD143915EBB81C00829F89 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143815EBB81C00829F89 /* mario.png */; };
+		32CD143D15EBE27900829F89 /* TableController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CD143B15EBE27800829F89 /* TableController.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -128,6 +129,9 @@
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		32CD143615E55F9F00829F89 /* backplate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backplate.jpg; sourceTree = "<group>"; };
 		32CD143815EBB81C00829F89 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
+		32CD143A15EBD88200829F89 /* ButtonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ButtonModel.h; path = ../include/ButtonModel.h; sourceTree = "<group>"; };
+		32CD143B15EBE27800829F89 /* TableController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TableController.cpp; sourceTree = "<group>"; };
+		32CD143C15EBE27800829F89 /* TableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableController.h; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -160,6 +164,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				32CD143B15EBE27800829F89 /* TableController.cpp */,
 				3295E59415DBFD3900B63297 /* PlistReader.cpp */,
 				3295E57D15D1620500B63297 /* NewUserArea.cpp */,
 				3295E57815D06CB000B63297 /* Video.cpp */,
@@ -237,9 +242,11 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				32CD143C15EBE27800829F89 /* TableController.h */,
 				3295E59215DBFD2E00B63297 /* PlistReader.h */,
 				320B343115CC5E62003AB00F /* RecipeView.h */,
 				3295E55315D01A1800B63297 /* RecipeModel.h */,
+				32CD143A15EBD88200829F89 /* ButtonModel.h */,
 				320B342D15CC128E003AB00F /* GalleryHelper.h */,
 				320B340515CB0025003AB00F /* Image.h */,
 				3295E57915D06CB000B63297 /* Video.h */,
@@ -441,6 +448,7 @@
 				3295E57A15D06CB000B63297 /* Video.cpp in Sources */,
 				3295E57F15D1620500B63297 /* NewUserArea.cpp in Sources */,
 				3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */,
+				32CD143D15EBE27900829F89 /* TableController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #include "AppModel.h"
 #include "UserArea.h"
 #include "RecipeView.h"
+#include "TableController.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -22,6 +23,7 @@ public:
 	void setup();
     
 	void keyDown( KeyEvent event );
+    void keyUp(KeyEvent event);
     void prepareSettings( Settings *settings );
 	void update();
 	void draw();
@@ -42,6 +44,7 @@ private:
     Vec2f windowScale;
     
     vector<RecipeView> recipeViews;
+    TableController controller;
 };
 
 void ProjectApp::setup()
@@ -49,6 +52,7 @@ void ProjectApp::setup()
     //debugState = DEVELOPMENT;
    
     
+    controller.setup(&model,&recipeViews);
     
     model.setup("SETTINGS.plist","RECIPES.plist");
     
@@ -113,17 +117,21 @@ void ProjectApp::prepareSettings( Settings *settings )
     // maybe lowering might smooth things out?
 	settings->setFrameRate( 60.0f );
 }
-
+void ProjectApp::keyUp(KeyEvent event){
+     controller.handleKeyRelease(event.getChar());
+}
 void ProjectApp::keyDown( KeyEvent event )
 {
-    
+    /*
     for(int i=0;i<recipeViews.size();i++){
        recipeViews.at(i).moveForward();
     }
+     */
+    controller.handleKeyPress(event.getChar());
     
     switch(event.getChar()){
-            case 'f':
-            case 'F':
+            case '`':
+            case '~':
                 setFullScreen( ! isFullScreen() );
             break;
             case ' ':

@@ -27,15 +27,19 @@ using namespace gallerytools;
  }   */
 
 Image::Image(){
+
     x = y = dx = dy = deg = 0;
     alpha = dAlpha = 1.0f;
     hidden = false;
     moveRate = 30.0f;
     fadeRate = 30.0f;
+    xscale = yscale = 1.0f;
 }
 
 Image::Image(string _file, int _x, int _y)
 {
+    
+     xscale = yscale = 1.0f;
     load(_file);
     x = _x;
     y = _y;
@@ -51,6 +55,7 @@ Image::Image(string _file, int _x, int _y)
 
 Image::Image(string _file, Vec2f _pos)
 {
+     xscale = yscale = 1.0f;
     load(_file);
     x = _pos.x;
     y = _pos.y;
@@ -66,6 +71,7 @@ Image::Image(string _file, Vec2f _pos)
 
 Image::Image(gl::Texture _texture, Vec2f _pos)
 {
+     xscale = yscale = 1.0f;
     texture = _texture;
     x = _pos.x;
     y = _pos.y;
@@ -119,6 +125,18 @@ void Image::moveTo(int _x, int _y, bool _tween)
  y = _y;
  }   */
 
+void Image::boingScaleIn(){
+    timeline().apply(&alpha,1.0f,0.1f,EaseNone());
+    timeline().apply(&xscale, 1.0f, 0.1f,EaseOutElastic(1.0f,1.0f));
+    timeline().apply(&yscale,1.0f,0.1f,EaseOutElastic(1.0f,2.0f));
+}
+
+void Image::boingScaleOut(){
+    timeline().apply(&alpha,0.0f,1.0f,EaseNone());
+    timeline().apply(&xscale, 0.5f, 1.0f,EaseOutElastic(1.0f,1.0f));
+    timeline().apply(&yscale,0.5f,1.0f,EaseOutElastic(1.0f,2.0f));
+}
+
 void Image::moveTo (Vec2f pos, bool _tween)
 {
     moveTo( pos.x, pos.y, _tween );
@@ -165,18 +183,19 @@ void Image::setRotation(int _deg)
 
 void Image::update()
 {
-    if (tween) {
-        x += (dx - x) / moveRate;
-        y += (dy - y) / moveRate;
-    }
+    console() << "deprecated the update on the image class... use timeline() instead." << endl;
+ //   if (tween) {
+ //       x += (dx - x) / moveRate;
+ //       y += (dy - y) / moveRate;
+ //   }
     
-    alpha += (dAlpha - alpha) / fadeRate;
+  //  alpha += (dAlpha - alpha) / fadeRate;
 }
 
 void Image::draw(char _align,bool _debug){
     // deprecated
     // put a cout here?
-    draw(_align,Vec2f(1.0f,1.0f),_debug);
+    draw(_align,Vec2f(xscale,yscale),_debug);
 }
 
 void Image::draw(char _align,Vec2f _scale, bool _debug)

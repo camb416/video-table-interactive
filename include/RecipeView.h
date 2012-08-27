@@ -33,7 +33,17 @@ public:
     RecipeView(UserAreaModel _area, RecipeModel _recipe);
     void draw();
     void update();
-    void moveForward();
+    
+    void forwardPress();
+    void backwardPress();
+    void selectPress();
+    
+    void forwardRelease();
+    void backwardRelease();
+    void selectRelease();
+    
+    
+    int getKeyFunction(char _aChar);
     
 private:
     Vec2f pos;
