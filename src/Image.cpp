@@ -137,6 +137,12 @@ void Image::boingScaleOut(){
     timeline().apply(&yscale,0.5f,1.0f,EaseOutElastic(1.0f,2.0f));
 }
 
+void Image::setHalfHidden(){
+    alpha = 0.0f;
+    xscale = 0.5f;
+    yscale = 0.5f;
+}
+
 void Image::moveTo (Vec2f pos, bool _tween)
 {
     moveTo( pos.x, pos.y, _tween );

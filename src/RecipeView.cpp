@@ -113,7 +113,9 @@ RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
 	layout.addLine( "testing here");
 	Surface8u rendered = layout.render( true, false );
 	text_texture = gl::Texture( rendered );
-    
+    select_btn.setHalfHidden();
+    back_btn.setHalfHidden();
+    fwd_btn.setHalfHidden();
     
 }
 

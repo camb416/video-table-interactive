@@ -45,6 +45,8 @@ namespace gallerytools {
         void boingScaleIn();
         void boingScaleOut();
         
+        void setHalfHidden();
+        
         void draw(char _align,Vec2f _scale = Vec2f(1.0f,1.0f),bool _debug = false);
         // legacy support
         void draw(char _align,bool _debug = false);
