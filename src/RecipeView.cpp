@@ -59,11 +59,15 @@ int RecipeView::getKeyFunction(char _aChar){
     
     return -1;
 }
+void RecipeView::setDebug(int _debugState){
+    debugState = _debugState;
+}
 
 RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
     recipeModel = _recipe;
     areaModel = _area;
     // menu_img.load(_model.getMenuImage());
+    debugState = 2;
     
     curStep = 0;
     stepState = 0;
@@ -242,7 +246,7 @@ void RecipeView::draw(){
         //    } else {
                 gl::color(1.0f,1.0f,1.0f);
         //    }
-          if(images.size()>curStep) images.at(curStep).draw(align,true);
+          if(images.size()>curStep) images.at(curStep).draw(align,(debugState!=0));
          //   gl::translate(25.0f,25.0f,0.0f);
      //   }
     } else {
@@ -252,20 +256,21 @@ void RecipeView::draw(){
         //    } else {
                 gl::color(1.0f,1.0f,1.0f);
         //    }
-          if(videos.size()>curStep)  videos.at(curStep).draw(align,true);
+          if(videos.size()>curStep)  videos.at(curStep).draw(align,(debugState!=0));
         //      gl::translate(25.0f,25.0f,0.0f);
       //  }
       
     }
     // gl::translate(20,20,0);
    // menu_img.draw(CENTER,true);
-    back_btn.draw(CENTER,true);
-    select_btn.draw(CENTER,true);
-    fwd_btn.draw(CENTER,true);
+    back_btn.draw(CENTER,(debugState!=0));
+    select_btn.draw(CENTER,(debugState!=0));
+    fwd_btn.draw(CENTER,(debugState!=0));
     
-    
+    if(debugState!=0){
     Rectf texRect = Rectf(0.0f,0.0f,text_texture.getWidth(),text_texture.getHeight());
     GalleryHelper::alignElement(align,Area(texRect));
     gl::draw(text_texture);
+    }
     gl::popMatrices();
 }

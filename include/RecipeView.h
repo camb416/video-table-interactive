@@ -42,10 +42,12 @@ public:
     void backwardRelease();
     void selectRelease();
     
+    void setDebug(int _debugState);
     
     int getKeyFunction(char _aChar);
     
 private:
+    int debugState;
     Vec2f pos;
     float rotation;
     RecipeModel recipeModel;

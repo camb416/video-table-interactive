@@ -12,6 +12,7 @@
 void  TableController::setup(AppModel * _model, vector<RecipeView> * _views){
     model = _model;
     views = _views;
+    debugState = DEVELOPMENT;
 }
 void TableController::handleKeyPress(char _key){
     console() << "check this out, yo: " << _key << endl;
@@ -35,7 +36,25 @@ void TableController::handleKeyPress(char _key){
                 break;
         }
     }
+    switch(_key){
+        case '`':
+        case '~':
+            setFullScreen( ! isFullScreen() );
+            break;
+        case ' ':
+            debugState++;
+            if(debugState>2){
+                debugState = 0;
+            }
+            updateViewStates();
+            break;
+    }
     
+}
+void TableController::updateViewStates(){
+    for(int i=0;i<views->size();i++){
+        views->at(i).setDebug(debugState);
+    }
 }
 void TableController::handleKeyRelease(char _key){
     console() << "check this out, yo: " << _key << endl;
@@ -59,5 +78,7 @@ void TableController::handleKeyRelease(char _key){
                 break;
         }
     }
+    
+    
 
 }

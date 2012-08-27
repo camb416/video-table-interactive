@@ -19,6 +19,8 @@ public:
     void handleKeyPress(char _key);
     void handleKeyRelease(char _key);
 private:
+    int debugState;
+    void updateViewStates();
     AppModel * model;
     vector<RecipeView> * views;
     

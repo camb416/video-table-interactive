@@ -39,7 +39,7 @@ private:
     gl::Texture background_tex;
     float width, height;
     bool useTouch;
-    int debugState;
+
     Vec2f defaultWindowSize;
     Vec2f windowScale;
     
@@ -129,25 +129,9 @@ void ProjectApp::keyDown( KeyEvent event )
      */
     controller.handleKeyPress(event.getChar());
     
-    switch(event.getChar()){
-            case '`':
-            case '~':
-                setFullScreen( ! isFullScreen() );
-            break;
-            case ' ':
-            debugState++;
-            if(debugState>2){
-                debugState = 0;
-            }
-            break;
-    }
-
     
-    //iterate, if key pressed matches player key, change video of that player
-    for (vector<UserArea>::iterator p = mAreas.begin(); p != mAreas.end(); ++p)
-        if (event.getChar() == p->getKey())
-            p->nextMovie();
-}
+
+    }
 
 void ProjectApp::update()
 {
