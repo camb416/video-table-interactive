@@ -203,7 +203,7 @@ void Image::draw(char _align,Vec2f _scale, bool _debug)
     gl::pushMatrices();
     if (texture) {
         
-        gl::translate(x*_scale.x, y*_scale.y);
+        gl::translate(x, y);
         gl::rotate(deg);
         /*
         gl::translate(-texture.getWidth()/2,
