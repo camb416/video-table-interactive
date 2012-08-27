@@ -5,7 +5,7 @@
 //  Created by Cameron Browning on 8/27/12.
 //
 //
-
+#include "CinderProjectApp.h"
 #include "TableController.h"
 #include "cinder/app/AppBasic.h"
 
@@ -37,15 +37,16 @@ void TableController::handleKeyPress(char _key){
                 break;
         }
     }
+    ProjectApp *myApp = (ProjectApp*)app::App::get();
+
     switch(_key){
         case '`':
         case '~':
             
-            // Issue #13... show/hide cursor when fullscreen toggled
             if(isFullScreen()){
-               // cinder::getApp().showCursor();
+                 myApp->showCursor();
             } else {
-              // getApp().hideCursor();
+                 myApp->hideCursor();
             }
             setFullScreen( ! isFullScreen() );
             

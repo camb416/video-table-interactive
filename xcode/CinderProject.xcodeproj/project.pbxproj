@@ -126,6 +126,7 @@
 		3295E59F15DC478E00B63297 /* sample.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample.mov; sourceTree = "<group>"; };
 		329B28B415D00EC40021F656 /* AppModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppModel.cpp; path = ../src/AppModel.cpp; sourceTree = "<group>"; };
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
+		32C5156515EC2D3D00525141 /* CinderProjectApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CinderProjectApp.h; path = ../include/CinderProjectApp.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		32CD143615E55F9F00829F89 /* backplate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backplate.jpg; sourceTree = "<group>"; };
 		32CD143815EBB81C00829F89 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 				320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */,
 				320B341D15CB128D003AB00F /* Button.cpp */,
 				320B341E15CB128D003AB00F /* CinderProjectApp.cpp */,
+				32C5156515EC2D3D00525141 /* CinderProjectApp.h */,
 				329B28B415D00EC40021F656 /* AppModel.cpp */,
 				320B341F15CB128D003AB00F /* Image.cpp */,
 				320B342015CB128D003AB00F /* TwoStateButton.cpp */,
