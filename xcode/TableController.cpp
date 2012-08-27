@@ -7,6 +7,7 @@
 //
 
 #include "TableController.h"
+#include "cinder/app/AppBasic.h"
 
 
 void  TableController::setup(AppModel * _model, vector<RecipeView> * _views){
@@ -39,7 +40,15 @@ void TableController::handleKeyPress(char _key){
     switch(_key){
         case '`':
         case '~':
+            
+            // Issue #13... show/hide cursor when fullscreen toggled
+            if(isFullScreen()){
+               // cinder::getApp().showCursor();
+            } else {
+              // getApp().hideCursor();
+            }
             setFullScreen( ! isFullScreen() );
+            
             break;
         case ' ':
             debugState++;

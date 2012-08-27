@@ -58,6 +58,7 @@ void ProjectApp::setup()
     
     // implement fullscreen test here...
     setFullScreen(model.isFullScreen);
+    if(model.isFullScreen) hideCursor();
     
     // doubt these still work
     // model.pretendSetup();

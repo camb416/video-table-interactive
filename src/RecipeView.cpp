@@ -161,7 +161,7 @@ void RecipeView::backwardPress(){
     back_btn.boingScaleIn();
 }
 void RecipeView::selectPress(){
-       select_btn.boingScaleIn();
+    if(stepState==0) select_btn.boingScaleIn();
 }
 
 void RecipeView::update(){
