@@ -53,6 +53,7 @@
 		3295E5A015DC478E00B63297 /* sample.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3295E59F15DC478E00B63297 /* sample.mov */; };
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
 		32CD143715E55F9F00829F89 /* backplate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143615E55F9F00829F89 /* backplate.jpg */; };
+		32CD143915EBB81C00829F89 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143815EBB81C00829F89 /* mario.png */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
@@ -126,6 +127,7 @@
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		32CD143615E55F9F00829F89 /* backplate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backplate.jpg; sourceTree = "<group>"; };
+		32CD143815EBB81C00829F89 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
@@ -255,6 +257,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32CD143815EBB81C00829F89 /* mario.png */,
 				32CD143615E55F9F00829F89 /* backplate.jpg */,
 				3295E59F15DC478E00B63297 /* sample.mov */,
 				3295E55515D04F6F00B63297 /* active_area.png */,
@@ -412,6 +415,7 @@
 				3295E57C15D075D200B63297 /* SETTINGS.plist in Resources */,
 				3295E5A015DC478E00B63297 /* sample.mov in Resources */,
 				32CD143715E55F9F00829F89 /* backplate.jpg in Resources */,
+				32CD143915EBB81C00829F89 /* mario.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -110,11 +110,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
          landmarkName = "AppModel::setup(string _appFilePath, string _contentFilePath)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -123,11 +123,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
+         startingLineNumber = "27"
+         endingLineNumber = "27"
          landmarkName = "AppModel::setup(string _appFilePath, string _contentFilePath)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -136,11 +136,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
          landmarkName = "AppModel::setup(string _appFilePath, string _contentFilePath)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -149,11 +149,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "246"
-         endingLineNumber = "246"
+         startingLineNumber = "250"
+         endingLineNumber = "250"
          landmarkName = "AppModel::parseRecipes(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -162,11 +162,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "60"
-         endingLineNumber = "60"
+         startingLineNumber = "61"
+         endingLineNumber = "61"
          landmarkName = "AppModel::pretendSetup()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -175,11 +175,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "207"
-         endingLineNumber = "207"
+         startingLineNumber = "211"
+         endingLineNumber = "211"
          landmarkName = "AppModel::parseRecipes(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -188,11 +188,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "224"
-         endingLineNumber = "224"
+         startingLineNumber = "228"
+         endingLineNumber = "228"
          landmarkName = "AppModel::parseRecipes(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -201,11 +201,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "223"
-         endingLineNumber = "223"
+         startingLineNumber = "227"
+         endingLineNumber = "227"
          landmarkName = "AppModel::parseRecipes(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -318,20 +318,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
-         landmarkName = "AppModel::parseSettings(XmlTree _root)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "93"
@@ -344,11 +331,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -357,11 +344,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "113"
+         endingLineNumber = "113"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -370,7 +357,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "101"
@@ -383,11 +370,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "162"
-         endingLineNumber = "162"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
+         landmarkName = "AppModel::parseSettings(XmlTree _root)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/AppModel.cpp"
+         timestampString = "367769769.760537"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "166"
+         endingLineNumber = "166"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -409,11 +409,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "100"
+         endingLineNumber = "100"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -422,11 +422,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "102"
-         endingLineNumber = "102"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -435,11 +435,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "107"
+         endingLineNumber = "107"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
          landmarkType = "5">
       </FileBreakpoint>
@@ -448,12 +448,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../src/AppModel.cpp"
-         timestampString = "367534237.252939"
+         timestampString = "367769769.760537"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
          landmarkName = "AppModel::parseSettings(XmlTree _root)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../src/CinderProjectApp.cpp"
+         timestampString = "367769789.204445"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
+         landmarkName = "ProjectApp::update()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

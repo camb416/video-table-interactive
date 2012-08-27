@@ -19,6 +19,12 @@
 using namespace std;
 using namespace cinder;
 
+struct ButtonModel{
+    string path;
+    float x;
+    float y;
+};
+
 struct UserAreaModel{
     string name;
     string recipe;
@@ -49,6 +55,7 @@ public:
     vector<TouchSensorModel> sensors;
     
     string backgroundPath;
+    string buttonPath;
     bool isFullScreen;
     
 private:

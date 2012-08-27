@@ -17,6 +17,7 @@ using namespace std;
 int AppModel::setup(string _appFilePath, string _contentFilePath){
 
     backgroundPath = "problem loading background path from settings";
+    buttonPath = "problem loading button path from settings";
     isFullScreen = false;
     
     XmlTree contentTree(loadResource( _contentFilePath ) );
@@ -99,6 +100,9 @@ void AppModel::parseSettings(XmlTree _root){
             if(tagType.compare("string")==0 || tagType.compare("false")==0 || tagType.compare("true")==0){
                 if(topLevelKey.compare("background")==0){
                     backgroundPath = child->getValue();
+                } else if(topLevelKey.compare("button")==0){
+                    console() << "Button Value::: " << tagType << "!!!!!" << endl;
+                    buttonPath = child->getValue();
                 } else if(topLevelKey.compare("fullscreen")==0){
                     console() << "FULLSCREEN VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     if(tagType.compare("true")==0) isFullScreen = true;

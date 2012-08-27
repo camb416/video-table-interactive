@@ -6,6 +6,8 @@
 	<false/>
 	<key>background</key>
 	<string>backplate.jpg</string>
+	<key>button</key>
+	<string>mario.png</string>
 	<key>User Areas</key>
 	<dict>
 		<key>bottom-left</key>

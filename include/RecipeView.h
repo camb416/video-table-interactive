@@ -54,6 +54,10 @@ private:
     vector<gallerytools::Image> images;
     vector<gallerytools::Video> videos;
     
+    gallerytools::Image back_btn;
+    gallerytools::Image fwd_btn;
+    gallerytools::Image select_btn;
+    
 };
 
 
