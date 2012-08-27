@@ -148,6 +148,7 @@ void RecipeView::backwardRelease(){
 }
 void RecipeView::selectRelease(){
     select_btn.boingScaleOut();
+    if(stepState==0) forwardRelease();
 }
 
 void RecipeView::forwardPress(){
