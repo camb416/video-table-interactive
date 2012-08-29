@@ -60,6 +60,7 @@ void ProjectApp::setup()
  //   height = 1200.0;
      */
     background_tex = gl::Texture( loadImage( loadResource( model.backgroundPath ) ) );
+    foreground_tex = gl::Texture( loadImage( loadResource( model.foregroundPath) ) );
 }
 
 void ProjectApp::parseXML()
@@ -109,6 +110,7 @@ void ProjectApp::draw()
     for(int i=0;i<recipeViews.size();i++){
         recipeViews.at(i).draw();
     }
+    gl::draw(foreground_tex,getWindowBounds());
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );

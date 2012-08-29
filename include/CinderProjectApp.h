@@ -49,6 +49,7 @@ private:
     void parseXML();
     
     gl::Texture background_tex;
+    gl::Texture foreground_tex;
     float width, height;
     bool useTouch;
     

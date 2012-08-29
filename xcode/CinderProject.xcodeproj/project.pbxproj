@@ -101,6 +101,7 @@
 		32C5161415EE7A2100525141 /* Stew11Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515F015EE7A2100525141 /* Stew11Still.jpg */; };
 		32C5161515EE7A2100525141 /* Stew12Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515F115EE7A2100525141 /* Stew12Video.mov */; };
 		32C5161715EE856D00525141 /* touchOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C5161615EE856D00525141 /* touchOverlay.png */; };
+		32C5161915EE901400525141 /* frontplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C5161815EE901400525141 /* frontplate.png */; };
 		32CD143715E55F9F00829F89 /* backplate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143615E55F9F00829F89 /* backplate.jpg */; };
 		32CD143915EBB81C00829F89 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143815EBB81C00829F89 /* mario.png */; };
 		32CD143D15EBE27900829F89 /* TableController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CD143B15EBE27800829F89 /* TableController.cpp */; };
@@ -225,6 +226,7 @@
 		32C515F015EE7A2100525141 /* Stew11Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew11Still.jpg; sourceTree = "<group>"; };
 		32C515F115EE7A2100525141 /* Stew12Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew12Video.mov; sourceTree = "<group>"; };
 		32C5161615EE856D00525141 /* touchOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchOverlay.png; path = ../resources/touchOverlay.png; sourceTree = "<group>"; };
+		32C5161815EE901400525141 /* frontplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frontplate.png; path = ../resources/frontplate.png; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		32CD143615E55F9F00829F89 /* backplate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backplate.jpg; sourceTree = "<group>"; };
 		32CD143815EBB81C00829F89 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32C5161815EE901400525141 /* frontplate.png */,
 				32C5161615EE856D00525141 /* touchOverlay.png */,
 				32C515CB15EE7A2100525141 /* Eggs */,
 				32C515D815EE7A2100525141 /* Grilling */,
@@ -657,6 +660,7 @@
 				32C5161415EE7A2100525141 /* Stew11Still.jpg in Resources */,
 				32C5161515EE7A2100525141 /* Stew12Video.mov in Resources */,
 				32C5161715EE856D00525141 /* touchOverlay.png in Resources */,
+				32C5161915EE901400525141 /* frontplate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

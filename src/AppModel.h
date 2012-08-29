@@ -55,6 +55,7 @@ public:
     vector<TouchSensorModel> sensors;
     
     string backgroundPath;
+    string foregroundPath;
     string buttonPath;
     bool isFullScreen;
     

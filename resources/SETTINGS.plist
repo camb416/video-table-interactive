@@ -6,6 +6,8 @@
 	<false/>
 	<key>background</key>
 	<string>backplate.jpg</string>
+	<key>foreground</key>
+	<string>frontplate.png</string>
 	<key>button</key>
 	<string>touchOverlay.png</string>
 	<key>User Areas</key>
