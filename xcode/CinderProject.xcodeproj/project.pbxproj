@@ -102,6 +102,7 @@
 		32C5161515EE7A2100525141 /* Stew12Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515F115EE7A2100525141 /* Stew12Video.mov */; };
 		32C5161715EE856D00525141 /* touchOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C5161615EE856D00525141 /* touchOverlay.png */; };
 		32C5161915EE901400525141 /* frontplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C5161815EE901400525141 /* frontplate.png */; };
+		32C5161C15EEA28F00525141 /* CursorTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C5161A15EEA28F00525141 /* CursorTarget.cpp */; };
 		32CD143715E55F9F00829F89 /* backplate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143615E55F9F00829F89 /* backplate.jpg */; };
 		32CD143915EBB81C00829F89 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143815EBB81C00829F89 /* mario.png */; };
 		32CD143D15EBE27900829F89 /* TableController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CD143B15EBE27800829F89 /* TableController.cpp */; };
@@ -227,6 +228,8 @@
 		32C515F115EE7A2100525141 /* Stew12Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew12Video.mov; sourceTree = "<group>"; };
 		32C5161615EE856D00525141 /* touchOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchOverlay.png; path = ../resources/touchOverlay.png; sourceTree = "<group>"; };
 		32C5161815EE901400525141 /* frontplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frontplate.png; path = ../resources/frontplate.png; sourceTree = "<group>"; };
+		32C5161A15EEA28F00525141 /* CursorTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CursorTarget.cpp; path = ../src/CursorTarget.cpp; sourceTree = "<group>"; };
+		32C5161B15EEA28F00525141 /* CursorTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CursorTarget.h; path = ../src/CursorTarget.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		32CD143615E55F9F00829F89 /* backplate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backplate.jpg; sourceTree = "<group>"; };
 		32CD143815EBB81C00829F89 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				320B341D15CB128D003AB00F /* Button.cpp */,
 				320B341E15CB128D003AB00F /* CinderProjectApp.cpp */,
 				32C5156515EC2D3D00525141 /* CinderProjectApp.h */,
+				32C5161A15EEA28F00525141 /* CursorTarget.cpp */,
+				32C5161B15EEA28F00525141 /* CursorTarget.h */,
 				329B28B415D00EC40021F656 /* AppModel.cpp */,
 				320B341F15CB128D003AB00F /* Image.cpp */,
 				320B342015CB128D003AB00F /* TwoStateButton.cpp */,
@@ -687,6 +692,7 @@
 				3295E57F15D1620500B63297 /* NewUserArea.cpp in Sources */,
 				3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */,
 				32CD143D15EBE27900829F89 /* TableController.cpp in Sources */,
+				32C5161C15EEA28F00525141 /* CursorTarget.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@
 #include "UserArea.h"
 #include "RecipeView.h"
 #include "TableController.h"
-
+#include "CursorTarget.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -35,6 +35,7 @@ public:
 	void setup();
     
 	void keyDown( KeyEvent event );
+    void mouseDown ( MouseEvent evt);
     void keyUp(KeyEvent event);
     void prepareSettings( Settings *settings );
 	void update();
@@ -58,6 +59,8 @@ private:
     
     vector<RecipeView> recipeViews;
     TableController controller;
+    
+    gallerytools::CursorTarget * cTarget;
 };
 
 #endif

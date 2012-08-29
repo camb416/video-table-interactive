@@ -8,6 +8,13 @@
 
 #include "GalleryHelper.h"
 
+int GalleryHelper::alignElement(char _align, gl::Texture * _tex){
+    
+    Rectf texRect = Rectf(0.0f,0.0f,_tex->getWidth(),_tex->getHeight());
+    return alignElement(_align,Area(texRect));
+   
+}
+
 int GalleryHelper::alignElement(char _align,cinder::Area _bounds){
     float xOffset, yOffset;
     if(_bounds.getWidth()>1){

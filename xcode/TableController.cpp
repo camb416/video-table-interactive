@@ -15,11 +15,14 @@ void  TableController::setup(AppModel * _model, vector<RecipeView> * _views){
     views = _views;
     debugState = DEVELOPMENT;
 }
+int TableController::getDebugState(){
+    return debugState;
+}
 void TableController::handleKeyPress(char _key){
     console() << "check this out, yo: " << _key << endl;
     
     for(int i=0;i<views->size();i++){
-        console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
+      //  console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
         RecipeView * rv = &views->at(i);
         int keyFunc = rv->getKeyFunction(_key);
         switch(keyFunc){
@@ -56,6 +59,11 @@ void TableController::handleKeyPress(char _key){
             if(debugState>2){
                 debugState = 0;
             }
+            if(debugState!=0){
+                myApp->showCursor();
+            } else {
+                myApp->hideCursor();
+            }
             updateViewStates();
             break;
     }
@@ -70,7 +78,7 @@ void TableController::handleKeyRelease(char _key){
     console() << "check this out, yo: " << _key << endl;
     
     for(int i=0;i<views->size();i++){
-        console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
+     //   console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
         RecipeView * rv = &views->at(i);
         int keyFunc = rv->getKeyFunction(_key);
         switch(keyFunc){

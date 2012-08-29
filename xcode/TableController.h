@@ -18,6 +18,7 @@ public:
    void  setup(AppModel * _model, vector<RecipeView>  * _views);
     void handleKeyPress(char _key);
     void handleKeyRelease(char _key);
+    int getDebugState();
 private:
     int debugState;
     void updateViewStates();

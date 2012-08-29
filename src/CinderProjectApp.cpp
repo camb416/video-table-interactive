@@ -7,6 +7,7 @@ void ProjectApp::setup()
 {
     //debugState = DEVELOPMENT;
    
+    cTarget = new gallerytools::CursorTarget();
     
     controller.setup(&model,&recipeViews);
     
@@ -78,6 +79,11 @@ void ProjectApp::prepareSettings( Settings *settings )
 void ProjectApp::keyUp(KeyEvent event){
      controller.handleKeyRelease(event.getChar());
 }
+
+void ProjectApp::mouseDown( MouseEvent evt){
+    if(controller.getDebugState()!=0) cTarget->push();
+}
+
 void ProjectApp::keyDown( KeyEvent event )
 {
     /*
@@ -96,6 +102,7 @@ void ProjectApp::update()
     for(int i=0;i<recipeViews.size();i++){
         recipeViews.at(i).update();
     }
+   
   
 //    pConnector.updateKits();
 
@@ -103,6 +110,8 @@ void ProjectApp::update()
 
 void ProjectApp::draw()
 {
+
+    
     gl::clear( Color( 0, 0, 0) );
     gl::enableAlphaBlending();
     gl::color(1.0f,1.0f,1.0f);
@@ -111,6 +120,17 @@ void ProjectApp::draw()
         recipeViews.at(i).draw();
     }
     gl::draw(foreground_tex,getWindowBounds());
+
+    // while this should be in update, Cinder likes to throw
+    // an exception on application quit
+    // ick...
+    if(controller.getDebugState()!=0){
+        cTarget->update(getMousePos());
+        cTarget->draw();
+    }//
+    //
+    
+    
 }
 
 CINDER_APP_BASIC( ProjectApp, RendererGl(0) );
