@@ -97,7 +97,7 @@ RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
         anImage.hide();
         images.push_back(anImage);
         gallerytools::Video aVideo;
-        aVideo.load(recipeModel.getCookStep(i).video);
+        console() << "loading video::: " << aVideo.load(recipeModel.getCookStep(i).video) << endl;
         aVideo.hide();
         videos.push_back(aVideo);
     }

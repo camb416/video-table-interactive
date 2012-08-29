@@ -2,4 +2,8 @@
 # *.m4v
 # *.png
 xcode/build/*
+resources/Eggs/*
+resources/Tamales/*
+resources/Stew/*
+resources/Grilling/*
 # xcode/CinderProject.xcodeproj/project.xcworkspace/xcuserdata/sysadmin.xcuserdatad/UserInterfaceState.xcuserstate

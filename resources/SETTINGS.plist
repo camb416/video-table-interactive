@@ -7,13 +7,13 @@
 	<key>background</key>
 	<string>backplate.jpg</string>
 	<key>button</key>
-	<string>mario.png</string>
+	<string>touchOverlay.png</string>
 	<key>User Areas</key>
 	<dict>
 		<key>bottom-left</key>
 		<dict>
 			<key>recipe</key>
-			<string>Tamales</string>
+			<string>Eggs</string>
 			<key>x</key>
 			<integer>0</integer>
 			<key>y</key>
@@ -51,7 +51,7 @@
 		<key>top-left</key>
 		<dict>
 			<key>recipe</key>
-			<string>Salmon</string>
+			<string>Stew</string>
 			<key>x</key>
 			<integer>0</integer>
 			<key>y</key>
@@ -89,7 +89,7 @@
 		<key>top-right</key>
 		<dict>
 			<key>recipe</key>
-			<string>Grits</string>
+			<string>Grilling</string>
 			<key>x</key>
 			<integer>1920</integer>
 			<key>y</key>
@@ -127,7 +127,7 @@
 		<key>bottom-right</key>
 		<dict>
 			<key>recipe</key>
-			<string>Eggs</string>
+			<string>Tamales</string>
 			<key>x</key>
 			<integer>1920</integer>
 			<key>y</key>

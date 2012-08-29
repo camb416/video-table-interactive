@@ -8,12 +8,47 @@
 		<dict>
 			<key>Steps</key>
 			<dict>
-				<key>prepare</key>
+				<key>step1</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg0.png</string>
+					<string>Tamales01Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Tamales02Video.mov</string>
+				</dict>
+				<key>step2</key>
+				<dict>
+					<key>img</key>
+					<string>Tamales03Still.jpg</string>
+					<key>video</key>
+					<string>Tamales04Video.mov</string>
+				</dict>
+				<key>step3</key>
+				<dict>
+					<key>img</key>
+					<string>Tamales05Still.jpg</string>
+					<key>video</key>
+					<string>Tamales06Video.mov</string>
+				</dict>
+				<key>step4</key>
+				<dict>
+					<key>img</key>
+					<string>Tamales07Still.jpg</string>
+					<key>video</key>
+					<string>Tamales08Video.mov</string>
+				</dict>
+				<key>step5</key>
+				<dict>
+					<key>img</key>
+					<string>Tamales09Still.jpg</string>
+					<key>video</key>
+					<string>Tamales10Video.mov</string>
+				</dict>
+				<key>step6</key>
+				<dict>
+					<key>img</key>
+					<string>Tamales11Still.jpg</string>
+					<key>video</key>
+					<string>Tamales12Video.mov</string>
 				</dict>
 			</dict>
 		</dict>
@@ -21,80 +56,143 @@
 		<dict>
 			<key>Steps</key>
 			<dict>
-				<key>prepare</key>
+				<key>step1</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg1.png</string>
+					<string>Eggs01Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Eggs02Video.mov</string>
 				</dict>
-				<key>chop</key>
+				<key>step1 - 2</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg1.png</string>
+					<string>Eggs03Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Eggs04Video.mov</string>
+				</dict>
+				<key>step1 - 3</key>
+				<dict>
+					<key>img</key>
+					<string>Eggs05Still.jpg</string>
+					<key>video</key>
+					<string>Eggs06Video.mov</string>
+				</dict>
+				<key>step1 - 4</key>
+				<dict>
+					<key>img</key>
+					<string>Eggs07Still.jpg</string>
+					<key>video</key>
+					<string>Eggs08Video.mov</string>
+				</dict>
+				<key>step1 - 5</key>
+				<dict>
+					<key>img</key>
+					<string>Eggs09Still.jpg</string>
+					<key>video</key>
+					<string>Eggs10Video.mov</string>
+				</dict>
+				<key>step1 - 6</key>
+				<dict>
+					<key>img</key>
+					<string>Eggs11Still.jpg</string>
+					<key>video</key>
+					<string>Eggs12Video.mov</string>
 				</dict>
 			</dict>
 		</dict>
-		<key>Salmon</key>
+		<key>Grilling</key>
 		<dict>
 			<key>Steps</key>
 			<dict>
-				<key>prepare</key>
+				<key>step1</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg0.png</string>
+					<string>Grilling01Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Grilling02Video.mov</string>
 				</dict>
-				<key>chop</key>
+				<key>step1 - 2</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg1.png</string>
+					<string>Grilling03Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Grilling04Video.mov</string>
 				</dict>
-				<key>cook</key>
+				<key>step1 - 3</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg2.png</string>
+					<string>Grilling05Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Grilling06Video.mov</string>
+				</dict>
+				<key>step1 - 4</key>
+				<dict>
+					<key>img</key>
+					<string>Grilling07Still.jpg</string>
+					<key>video</key>
+					<string>Grilling08Video.mov</string>
+				</dict>
+				<key>step1 - 5</key>
+				<dict>
+					<key>img</key>
+					<string>Grilling09Still.jpg</string>
+					<key>video</key>
+					<string>Grilling10Video.mov</string>
+				</dict>
+				<key>step1 - 6</key>
+				<dict>
+					<key>img</key>
+					<string>Grilling11Still.jpg</string>
+					<key>video</key>
+					<string>Grilling12Video.mov</string>
 				</dict>
 			</dict>
 		</dict>
-		<key>Grits</key>
+		<key>Stew</key>
 		<dict>
 			<key>Steps</key>
 			<dict>
-				<key>prepare</key>
+				<key>step1</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg2.png</string>
+					<string>Stew01Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Stew02Video.mov</string>
 				</dict>
-				<key>chop</key>
+				<key>step1 - 2</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg1.png</string>
+					<string>Stew03Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Stew04Video.mov</string>
 				</dict>
-				<key>cook</key>
+				<key>step1 - 3</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg2.png</string>
+					<string>Stew05Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Stew06Video.mov</string>
 				</dict>
-				<key>eat</key>
+				<key>step1 - 4</key>
 				<dict>
 					<key>img</key>
-					<string>ckimg3.png</string>
+					<string>Stew07Still.jpg</string>
 					<key>video</key>
-					<string>sample.mov</string>
+					<string>Stew08Video.mov</string>
+				</dict>
+				<key>step1 - 5</key>
+				<dict>
+					<key>img</key>
+					<string>Stew09Still.jpg</string>
+					<key>video</key>
+					<string>Stew10Video.mov</string>
+				</dict>
+				<key>step1 - 6</key>
+				<dict>
+					<key>img</key>
+					<string>Stew11Still.jpg</string>
+					<key>video</key>
+					<string>Stew12Video.mov</string>
 				</dict>
 			</dict>
 		</dict>

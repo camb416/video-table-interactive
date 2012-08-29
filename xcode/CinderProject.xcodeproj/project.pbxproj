@@ -52,6 +52,55 @@
 		3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E59415DBFD3900B63297 /* PlistReader.cpp */; };
 		3295E5A015DC478E00B63297 /* sample.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3295E59F15DC478E00B63297 /* sample.mov */; };
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
+		32C515BF15EE74CD00525141 /* Tamales01Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C5158F15EE74CD00525141 /* Tamales01Still.jpg */; };
+		32C515C015EE74CD00525141 /* Tamales02Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159015EE74CD00525141 /* Tamales02Video.mov */; };
+		32C515C115EE74CD00525141 /* Tamales03Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159115EE74CD00525141 /* Tamales03Still.jpg */; };
+		32C515C215EE74CD00525141 /* Tamales04Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159215EE74CD00525141 /* Tamales04Video.mov */; };
+		32C515C315EE74CD00525141 /* Tamales05Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159315EE74CD00525141 /* Tamales05Still.jpg */; };
+		32C515C415EE74CD00525141 /* Tamales06Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159415EE74CD00525141 /* Tamales06Video.mov */; };
+		32C515C515EE74CD00525141 /* Tamales07Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159515EE74CD00525141 /* Tamales07Still.jpg */; };
+		32C515C615EE74CD00525141 /* Tamales08Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159615EE74CD00525141 /* Tamales08Video.mov */; };
+		32C515C715EE74CD00525141 /* Tamales09Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159715EE74CD00525141 /* Tamales09Still.jpg */; };
+		32C515C815EE74CD00525141 /* Tamales10Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159815EE74CD00525141 /* Tamales10Video.mov */; };
+		32C515C915EE74CD00525141 /* Tamales11Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159915EE74CD00525141 /* Tamales11Still.jpg */; };
+		32C515CA15EE74CD00525141 /* Tamales12Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C5159A15EE74CD00525141 /* Tamales12Video.mov */; };
+		32C515F215EE7A2100525141 /* Eggs01Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515CC15EE7A2100525141 /* Eggs01Still.jpg */; };
+		32C515F315EE7A2100525141 /* Eggs02Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515CD15EE7A2100525141 /* Eggs02Video.mov */; };
+		32C515F415EE7A2100525141 /* Eggs03Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515CE15EE7A2100525141 /* Eggs03Still.jpg */; };
+		32C515F515EE7A2100525141 /* Eggs04Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515CF15EE7A2100525141 /* Eggs04Video.mov */; };
+		32C515F615EE7A2100525141 /* Eggs05Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D015EE7A2100525141 /* Eggs05Still.jpg */; };
+		32C515F715EE7A2100525141 /* Eggs06Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D115EE7A2100525141 /* Eggs06Video.mov */; };
+		32C515F815EE7A2100525141 /* Eggs07Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D215EE7A2100525141 /* Eggs07Still.jpg */; };
+		32C515F915EE7A2100525141 /* Eggs08Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D315EE7A2100525141 /* Eggs08Video.mov */; };
+		32C515FA15EE7A2100525141 /* Eggs09Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D415EE7A2100525141 /* Eggs09Still.jpg */; };
+		32C515FB15EE7A2100525141 /* Eggs10Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D515EE7A2100525141 /* Eggs10Video.mov */; };
+		32C515FC15EE7A2100525141 /* Eggs11Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D615EE7A2100525141 /* Eggs11Still.jpg */; };
+		32C515FD15EE7A2100525141 /* Eggs12Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D715EE7A2100525141 /* Eggs12Video.mov */; };
+		32C515FE15EE7A2100525141 /* Grilling01Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515D915EE7A2100525141 /* Grilling01Still.jpg */; };
+		32C515FF15EE7A2100525141 /* Grilling02Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515DA15EE7A2100525141 /* Grilling02Video.mov */; };
+		32C5160015EE7A2100525141 /* Grilling03Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515DB15EE7A2100525141 /* Grilling03Still.jpg */; };
+		32C5160115EE7A2100525141 /* Grilling04Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515DC15EE7A2100525141 /* Grilling04Video.mov */; };
+		32C5160215EE7A2100525141 /* Grilling05Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515DD15EE7A2100525141 /* Grilling05Still.jpg */; };
+		32C5160315EE7A2100525141 /* Grilling06Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515DE15EE7A2100525141 /* Grilling06Video.mov */; };
+		32C5160415EE7A2100525141 /* Grilling07Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515DF15EE7A2100525141 /* Grilling07Still.jpg */; };
+		32C5160515EE7A2100525141 /* Grilling08Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E015EE7A2100525141 /* Grilling08Video.mov */; };
+		32C5160615EE7A2100525141 /* Grilling09Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E115EE7A2100525141 /* Grilling09Still.jpg */; };
+		32C5160715EE7A2100525141 /* Grilling10Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E215EE7A2100525141 /* Grilling10Video.mov */; };
+		32C5160815EE7A2100525141 /* Grilling11Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E315EE7A2100525141 /* Grilling11Still.jpg */; };
+		32C5160915EE7A2100525141 /* Grilling12Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E415EE7A2100525141 /* Grilling12Video.mov */; };
+		32C5160A15EE7A2100525141 /* Stew01Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E615EE7A2100525141 /* Stew01Still.jpg */; };
+		32C5160B15EE7A2100525141 /* Stew02Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E715EE7A2100525141 /* Stew02Video.mov */; };
+		32C5160C15EE7A2100525141 /* Stew03Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E815EE7A2100525141 /* Stew03Still.jpg */; };
+		32C5160D15EE7A2100525141 /* Stew04Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515E915EE7A2100525141 /* Stew04Video.mov */; };
+		32C5160E15EE7A2100525141 /* Stew05Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515EA15EE7A2100525141 /* Stew05Still.jpg */; };
+		32C5160F15EE7A2100525141 /* Stew06Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515EB15EE7A2100525141 /* Stew06Video.mov */; };
+		32C5161015EE7A2100525141 /* Stew07Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515EC15EE7A2100525141 /* Stew07Still.jpg */; };
+		32C5161115EE7A2100525141 /* Stew08Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515ED15EE7A2100525141 /* Stew08Video.mov */; };
+		32C5161215EE7A2100525141 /* Stew09Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515EE15EE7A2100525141 /* Stew09Still.jpg */; };
+		32C5161315EE7A2100525141 /* Stew10Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515EF15EE7A2100525141 /* Stew10Video.mov */; };
+		32C5161415EE7A2100525141 /* Stew11Still.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C515F015EE7A2100525141 /* Stew11Still.jpg */; };
+		32C5161515EE7A2100525141 /* Stew12Video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 32C515F115EE7A2100525141 /* Stew12Video.mov */; };
+		32C5161715EE856D00525141 /* touchOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C5161615EE856D00525141 /* touchOverlay.png */; };
 		32CD143715E55F9F00829F89 /* backplate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143615E55F9F00829F89 /* backplate.jpg */; };
 		32CD143915EBB81C00829F89 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CD143815EBB81C00829F89 /* mario.png */; };
 		32CD143D15EBE27900829F89 /* TableController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CD143B15EBE27800829F89 /* TableController.cpp */; };
@@ -127,6 +176,55 @@
 		329B28B415D00EC40021F656 /* AppModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppModel.cpp; path = ../src/AppModel.cpp; sourceTree = "<group>"; };
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
 		32C5156515EC2D3D00525141 /* CinderProjectApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CinderProjectApp.h; path = ../include/CinderProjectApp.h; sourceTree = "<group>"; };
+		32C5158F15EE74CD00525141 /* Tamales01Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales01Still.jpg; sourceTree = "<group>"; };
+		32C5159015EE74CD00525141 /* Tamales02Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales02Video.mov; sourceTree = "<group>"; };
+		32C5159115EE74CD00525141 /* Tamales03Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales03Still.jpg; sourceTree = "<group>"; };
+		32C5159215EE74CD00525141 /* Tamales04Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales04Video.mov; sourceTree = "<group>"; };
+		32C5159315EE74CD00525141 /* Tamales05Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales05Still.jpg; sourceTree = "<group>"; };
+		32C5159415EE74CD00525141 /* Tamales06Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales06Video.mov; sourceTree = "<group>"; };
+		32C5159515EE74CD00525141 /* Tamales07Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales07Still.jpg; sourceTree = "<group>"; };
+		32C5159615EE74CD00525141 /* Tamales08Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales08Video.mov; sourceTree = "<group>"; };
+		32C5159715EE74CD00525141 /* Tamales09Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales09Still.jpg; sourceTree = "<group>"; };
+		32C5159815EE74CD00525141 /* Tamales10Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales10Video.mov; sourceTree = "<group>"; };
+		32C5159915EE74CD00525141 /* Tamales11Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales11Still.jpg; sourceTree = "<group>"; };
+		32C5159A15EE74CD00525141 /* Tamales12Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales12Video.mov; sourceTree = "<group>"; };
+		32C515CC15EE7A2100525141 /* Eggs01Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eggs01Still.jpg; sourceTree = "<group>"; };
+		32C515CD15EE7A2100525141 /* Eggs02Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Eggs02Video.mov; sourceTree = "<group>"; };
+		32C515CE15EE7A2100525141 /* Eggs03Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eggs03Still.jpg; sourceTree = "<group>"; };
+		32C515CF15EE7A2100525141 /* Eggs04Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Eggs04Video.mov; sourceTree = "<group>"; };
+		32C515D015EE7A2100525141 /* Eggs05Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eggs05Still.jpg; sourceTree = "<group>"; };
+		32C515D115EE7A2100525141 /* Eggs06Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Eggs06Video.mov; sourceTree = "<group>"; };
+		32C515D215EE7A2100525141 /* Eggs07Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eggs07Still.jpg; sourceTree = "<group>"; };
+		32C515D315EE7A2100525141 /* Eggs08Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Eggs08Video.mov; sourceTree = "<group>"; };
+		32C515D415EE7A2100525141 /* Eggs09Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eggs09Still.jpg; sourceTree = "<group>"; };
+		32C515D515EE7A2100525141 /* Eggs10Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Eggs10Video.mov; sourceTree = "<group>"; };
+		32C515D615EE7A2100525141 /* Eggs11Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eggs11Still.jpg; sourceTree = "<group>"; };
+		32C515D715EE7A2100525141 /* Eggs12Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Eggs12Video.mov; sourceTree = "<group>"; };
+		32C515D915EE7A2100525141 /* Grilling01Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grilling01Still.jpg; sourceTree = "<group>"; };
+		32C515DA15EE7A2100525141 /* Grilling02Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Grilling02Video.mov; sourceTree = "<group>"; };
+		32C515DB15EE7A2100525141 /* Grilling03Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grilling03Still.jpg; sourceTree = "<group>"; };
+		32C515DC15EE7A2100525141 /* Grilling04Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Grilling04Video.mov; sourceTree = "<group>"; };
+		32C515DD15EE7A2100525141 /* Grilling05Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grilling05Still.jpg; sourceTree = "<group>"; };
+		32C515DE15EE7A2100525141 /* Grilling06Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Grilling06Video.mov; sourceTree = "<group>"; };
+		32C515DF15EE7A2100525141 /* Grilling07Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grilling07Still.jpg; sourceTree = "<group>"; };
+		32C515E015EE7A2100525141 /* Grilling08Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Grilling08Video.mov; sourceTree = "<group>"; };
+		32C515E115EE7A2100525141 /* Grilling09Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grilling09Still.jpg; sourceTree = "<group>"; };
+		32C515E215EE7A2100525141 /* Grilling10Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Grilling10Video.mov; sourceTree = "<group>"; };
+		32C515E315EE7A2100525141 /* Grilling11Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grilling11Still.jpg; sourceTree = "<group>"; };
+		32C515E415EE7A2100525141 /* Grilling12Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Grilling12Video.mov; sourceTree = "<group>"; };
+		32C515E615EE7A2100525141 /* Stew01Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew01Still.jpg; sourceTree = "<group>"; };
+		32C515E715EE7A2100525141 /* Stew02Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew02Video.mov; sourceTree = "<group>"; };
+		32C515E815EE7A2100525141 /* Stew03Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew03Still.jpg; sourceTree = "<group>"; };
+		32C515E915EE7A2100525141 /* Stew04Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew04Video.mov; sourceTree = "<group>"; };
+		32C515EA15EE7A2100525141 /* Stew05Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew05Still.jpg; sourceTree = "<group>"; };
+		32C515EB15EE7A2100525141 /* Stew06Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew06Video.mov; sourceTree = "<group>"; };
+		32C515EC15EE7A2100525141 /* Stew07Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew07Still.jpg; sourceTree = "<group>"; };
+		32C515ED15EE7A2100525141 /* Stew08Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew08Video.mov; sourceTree = "<group>"; };
+		32C515EE15EE7A2100525141 /* Stew09Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew09Still.jpg; sourceTree = "<group>"; };
+		32C515EF15EE7A2100525141 /* Stew10Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew10Video.mov; sourceTree = "<group>"; };
+		32C515F015EE7A2100525141 /* Stew11Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stew11Still.jpg; sourceTree = "<group>"; };
+		32C515F115EE7A2100525141 /* Stew12Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stew12Video.mov; sourceTree = "<group>"; };
+		32C5161615EE856D00525141 /* touchOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchOverlay.png; path = ../resources/touchOverlay.png; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CinderProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderProject_Prefix.pch; sourceTree = "<group>"; };
 		32CD143615E55F9F00829F89 /* backplate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backplate.jpg; sourceTree = "<group>"; };
 		32CD143815EBB81C00829F89 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
@@ -266,6 +364,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32C5161615EE856D00525141 /* touchOverlay.png */,
+				32C515CB15EE7A2100525141 /* Eggs */,
+				32C515D815EE7A2100525141 /* Grilling */,
+				32C515E515EE7A2100525141 /* Stew */,
+				32C5158E15EE74CD00525141 /* Tamales */,
 				32CD143815EBB81C00829F89 /* mario.png */,
 				32CD143615E55F9F00829F89 /* backplate.jpg */,
 				3295E59F15DC478E00B63297 /* sample.mov */,
@@ -350,6 +453,86 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		32C5158E15EE74CD00525141 /* Tamales */ = {
+			isa = PBXGroup;
+			children = (
+				32C5158F15EE74CD00525141 /* Tamales01Still.jpg */,
+				32C5159015EE74CD00525141 /* Tamales02Video.mov */,
+				32C5159115EE74CD00525141 /* Tamales03Still.jpg */,
+				32C5159215EE74CD00525141 /* Tamales04Video.mov */,
+				32C5159315EE74CD00525141 /* Tamales05Still.jpg */,
+				32C5159415EE74CD00525141 /* Tamales06Video.mov */,
+				32C5159515EE74CD00525141 /* Tamales07Still.jpg */,
+				32C5159615EE74CD00525141 /* Tamales08Video.mov */,
+				32C5159715EE74CD00525141 /* Tamales09Still.jpg */,
+				32C5159815EE74CD00525141 /* Tamales10Video.mov */,
+				32C5159915EE74CD00525141 /* Tamales11Still.jpg */,
+				32C5159A15EE74CD00525141 /* Tamales12Video.mov */,
+			);
+			name = Tamales;
+			path = ../resources/Tamales;
+			sourceTree = "<group>";
+		};
+		32C515CB15EE7A2100525141 /* Eggs */ = {
+			isa = PBXGroup;
+			children = (
+				32C515CC15EE7A2100525141 /* Eggs01Still.jpg */,
+				32C515CD15EE7A2100525141 /* Eggs02Video.mov */,
+				32C515CE15EE7A2100525141 /* Eggs03Still.jpg */,
+				32C515CF15EE7A2100525141 /* Eggs04Video.mov */,
+				32C515D015EE7A2100525141 /* Eggs05Still.jpg */,
+				32C515D115EE7A2100525141 /* Eggs06Video.mov */,
+				32C515D215EE7A2100525141 /* Eggs07Still.jpg */,
+				32C515D315EE7A2100525141 /* Eggs08Video.mov */,
+				32C515D415EE7A2100525141 /* Eggs09Still.jpg */,
+				32C515D515EE7A2100525141 /* Eggs10Video.mov */,
+				32C515D615EE7A2100525141 /* Eggs11Still.jpg */,
+				32C515D715EE7A2100525141 /* Eggs12Video.mov */,
+			);
+			name = Eggs;
+			path = ../resources/Eggs;
+			sourceTree = "<group>";
+		};
+		32C515D815EE7A2100525141 /* Grilling */ = {
+			isa = PBXGroup;
+			children = (
+				32C515D915EE7A2100525141 /* Grilling01Still.jpg */,
+				32C515DA15EE7A2100525141 /* Grilling02Video.mov */,
+				32C515DB15EE7A2100525141 /* Grilling03Still.jpg */,
+				32C515DC15EE7A2100525141 /* Grilling04Video.mov */,
+				32C515DD15EE7A2100525141 /* Grilling05Still.jpg */,
+				32C515DE15EE7A2100525141 /* Grilling06Video.mov */,
+				32C515DF15EE7A2100525141 /* Grilling07Still.jpg */,
+				32C515E015EE7A2100525141 /* Grilling08Video.mov */,
+				32C515E115EE7A2100525141 /* Grilling09Still.jpg */,
+				32C515E215EE7A2100525141 /* Grilling10Video.mov */,
+				32C515E315EE7A2100525141 /* Grilling11Still.jpg */,
+				32C515E415EE7A2100525141 /* Grilling12Video.mov */,
+			);
+			name = Grilling;
+			path = ../resources/Grilling;
+			sourceTree = "<group>";
+		};
+		32C515E515EE7A2100525141 /* Stew */ = {
+			isa = PBXGroup;
+			children = (
+				32C515E615EE7A2100525141 /* Stew01Still.jpg */,
+				32C515E715EE7A2100525141 /* Stew02Video.mov */,
+				32C515E815EE7A2100525141 /* Stew03Still.jpg */,
+				32C515E915EE7A2100525141 /* Stew04Video.mov */,
+				32C515EA15EE7A2100525141 /* Stew05Still.jpg */,
+				32C515EB15EE7A2100525141 /* Stew06Video.mov */,
+				32C515EC15EE7A2100525141 /* Stew07Still.jpg */,
+				32C515ED15EE7A2100525141 /* Stew08Video.mov */,
+				32C515EE15EE7A2100525141 /* Stew09Still.jpg */,
+				32C515EF15EE7A2100525141 /* Stew10Video.mov */,
+				32C515F015EE7A2100525141 /* Stew11Still.jpg */,
+				32C515F115EE7A2100525141 /* Stew12Video.mov */,
+			);
+			name = Stew;
+			path = ../resources/Stew;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,6 +608,55 @@
 				3295E5A015DC478E00B63297 /* sample.mov in Resources */,
 				32CD143715E55F9F00829F89 /* backplate.jpg in Resources */,
 				32CD143915EBB81C00829F89 /* mario.png in Resources */,
+				32C515BF15EE74CD00525141 /* Tamales01Still.jpg in Resources */,
+				32C515C015EE74CD00525141 /* Tamales02Video.mov in Resources */,
+				32C515C115EE74CD00525141 /* Tamales03Still.jpg in Resources */,
+				32C515C215EE74CD00525141 /* Tamales04Video.mov in Resources */,
+				32C515C315EE74CD00525141 /* Tamales05Still.jpg in Resources */,
+				32C515C415EE74CD00525141 /* Tamales06Video.mov in Resources */,
+				32C515C515EE74CD00525141 /* Tamales07Still.jpg in Resources */,
+				32C515C615EE74CD00525141 /* Tamales08Video.mov in Resources */,
+				32C515C715EE74CD00525141 /* Tamales09Still.jpg in Resources */,
+				32C515C815EE74CD00525141 /* Tamales10Video.mov in Resources */,
+				32C515C915EE74CD00525141 /* Tamales11Still.jpg in Resources */,
+				32C515CA15EE74CD00525141 /* Tamales12Video.mov in Resources */,
+				32C515F215EE7A2100525141 /* Eggs01Still.jpg in Resources */,
+				32C515F315EE7A2100525141 /* Eggs02Video.mov in Resources */,
+				32C515F415EE7A2100525141 /* Eggs03Still.jpg in Resources */,
+				32C515F515EE7A2100525141 /* Eggs04Video.mov in Resources */,
+				32C515F615EE7A2100525141 /* Eggs05Still.jpg in Resources */,
+				32C515F715EE7A2100525141 /* Eggs06Video.mov in Resources */,
+				32C515F815EE7A2100525141 /* Eggs07Still.jpg in Resources */,
+				32C515F915EE7A2100525141 /* Eggs08Video.mov in Resources */,
+				32C515FA15EE7A2100525141 /* Eggs09Still.jpg in Resources */,
+				32C515FB15EE7A2100525141 /* Eggs10Video.mov in Resources */,
+				32C515FC15EE7A2100525141 /* Eggs11Still.jpg in Resources */,
+				32C515FD15EE7A2100525141 /* Eggs12Video.mov in Resources */,
+				32C515FE15EE7A2100525141 /* Grilling01Still.jpg in Resources */,
+				32C515FF15EE7A2100525141 /* Grilling02Video.mov in Resources */,
+				32C5160015EE7A2100525141 /* Grilling03Still.jpg in Resources */,
+				32C5160115EE7A2100525141 /* Grilling04Video.mov in Resources */,
+				32C5160215EE7A2100525141 /* Grilling05Still.jpg in Resources */,
+				32C5160315EE7A2100525141 /* Grilling06Video.mov in Resources */,
+				32C5160415EE7A2100525141 /* Grilling07Still.jpg in Resources */,
+				32C5160515EE7A2100525141 /* Grilling08Video.mov in Resources */,
+				32C5160615EE7A2100525141 /* Grilling09Still.jpg in Resources */,
+				32C5160715EE7A2100525141 /* Grilling10Video.mov in Resources */,
+				32C5160815EE7A2100525141 /* Grilling11Still.jpg in Resources */,
+				32C5160915EE7A2100525141 /* Grilling12Video.mov in Resources */,
+				32C5160A15EE7A2100525141 /* Stew01Still.jpg in Resources */,
+				32C5160B15EE7A2100525141 /* Stew02Video.mov in Resources */,
+				32C5160C15EE7A2100525141 /* Stew03Still.jpg in Resources */,
+				32C5160D15EE7A2100525141 /* Stew04Video.mov in Resources */,
+				32C5160E15EE7A2100525141 /* Stew05Still.jpg in Resources */,
+				32C5160F15EE7A2100525141 /* Stew06Video.mov in Resources */,
+				32C5161015EE7A2100525141 /* Stew07Still.jpg in Resources */,
+				32C5161115EE7A2100525141 /* Stew08Video.mov in Resources */,
+				32C5161215EE7A2100525141 /* Stew09Still.jpg in Resources */,
+				32C5161315EE7A2100525141 /* Stew10Video.mov in Resources */,
+				32C5161415EE7A2100525141 /* Stew11Still.jpg in Resources */,
+				32C5161515EE7A2100525141 /* Stew12Video.mov in Resources */,
+				32C5161715EE856D00525141 /* touchOverlay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
