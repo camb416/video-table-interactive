@@ -19,7 +19,7 @@ CursorTarget::CursorTarget(){
 string normalFont( "Arial" );
 TextLayout layout;
 layout.clear( ColorA( 0.5f, 0.5f, 0.5f, 0.5f ) );
-layout.setFont( Font( normalFont, 24 ) );
+layout.setFont( Font( normalFont, 12 ) );
 layout.setColor( Color( 1, 1, 1 ) );
 layout.addLine( "...");
 Surface8u rendered = layout.render( true, false );
@@ -41,7 +41,7 @@ try{
     string normalFont( "Arial" );
     TextLayout layout;
     layout.clear( ColorA( 0.0f, 0.0f, 0.0f, 0.5f ) );
-    layout.setFont( Font( normalFont, 24 ) );
+    layout.setFont( Font( normalFont, 12 ) );
     layout.setColor( Color( 1, 0.75f,0.75f ) );
     
 
@@ -64,21 +64,28 @@ try{
 void CursorTarget::draw(){
     Vec2i pos = app->getMousePos();
     Vec2i windowCenter = app->getWindowCenter();
+    
     char align;
+    Vec2f offset;
     if(pos.x>windowCenter.x){
         if(pos.y>windowCenter.y){
             align=BOTTOM_RIGHT;
+            offset = Vec2f(-20,-20);
         } else {
             align=TOP_RIGHT;
+            offset = Vec2f(-20,20);
         }
     } else {
         if(pos.y>windowCenter.y){
             align = BOTTOM_LEFT;
+            offset = Vec2f(20,-20);
         } else {
             align = TOP_LEFT;
+            offset = Vec2f(20,20);
         }
     }
     gl::pushMatrices();
+    gl::translate(offset);
     GalleryHelper::alignElement(align,&text_texture);
     gl::draw(text_texture,pos);
     gl::popMatrices();
