@@ -723,7 +723,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = CinderProject;
-				SDKROOT = "";
+				SDKROOT = macosx10.7;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
 			};
@@ -755,7 +755,7 @@
 					"-lcurl",
 				);
 				PRODUCT_NAME = CinderProject;
-				SDKROOT = "";
+				SDKROOT = macosx10.7;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
