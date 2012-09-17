@@ -6,4 +6,7 @@ resources/Eggs/*
 resources/Tamales/*
 resources/Stew/*
 resources/Grilling/*
+*.xcuserstate
+*.xcbkptlist
+build/*
 # xcode/CinderProject.xcodeproj/project.xcworkspace/xcuserdata/sysadmin.xcuserdatad/UserInterfaceState.xcuserstate
