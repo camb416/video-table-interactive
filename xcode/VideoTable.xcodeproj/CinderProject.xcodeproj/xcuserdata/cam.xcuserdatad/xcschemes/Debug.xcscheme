@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0450"
+   LastUpgradeVersion = "0440"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "322311931607885900FB16AF"
+               BlueprintIdentifier = "8D1107260486CEB800E47090"
                BuildableName = "CinderProject.app"
-               BlueprintName = "CinderProject_Debug"
+               BlueprintName = "CinderProject"
                ReferencedContainer = "container:CinderProject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject.app"
-            BlueprintName = "CinderProject_Debug"
+            BuildableName = "CinderProject_Debug.app"
+            BlueprintName = "VideoTable_Debug"
             ReferencedContainer = "container:CinderProject.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject.app"
-            BlueprintName = "CinderProject_Debug"
+            BuildableName = "CinderProject_Debug.app"
+            BlueprintName = "VideoTable_Debug"
             ReferencedContainer = "container:CinderProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "322311931607885900FB16AF"
+            BlueprintIdentifier = "8D1107260486CEB800E47090"
             BuildableName = "CinderProject.app"
-            BlueprintName = "CinderProject_Debug"
+            BlueprintName = "CinderProject"
             ReferencedContainer = "container:CinderProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

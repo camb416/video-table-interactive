@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0440"
+   LastUpgradeVersion = "0450"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D1107260486CEB800E47090"
-               BuildableName = "CinderProject.app"
-               BlueprintName = "CinderProject"
-               ReferencedContainer = "container:CinderProject.xcodeproj">
+               BlueprintIdentifier = "326DA1EE161A0CBF00E4C612"
+               BuildableName = "VideoTable.app"
+               BlueprintName = "VideoTable"
+               ReferencedContainer = "container:VideoTable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject_Debug.app"
-            BlueprintName = "CinderProject_Debug"
-            ReferencedContainer = "container:CinderProject.xcodeproj">
+            BlueprintIdentifier = "326DA1EE161A0CBF00E4C612"
+            BuildableName = "VideoTable.app"
+            BlueprintName = "VideoTable"
+            ReferencedContainer = "container:VideoTable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject_Debug.app"
-            BlueprintName = "CinderProject_Debug"
-            ReferencedContainer = "container:CinderProject.xcodeproj">
+            BlueprintIdentifier = "326DA1EE161A0CBF00E4C612"
+            BuildableName = "VideoTable.app"
+            BlueprintName = "VideoTable"
+            ReferencedContainer = "container:VideoTable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "CinderProject.app"
-            BlueprintName = "CinderProject"
-            ReferencedContainer = "container:CinderProject.xcodeproj">
+            BlueprintIdentifier = "326DA1EE161A0CBF00E4C612"
+            BuildableName = "VideoTable.app"
+            BlueprintName = "VideoTable"
+            ReferencedContainer = "container:VideoTable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

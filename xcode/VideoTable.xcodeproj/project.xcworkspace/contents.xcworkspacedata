@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CinderProject.xcodeproj">
+      location = "self:VideoTable.xcodeproj">
    </FileRef>
 </Workspace>

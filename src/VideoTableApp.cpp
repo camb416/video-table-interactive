@@ -1,12 +1,14 @@
 
-#include "CinderProjectApp.h"
+#include "VideoTableApp.h"
 
 
 
-void ProjectApp::setup()
+void VideoTable::setup()
 {
     //debugState = DEVELOPMENT;
    
+
+    
     cTarget = new gallerytools::CursorTarget();
     
     controller.setup(&model,&recipeViews);
@@ -64,27 +66,27 @@ void ProjectApp::setup()
     foreground_tex = gl::Texture( loadImage( loadResource( model.foregroundPath) ) );
 }
 
-void ProjectApp::parseXML()
+void VideoTable::parseXML()
 {
-    console() << "ProjectApp::parseXML has been deprecated" << endl;
+    console() << "VideoTableApp::parseXML has been deprecated" << endl;
 }
 
-void ProjectApp::prepareSettings( Settings *settings )
+void VideoTable::prepareSettings( Settings *settings )
 {
     settings->setWindowSize( 1920,1200 );
     
     // maybe lowering might smooth things out?
 	settings->setFrameRate( 60.0f );
 }
-void ProjectApp::keyUp(KeyEvent event){
+void VideoTable::keyUp(KeyEvent event){
      controller.handleKeyRelease(event.getChar());
 }
 
-void ProjectApp::mouseDown( MouseEvent evt){
+void VideoTable::mouseDown( MouseEvent evt){
     if(controller.getDebugState()!=0) cTarget->push();
 }
 
-void ProjectApp::keyDown( KeyEvent event )
+void VideoTable::keyDown( KeyEvent event )
 {
     /*
     for(int i=0;i<recipeViews.size();i++){
@@ -97,7 +99,7 @@ void ProjectApp::keyDown( KeyEvent event )
 
     }
 
-void ProjectApp::update()
+void VideoTable::update()
 {
     for(int i=0;i<recipeViews.size();i++){
         recipeViews.at(i).update();
@@ -108,7 +110,7 @@ void ProjectApp::update()
 
 }
 
-void ProjectApp::draw()
+void VideoTable::draw()
 {
 
     
@@ -119,7 +121,7 @@ void ProjectApp::draw()
     for(int i=0;i<recipeViews.size();i++){
         recipeViews.at(i).draw();
     }
-    gl::draw(foreground_tex,getWindowBounds());
+    if(model.useFrontPlate)    gl::draw(foreground_tex,getWindowBounds());
 
     // while this should be in update, Cinder likes to throw
     // an exception on application quit
@@ -133,4 +135,4 @@ void ProjectApp::draw()
     
 }
 
-CINDER_APP_BASIC( ProjectApp, RendererGl(0) );
+CINDER_APP_BASIC( VideoTable, RendererGl(0) );

@@ -15,7 +15,7 @@ using namespace ci::app;
 using namespace std;
 
 int AppModel::setup(string _appFilePath, string _contentFilePath){
-
+    useFrontPlate = false;
     backgroundPath = "problem loading background path from settings";
      foregroundPath = "problem loading background path from settings";
     buttonPath = "problem loading button path from settings";
@@ -110,6 +110,9 @@ void AppModel::parseSettings(XmlTree _root){
                 } else if(topLevelKey.compare("fullscreen")==0){
                     console() << "FULLSCREEN VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     if(tagType.compare("true")==0) isFullScreen = true;
+                } else if(topLevelKey.compare("frontplate")==0){
+                    console() << "FRONTPLATE VALUE:::: " << tagType << "!!!!!!!!!" << endl;
+                    if(tagType.compare("true")==0) useFrontPlate = true;
                 }
             } else if(tagType.compare("dict")==0){
                 // this is either the user areas, or the sensor boards

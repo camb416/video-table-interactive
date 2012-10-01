@@ -5,7 +5,7 @@
 //  Created by Cameron Browning on 8/27/12.
 //
 //
-#include "CinderProjectApp.h"
+#include "VideoTableApp.h"
 #include "TableController.h"
 #include "cinder/app/AppBasic.h"
 
@@ -40,9 +40,15 @@ void TableController::handleKeyPress(char _key){
                 break;
         }
     }
-    ProjectApp *myApp = (ProjectApp*)app::App::get();
+    VideoTable *myApp = (VideoTable*)app::App::get();
 
     switch(_key){
+            
+            case '\t':
+            //case 'F':
+            model->useFrontPlate = !model->useFrontPlate;
+            break;
+            
         case '`':
         case '~':
             

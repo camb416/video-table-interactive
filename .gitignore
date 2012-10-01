@@ -6,6 +6,8 @@ resources/Eggs/*
 resources/Tamales/*
 resources/Stew/*
 resources/Grilling/*
+resources-old
+resources-old-clean
 *.xcuserstate
 *.xcbkptlist
 build/*

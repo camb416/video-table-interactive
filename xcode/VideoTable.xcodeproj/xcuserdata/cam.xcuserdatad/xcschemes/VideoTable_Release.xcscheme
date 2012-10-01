@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "322311931607885900FB16AF"
-               BuildableName = "CinderProject_Debug.app"
-               BlueprintName = "VideoTable_Debug"
+               BlueprintIdentifier = "326DA160161A0AE900E4C612"
+               BuildableName = "VideoTable_Release.app"
+               BlueprintName = "VideoTable_Release"
                ReferencedContainer = "container:VideoTable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject_Debug.app"
-            BlueprintName = "VideoTable_Debug"
+            BlueprintIdentifier = "326DA160161A0AE900E4C612"
+            BuildableName = "VideoTable_Release.app"
+            BlueprintName = "VideoTable_Release"
             ReferencedContainer = "container:VideoTable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject_Debug.app"
-            BlueprintName = "VideoTable_Debug"
+            BlueprintIdentifier = "326DA160161A0AE900E4C612"
+            BuildableName = "VideoTable_Release.app"
+            BlueprintName = "VideoTable_Release"
             ReferencedContainer = "container:VideoTable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "322311931607885900FB16AF"
-            BuildableName = "CinderProject_Debug.app"
-            BlueprintName = "VideoTable_Debug"
+            BlueprintIdentifier = "326DA160161A0AE900E4C612"
+            BuildableName = "VideoTable_Release.app"
+            BlueprintName = "VideoTable_Release"
             ReferencedContainer = "container:VideoTable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

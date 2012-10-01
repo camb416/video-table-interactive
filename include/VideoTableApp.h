@@ -30,7 +30,7 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-class ProjectApp : public AppBasic {
+class VideoTable : public AppBasic {
 public:
 	void setup();
     
@@ -48,6 +48,8 @@ public:
     
 private:
     void parseXML();
+    
+
     
     gl::Texture background_tex;
     gl::Texture foreground_tex;

@@ -31,6 +31,7 @@ struct UserAreaModel{
     ButtonModel back_btn;
     ButtonModel select_btn;
     ButtonModel fwd_btn;
+    
 };
 struct TouchSensorModel{
     int board;
@@ -58,6 +59,7 @@ public:
     string foregroundPath;
     string buttonPath;
     bool isFullScreen;
+        bool useFrontPlate;
     
 private:
     

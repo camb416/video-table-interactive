@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'VideoTable_Release' target in the 'VideoTable_Release' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>frontplate</key>
+	<false/>
 	<key>fullscreen</key>
 	<false/>
 	<key>background</key>
@@ -25,27 +27,27 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>456</integer>
+				<integer>766</integer>
 				<key>y</key>
-				<integer>-66</integer>
+				<integer>-65</integer>
 				<key>keymap</key>
 				<string>a</string>
 			</dict>
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>588</integer>
+				<integer>635</integer>
 				<key>y</key>
-				<integer>-97</integer>
+				<integer>-66</integer>
 				<key>keymap</key>
 				<string>s</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>720</integer>
+				<integer>970</integer>
 				<key>y</key>
-				<integer>-66</integer>
+				<integer>-64</integer>
 				<key>keymap</key>
 				<string>d</string>
 			</dict>
@@ -63,7 +65,7 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>-564</integer>
+				<integer>-309</integer>
 				<key>y</key>
 				<integer>-66</integer>
 				<key>keymap</key>
@@ -72,16 +74,16 @@
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>-432</integer>
+				<integer>-213</integer>
 				<key>y</key>
-				<integer>-97</integer>
+				<integer>-108</integer>
 				<key>keymap</key>
 				<string>w</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>-300</integer>
+				<integer>-104</integer>
 				<key>y</key>
 				<integer>-66</integer>
 				<key>keymap</key>
@@ -101,7 +103,7 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>497</integer>
+				<integer>667</integer>
 				<key>y</key>
 				<integer>-66</integer>
 				<key>keymap</key>
@@ -110,16 +112,16 @@
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>629</integer>
+				<integer>766</integer>
 				<key>y</key>
-				<integer>-97</integer>
+				<integer>-108</integer>
 				<key>keymap</key>
 				<string>t</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>761</integer>
+				<integer>868</integer>
 				<key>y</key>
 				<integer>-66</integer>
 				<key>keymap</key>
@@ -139,27 +141,27 @@
 			<key>back-button</key>
 			<dict>
 				<key>x</key>
-				<integer>-547</integer>
+				<integer>-333</integer>
 				<key>y</key>
-				<integer>-66</integer>
+				<integer>-67</integer>
 				<key>keymap</key>
 				<string>f</string>
 			</dict>
 			<key>select-button</key>
 			<dict>
 				<key>x</key>
-				<integer>-415</integer>
+				<integer>-231</integer>
 				<key>y</key>
-				<integer>-97</integer>
+				<integer>-107</integer>
 				<key>keymap</key>
 				<string>g</string>
 			</dict>
 			<key>forward-button</key>
 			<dict>
 				<key>x</key>
-				<integer>-283</integer>
+				<integer>-128</integer>
 				<key>y</key>
-				<integer>-66</integer>
+				<integer>-67</integer>
 				<key>keymap</key>
 				<string>h</string>
 			</dict>

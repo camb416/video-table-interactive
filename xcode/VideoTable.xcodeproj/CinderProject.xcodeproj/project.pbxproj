@@ -17,7 +17,7 @@
 		1B1C425D15A73FF200CC936A /* USER_AREAS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1B1C425C15A73FF200CC936A /* USER_AREAS.xml */; };
 		320B33D515C985CB003AB00F /* area_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 320B33D415C985CB003AB00F /* area_background.png */; };
 		320B342315CB128D003AB00F /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341D15CB128D003AB00F /* Button.cpp */; };
-		320B342415CB128D003AB00F /* CinderProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341E15CB128D003AB00F /* CinderProjectApp.cpp */; };
+		320B342415CB128D003AB00F /* VideoTableApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341E15CB128D003AB00F /* VideoTableApp.cpp */; };
 		320B342515CB128D003AB00F /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341F15CB128D003AB00F /* Image.cpp */; };
 		320B342615CB128D003AB00F /* TwoStateButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342015CB128D003AB00F /* TwoStateButton.cpp */; };
 		320B342715CB128D003AB00F /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342115CB128D003AB00F /* UserArea.cpp */; };
@@ -104,7 +104,7 @@
 		322311E11607885900FB16AF /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		322311E21607885900FB16AF /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
 		322311E31607885900FB16AF /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341D15CB128D003AB00F /* Button.cpp */; };
-		322311E41607885900FB16AF /* CinderProjectApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341E15CB128D003AB00F /* CinderProjectApp.cpp */; };
+		322311E41607885900FB16AF /* VideoTableApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341E15CB128D003AB00F /* VideoTableApp.cpp */; };
 		322311E51607885900FB16AF /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341F15CB128D003AB00F /* Image.cpp */; };
 		322311E61607885900FB16AF /* TwoStateButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342015CB128D003AB00F /* TwoStateButton.cpp */; };
 		322311E71607885900FB16AF /* UserArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342115CB128D003AB00F /* UserArea.cpp */; };
@@ -235,7 +235,7 @@
 		320B340515CB0025003AB00F /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../include/Image.h; sourceTree = SOURCE_ROOT; };
 		320B341015CB10A4003AB00F /* TwoStateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoStateButton.h; path = ../include/TwoStateButton.h; sourceTree = "<group>"; };
 		320B341D15CB128D003AB00F /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../src/Button.cpp; sourceTree = "<group>"; };
-		320B341E15CB128D003AB00F /* CinderProjectApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CinderProjectApp.cpp; path = ../src/CinderProjectApp.cpp; sourceTree = "<group>"; };
+		320B341E15CB128D003AB00F /* VideoTableApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoTableApp.cpp; path = ../src/VideoTableApp.cpp; sourceTree = "<group>"; };
 		320B341F15CB128D003AB00F /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Image.cpp; path = ../src/Image.cpp; sourceTree = "<group>"; };
 		320B342015CB128D003AB00F /* TwoStateButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TwoStateButton.cpp; path = ../src/TwoStateButton.cpp; sourceTree = "<group>"; };
 		320B342115CB128D003AB00F /* UserArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserArea.cpp; path = ../src/UserArea.cpp; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 		3295E59F15DC478E00B63297 /* sample.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample.mov; sourceTree = "<group>"; };
 		329B28B415D00EC40021F656 /* AppModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppModel.cpp; path = ../src/AppModel.cpp; sourceTree = "<group>"; };
 		329B28B515D00EC40021F656 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../src/AppModel.h; sourceTree = "<group>"; };
-		32C5156515EC2D3D00525141 /* CinderProjectApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CinderProjectApp.h; path = ../include/CinderProjectApp.h; sourceTree = "<group>"; };
+		32C5156515EC2D3D00525141 /* VideoTableApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoTableApp.h; path = ../include/VideoTableApp.h; sourceTree = "<group>"; };
 		32C5158F15EE74CD00525141 /* Tamales01Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales01Still.jpg; sourceTree = "<group>"; };
 		32C5159015EE74CD00525141 /* Tamales02Video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Tamales02Video.mov; sourceTree = "<group>"; };
 		32C5159115EE74CD00525141 /* Tamales03Still.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tamales03Still.jpg; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 				3295E55215D01A1800B63297 /* RecipeModel.cpp */,
 				320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */,
 				320B341D15CB128D003AB00F /* Button.cpp */,
-				320B341E15CB128D003AB00F /* CinderProjectApp.cpp */,
-				32C5156515EC2D3D00525141 /* CinderProjectApp.h */,
+				320B341E15CB128D003AB00F /* VideoTableApp.cpp */,
+				32C5156515EC2D3D00525141 /* VideoTableApp.h */,
 				32C5161A15EEA28F00525141 /* CursorTarget.cpp */,
 				32C5161B15EEA28F00525141 /* CursorTarget.h */,
 				329B28B415D00EC40021F656 /* AppModel.cpp */,
@@ -667,9 +667,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		322311931607885900FB16AF /* CinderProject_Debug */ = {
+		322311931607885900FB16AF /* VideoTable_Debug */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 322311FE1607885900FB16AF /* Build configuration list for PBXNativeTarget "CinderProject_Debug" */;
+			buildConfigurationList = 322311FE1607885900FB16AF /* Build configuration list for PBXNativeTarget "VideoTable_Debug" */;
 			buildPhases = (
 				322311941607885900FB16AF /* Resources */,
 				322311E01607885900FB16AF /* Sources */,
@@ -679,7 +679,7 @@
 			);
 			dependencies = (
 			);
-			name = CinderProject_Debug;
+			name = VideoTable_Debug;
 			productInstallPath = "$(HOME)/Applications";
 			productName = CinderProject;
 			productReference = 322312011607885900FB16AF /* CinderProject_Debug.app */;
@@ -723,7 +723,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* CinderProject */,
-				322311931607885900FB16AF /* CinderProject_Debug */,
+				322311931607885900FB16AF /* VideoTable_Debug */,
 			);
 		};
 /* End PBXProject section */
@@ -903,7 +903,7 @@
 				322311E11607885900FB16AF /* PhidgetConnector.cpp in Sources */,
 				322311E21607885900FB16AF /* PhidgetModel.cpp in Sources */,
 				322311E31607885900FB16AF /* Button.cpp in Sources */,
-				322311E41607885900FB16AF /* CinderProjectApp.cpp in Sources */,
+				322311E41607885900FB16AF /* VideoTableApp.cpp in Sources */,
 				322311E51607885900FB16AF /* Image.cpp in Sources */,
 				322311E61607885900FB16AF /* TwoStateButton.cpp in Sources */,
 				322311E71607885900FB16AF /* UserArea.cpp in Sources */,
@@ -927,7 +927,7 @@
 				3238EFFE15C712D6001BB4A1 /* PhidgetConnector.cpp in Sources */,
 				3238EFFF15C712D6001BB4A1 /* PhidgetModel.cpp in Sources */,
 				320B342315CB128D003AB00F /* Button.cpp in Sources */,
-				320B342415CB128D003AB00F /* CinderProjectApp.cpp in Sources */,
+				320B342415CB128D003AB00F /* VideoTableApp.cpp in Sources */,
 				320B342515CB128D003AB00F /* Image.cpp in Sources */,
 				320B342615CB128D003AB00F /* TwoStateButton.cpp in Sources */,
 				320B342715CB128D003AB00F /* UserArea.cpp in Sources */,
@@ -1112,7 +1112,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		322311FE1607885900FB16AF /* Build configuration list for PBXNativeTarget "CinderProject_Debug" */ = {
+		322311FE1607885900FB16AF /* Build configuration list for PBXNativeTarget "VideoTable_Debug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				322311FF1607885900FB16AF /* Debug */,
