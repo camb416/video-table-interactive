@@ -19,7 +19,30 @@ int TableController::getDebugState(){
     return debugState;
 }
 void TableController::handleKeyPress(char _key){
+    
     console() << "check this out, yo: " << _key << endl;
+    VideoTable *myApp;
+    switch(_key){
+        case '`':
+        case '~':
+            myApp = (VideoTable*)app::App::get();
+            if(isFullScreen()){
+                myApp->showCursor();
+            } else {
+                myApp->hideCursor();
+            }
+            setFullScreen( ! isFullScreen() );
+            
+            break;
+        case ' ':
+            debugState++;
+            if(debugState>2){
+                debugState = 0;
+            }
+            updateViewStates();
+            break;
+    }
+    
     
     for(int i=0;i<views->size();i++){
       //  console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
@@ -35,6 +58,7 @@ void TableController::handleKeyPress(char _key){
             case 2:
                 rv->forwardPress();
                 break;
+            
             default:
                 // do nothing
                 break;

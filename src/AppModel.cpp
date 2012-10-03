@@ -16,7 +16,7 @@ using namespace std;
 
 int AppModel::setup(string _appFilePath, string _contentFilePath){
     
-    basePath = "/Users/cam/Desktop/videotable/";
+    basePath = getHomeDirectory().string()+"/Desktop/videotable/";
     assetsPath = "assets/";
     settingsPath ="settings/";
     
@@ -206,7 +206,7 @@ void AppModel::parseSettings(XmlTree _root){
                                     console() << "couldn't find this button in the ua model... " << easyModeKey << endl;
                                 }
                             }
-                            
+                    
                         
                         
                         }
