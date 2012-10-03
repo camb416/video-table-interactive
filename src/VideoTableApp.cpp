@@ -62,8 +62,8 @@ void VideoTable::setup()
 //    width = 1920.0;
  //   height = 1200.0;
      */
-    background_tex = gl::Texture( loadImage( loadResource( model.backgroundPath ) ) );
-    foreground_tex = gl::Texture( loadImage( loadResource( model.foregroundPath) ) );
+    background_tex = gl::Texture( loadImage( model.backgroundPath  ) );
+    foreground_tex = gl::Texture( loadImage(  model.foregroundPath ) );
 }
 
 void VideoTable::parseXML()

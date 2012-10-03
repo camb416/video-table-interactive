@@ -84,7 +84,7 @@ int Video::load(string _file)
     path_str = _file;
     try {
         
-        video = qtime::MovieGl( loadResource( path_str  ) );
+        video = qtime::MovieGl( loadFile( path_str  ) );
         
     } catch(...) {
         console()<<"Unable to load Video: "<< path_str << "." << endl;

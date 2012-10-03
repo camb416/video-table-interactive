@@ -15,13 +15,18 @@ using namespace ci::app;
 using namespace std;
 
 int AppModel::setup(string _appFilePath, string _contentFilePath){
+    
+    basePath = "/Users/cam/Desktop/videotable/";
+    assetsPath = "assets/";
+    settingsPath ="settings/";
+    
     useFrontPlate = false;
     backgroundPath = "problem loading background path from settings";
      foregroundPath = "problem loading background path from settings";
     buttonPath = "problem loading button path from settings";
     isFullScreen = false;
     
-    XmlTree contentTree(loadResource( _contentFilePath ) );
+    XmlTree contentTree(loadFile( basePath+settingsPath+_contentFilePath ) );
     XmlTree root;
     
     try {
@@ -36,7 +41,7 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
         return -1;
     }
     
-    XmlTree appTree(loadResource(_appFilePath));
+    XmlTree appTree(loadFile(basePath+settingsPath+_appFilePath));
     
     try {
         root = appTree.getChild("plist");
@@ -101,12 +106,12 @@ void AppModel::parseSettings(XmlTree _root){
         } else {
             if(tagType.compare("string")==0 || tagType.compare("false")==0 || tagType.compare("true")==0){
                 if(topLevelKey.compare("background")==0){
-                    backgroundPath = child->getValue();
+                    backgroundPath = basePath+assetsPath+child->getValue();
                 } else if(topLevelKey.compare("foreground")==0){
-                    foregroundPath = child->getValue();
+                    foregroundPath = basePath+assetsPath+child->getValue();
                 } else if(topLevelKey.compare("button")==0){
                     console() << "Button Value::: " << tagType << "!!!!!" << endl;
-                    buttonPath = child->getValue();
+                    buttonPath = basePath+assetsPath+child->getValue();
                 } else if(topLevelKey.compare("fullscreen")==0){
                     console() << "FULLSCREEN VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     if(tagType.compare("true")==0) isFullScreen = true;
@@ -256,9 +261,9 @@ void AppModel::parseRecipes(XmlTree _root){
                                         stepKey = baby->getValue();
                                     } else {
                                         if(stepKey.compare("img")==0){
-                                            sm.img = baby->getValue();
+                                            sm.img = basePath+assetsPath+baby->getValue();
                                         } else if(stepKey.compare("video")==0){
-                                            sm.video = baby->getValue();
+                                            sm.video = basePath+assetsPath+baby->getValue();
                                         } else {
                                             console() << "I got a property of a cookstep that was unexpected: " << stepKey << ", " << baby->getValue();
                                         }

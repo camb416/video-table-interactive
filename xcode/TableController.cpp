@@ -40,39 +40,7 @@ void TableController::handleKeyPress(char _key){
                 break;
         }
     }
-    VideoTable *myApp = (VideoTable*)app::App::get();
-
-    switch(_key){
-            
-            case '\t':
-            //case 'F':
-            model->useFrontPlate = !model->useFrontPlate;
-            break;
-            
-        case '`':
-        case '~':
-            
-            if(isFullScreen()){
-                 myApp->showCursor();
-            } else {
-                 myApp->hideCursor();
-            }
-            setFullScreen( ! isFullScreen() );
-            
-            break;
-        case ' ':
-            debugState++;
-            if(debugState>2){
-                debugState = 0;
-            }
-            if(debugState!=0){
-                myApp->showCursor();
-            } else {
-                myApp->hideCursor();
-            }
-            updateViewStates();
-            break;
-    }
+    
     
 }
 void TableController::updateViewStates(){

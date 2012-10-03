@@ -49,6 +49,10 @@ public:
     void parseRecipes(XmlTree _root);
     void parseSettings(XmlTree _root);
     
+    string basePath;
+    string assetsPath;
+    string settingsPath;
+    
     RecipeModel getRecipeModel(string _recipeTitle);
     
     vector<RecipeModel> recipes;

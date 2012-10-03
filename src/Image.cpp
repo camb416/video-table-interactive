@@ -89,7 +89,7 @@ int Image::load(string _file)
 {
     path_str = _file;
     try {
-        texture = gl::Texture( loadImage( loadResource( path_str ) ) );
+        texture = gl::Texture( loadImage( path_str) );
     
     } catch(...) {
         console()<<"Unable to load image: "<< path_str << "." << endl;
