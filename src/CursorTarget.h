@@ -30,6 +30,7 @@ public:
     CursorTarget();
     void draw();
     void update(Vec2i pos);
+    void update(string _str);
     void push();
 private:
     AppBasic * app;

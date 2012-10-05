@@ -34,31 +34,34 @@ void CursorTarget::push(){
     poslist.push_back(ss.str());
 }
 
-void CursorTarget::update(Vec2i pos){
-try{
-     //  app= (AppBasic*)app::App::get();
-    //    Vec2i pos = app->getMousePos();
-    string normalFont( "Arial" );
-    TextLayout layout;
-    layout.clear( ColorA( 0.0f, 0.0f, 0.0f, 0.5f ) );
-    layout.setFont( Font( normalFont, 12 ) );
-    layout.setColor( Color( 1, 0.75f,0.75f ) );
-    
+void CursorTarget::update(string _str){
+    try{
+        //  app= (AppBasic*)app::App::get();
+        //    Vec2i pos = app->getMousePos();
+        string normalFont( "Arial" );
+        TextLayout layout;
+        layout.clear( ColorA( 0.0f, 0.0f, 0.0f, 0.5f ) );
+        layout.setFont( Font( normalFont, 12 ) );
+        layout.setColor( Color( 1, 0.75f,0.75f ) );
+        
+        
+               layout.addLine( _str);
+        layout.setColor( Color( 1, 1,1 ) );
+        for(int i=0;i<poslist.size();i++){
+            layout.addLine(poslist.at(i).c_str());
+        }
+        Surface8u rendered = layout.render( true, false );
+        text_texture = gl::Texture( rendered );
+    } catch(Exception ex){
+        console() << "caught an exception" << endl;
+    }
+}
 
-    stringstream ss;//create a stringstream
+void CursorTarget::update(Vec2i pos){
+       stringstream ss;//create a stringstream
         ss << pos.x << "," << pos.y;//add number to the stream
    //     return ss.str();//return a string with the contents of the stream
-    
-    layout.addLine( ss.str());
-     layout.setColor( Color( 1, 1,1 ) );
-    for(int i=0;i<poslist.size();i++){
-        layout.addLine(poslist.at(i).c_str());
-    }
-    Surface8u rendered = layout.render( true, false );
-    text_texture = gl::Texture( rendered );
-} catch(Exception ex){
-    console() << "caught an exception" << endl;
-}
+    update(ss.str());
 }
 
 void CursorTarget::draw(){

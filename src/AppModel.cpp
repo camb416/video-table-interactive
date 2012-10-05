@@ -20,6 +20,7 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
     assetsPath = "assets/";
     settingsPath ="settings/";
     
+    useSensors = true;
     useFrontPlate = false;
     backgroundPath = "problem loading background path from settings";
      foregroundPath = "problem loading background path from settings";
@@ -118,6 +119,9 @@ void AppModel::parseSettings(XmlTree _root){
                 } else if(topLevelKey.compare("frontplate")==0){
                     console() << "FRONTPLATE VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     if(tagType.compare("true")==0) useFrontPlate = true;
+                } else if(topLevelKey.compare("sensors")==0){
+                    console() << "SENSORS VALUE:::: " << tagType << "!!!!!!!!!" << endl;
+                    if(tagType.compare("false")==0) useSensors = false;
                 }
             } else if(tagType.compare("dict")==0){
                 // this is either the user areas, or the sensor boards
@@ -166,6 +170,8 @@ void AppModel::parseSettings(XmlTree _root){
                                     tsm.sensor = atoi(baby->getValue().c_str());
                                     tsm.keymap = bottomLevelKey[0];
                                     tsm.board = atoi(midLevelKey.c_str());
+                                    tsm.val = 0;
+                                    tsm.prev = 0;
                                     sensors.push_back(tsm);
                                 }
                                 

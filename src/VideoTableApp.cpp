@@ -6,7 +6,9 @@
 void VideoTable::setup()
 {
     //debugState = DEVELOPMENT;
-   
+    
+    // TODO ISSUE #22
+
 
     
     cTarget = new gallerytools::CursorTarget();
@@ -15,6 +17,12 @@ void VideoTable::setup()
     
     model.setup("SETTINGS.plist","RECIPES.plist");
     
+    if(model.useSensors){
+        console() << "this shouldnt be happening" << endl;
+        pConnector.useEvents(false);
+        pConnector.connect(148920);
+    }
+        
     // implement fullscreen test here...
     setFullScreen(model.isFullScreen);
     if(model.isFullScreen) hideCursor();
@@ -101,12 +109,37 @@ void VideoTable::keyDown( KeyEvent event )
 
 void VideoTable::update()
 {
+    
     for(int i=0;i<recipeViews.size();i++){
         recipeViews.at(i).update();
     }
    
   
-//    pConnector.updateKits();
+    if(model.useSensors){
+        
+    pConnector.updateKits();
+    
+   // console() << pConnector.getBool(148920, 0) << pConnector.getBool(148920, 1) << pConnector.getBool(148920, 2) << endl;
+    
+    for(int i=0;i<model.sensors.size();i++){
+      //  if(i>0) console() << ", " ;
+      //  console() << pConnector.getBool(model.sensors.at(i).board, model.sensors.at(i).sensor);
+        TouchSensorModel * tsm = & model.sensors.at(i);
+        tsm->val = pConnector.getVal(tsm->board, tsm->sensor);
+        if(abs(tsm->val-tsm->prev)>1){
+            console() << tsm->keymap << " : " << tsm->val << ", " << tsm->prev << endl;
+            if(tsm->val>tsm->prev){
+                console() << "TOUCHED!" << "...omg" << endl;
+                controller.handleKeyPress(tsm->keymap);
+            } else {
+                console() << "RELEASED" << endl;
+                controller.handleKeyRelease(tsm->keymap);
+            }
+            tsm->prev = tsm->val;
+        }
+    }
+        }
+    // console() << endl;
 
 }
 
@@ -127,6 +160,17 @@ void VideoTable::draw()
     // an exception on application quit
     // ick...
     if(controller.getDebugState()!=0){
+        
+        char buffer [50];
+        int n, a=5, b=3;
+        n=sprintf (buffer, "%i, %i, %i", pConnector.getVal(148920, 0),pConnector.getVal(148920,2),pConnector.getVal(148920, 2));
+        //printf ("[%s] is a string %d chars long\n",buffer,n);
+        
+    //    string myString =pConnector.getBool(148920, 0) + pConnector.getBool(148920, 1) +
+      //  pConnector.getBool(148920, 2);
+        
+        
+        cTarget->update(buffer);
         cTarget->update(getMousePos());
         cTarget->draw();
     }//

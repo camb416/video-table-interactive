@@ -37,6 +37,8 @@ struct TouchSensorModel{
     int board;
     int sensor;
     char keymap;
+    int val;
+    int prev;
 };
 
 class AppModel{
@@ -63,7 +65,8 @@ public:
     string foregroundPath;
     string buttonPath;
     bool isFullScreen;
-        bool useFrontPlate;
+    bool useFrontPlate;
+    bool useSensors;
     
 private:
     

@@ -20,7 +20,7 @@ int TableController::getDebugState(){
 }
 void TableController::handleKeyPress(char _key){
     
-    console() << "check this out, yo: " << _key << endl;
+    console() << "check this out, down: " << _key << endl;
     VideoTable *myApp;
     switch(_key){
         case '`':
@@ -73,7 +73,7 @@ void TableController::updateViewStates(){
     }
 }
 void TableController::handleKeyRelease(char _key){
-    console() << "check this out, yo: " << _key << endl;
+    console() << "check this out, release: " << _key << endl;
     
     for(int i=0;i<views->size();i++){
      //   console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
