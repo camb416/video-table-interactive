@@ -68,6 +68,11 @@ public:
     bool useFrontPlate;
     bool useSensors;
     
+    
+    vector<string> languages;
+    int curLanguage;
+    
+    
 private:
     
 

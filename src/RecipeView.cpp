@@ -91,13 +91,13 @@ RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
     }
     console() << "this recipemodel has this many steps: " << recipeModel.getNumSteps() << "." << endl;
     for(int i=0;i<recipeModel.getNumSteps();i++){
-        console() << "wtf: " << recipeModel.getCookStep(i).img << endl;
+        console() << "wtf: " << recipeModel.getCookStep(i).img.at(0) << endl;
         gallerytools::Image anImage;
-        anImage.load(recipeModel.getCookStep(i).img);
+        anImage.load(recipeModel.getCookStep(i).img.at(recipeModel.curLanguage));
         anImage.hide();
         images.push_back(anImage);
         gallerytools::Video aVideo;
-        console() << "loading video::: " << aVideo.load(recipeModel.getCookStep(i).video) << endl;
+        console() << "loading video::: " << aVideo.load(recipeModel.getCookStep(i).video.at(recipeModel.curLanguage)) << endl;
         aVideo.hide();
         videos.push_back(aVideo);
     }
@@ -122,38 +122,76 @@ RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
     fwd_btn.setHalfHidden();
     
 }
-
-void RecipeView::forwardRelease(){
-    //stepState++;
+void RecipeView::next(){
     if(++stepState>1){
         stepState = 0;
         if(++curStep>=recipeModel.getNumSteps()){
             curStep = 0;
         }
     }
-    //  img.load(recipeModel.getCookStep(curStep).img);
-    fwd_btn.boingScaleOut();
 }
+
+void RecipeView::reload(){
+    images.clear();
+    videos.clear();
+    for(int i=0;i<recipeModel.getNumSteps();i++){
+        console() << "wtf: " << recipeModel.getCookStep(i).img.at(recipeModel.curLanguage) << endl;
+        gallerytools::Image anImage;
+        anImage.load(recipeModel.getCookStep(i).img.at(recipeModel.curLanguage));
+        anImage.hide();
+        images.push_back(anImage);
+        gallerytools::Video aVideo;
+        console() << "loading video::: " << aVideo.load(recipeModel.getCookStep(i).video.at(recipeModel.curLanguage)) << endl;
+        aVideo.hide();
+        videos.push_back(aVideo);
+    
+    }
+    
+    if(stepState==0){
+        images.at(curStep).show();
+    } else {
+        videos.at(curStep).show();
+    }
+}
+
+void RecipeView::forwardRelease(){
+    //stepState++;
+    if(!(curStep==0 && stepState==0)){
+        next();
+        fwd_btn.boingScaleOut();
+    } 
+      //
+    
+}
+
 
 void RecipeView::backwardRelease(){
     //stepState++;
-    if(--stepState<0){
-        stepState = 1;
-        if(--curStep<0){
-            curStep = recipeModel.getNumSteps()-1;
+    if(!(curStep==0 && stepState==0)){
+        if(--stepState<0){
+            stepState = 1;
+            if(--curStep<0){
+                curStep = recipeModel.getNumSteps()-1;
+            }
+        }
+    } else {
+        // okay, try to load all the new crap...
+        if(recipeModel.switchLanguage()>0){
+            reload();
         }
     }
     back_btn.boingScaleOut();
     //  img.load(recipeModel.getCookStep(curStep).img);
 }
+    
 void RecipeView::selectRelease(){
     select_btn.boingScaleOut();
-    if(stepState==0) forwardRelease();
+    if(stepState==0) next();
 }
 
 void RecipeView::forwardPress(){
 // forward button press
-    fwd_btn.boingScaleIn();
+    if(!(curStep==0 && stepState==0)) fwd_btn.boingScaleIn();
 }
 
 void RecipeView::backwardPress(){
@@ -178,11 +216,7 @@ void RecipeView::update(){
     }
     
     char buffer [40];
-  sprintf (buffer, "curStep: %i \n stepState: %i", curStep, stepState);
-   // sprintf (buffer, "this: %s",recipeModel.name.c_str());
-  
-  //  buffer = *areaModel.name.c_str();
-  //  console() << buffer << ", " << areaModel.name.c_str() <<  endl;
+    sprintf (buffer, "curStep: %i \n stepState: %i", curStep, stepState);
     TextLayout layout;
 	layout.clear( ColorA( 0.5f, 0.5f, 0.5f, 0.5f ) );
 	layout.setFont( Font( "Arial", 18 ) );
@@ -195,35 +229,22 @@ void RecipeView::update(){
         // moved from video to new start image
         // load both the image and the video for the new step
 
-      //  videos.at(curStep).stop();
-     //   videos.at(curStep).hide();
        if(prevStep>-1) videos.at(prevStep).stop();
         prevStep = curStep;
-        
-      //  videos.at(curStep).show();
-     //   videos.at(curStep).play();
+
         
     }
     if(prevStepState!=stepState){
         // moved from start image to video
-        //
-        
         if(stepState==1){
-           // video.fadeIn();
-            
-          if(videos.size()>curStep)    videos.at(curStep).show();
-          if(images.size()>curStep)  images.at(curStep).hide();
-            // img.fadeOut();
-           if(videos.size()>curStep)   videos.at(curStep).play();
+            if(videos.size()>curStep)    videos.at(curStep).show();
+            if(images.size()>curStep)  images.at(curStep).hide();
+            if(videos.size()>curStep)   videos.at(curStep).play();
         } else {
-            console() << "// does this ever even happen?" << endl;
-            //img.fadeIn();
-            //video.fadeOut();
-           if(images.size()>curStep) images.at(curStep).show();
-          if(videos.size()>curStep)  videos.at(curStep).hide();
-          if(videos.size()>curStep)  videos.at(curStep).stop();
+            if(images.size()>curStep) images.at(curStep).show();
+            if(videos.size()>curStep)  videos.at(curStep).hide();
+            if(videos.size()>curStep)  videos.at(curStep).stop();
         }
-     //   if(prevStepState==-1)  video.stop();
         prevStepState = stepState;
     }
     
@@ -236,34 +257,15 @@ void RecipeView::draw(){
      
     (stepState == 0) ? gl::color(1.0f,1.0f,1.0f,0.5f) : gl::color(0.0f,1.0f,1.0f,0.5f);
     
-   // Vec2f actualPos = Vec2f(getWindowWidth()*pos.x,getWindowHeight()*pos.y);
     gl::translate(pos);
-    //gl::r
     gl::rotate(rotation);
     if(stepState==0){
-        //for(int i=0;i<images.size();i++){
-        //    if(i==curStep && stepState==0){
-        //        gl::color(1.0f,0.0f,0.0f);
-        //    } else {
-                gl::color(1.0f,1.0f,1.0f);
-        //    }
-          if(images.size()>curStep) images.at(curStep).draw(align,(debugState!=0));
-         //   gl::translate(25.0f,25.0f,0.0f);
-     //   }
+            gl::color(1.0f,1.0f,1.0f);
+            if(images.size()>curStep) images.at(curStep).draw(align,(debugState!=0));
     } else {
-        // for(int i=0;i<videos.size();i++){
-        //    if(i==curStep && stepState!=0){
-        //        gl::color(1.0f,0.0f,0.0f);
-        //    } else {
-                gl::color(1.0f,1.0f,1.0f);
-        //    }
-          if(videos.size()>curStep)  videos.at(curStep).draw(align,(debugState!=0));
-        //      gl::translate(25.0f,25.0f,0.0f);
-      //  }
-      
+            gl::color(1.0f,1.0f,1.0f);
+            if(videos.size()>curStep)  videos.at(curStep).draw(align,(debugState!=0));
     }
-    // gl::translate(20,20,0);
-   // menu_img.draw(CENTER,true);
     back_btn.draw(CENTER,(debugState!=0));
     select_btn.draw(CENTER,(debugState!=0));
     fwd_btn.draw(CENTER,(debugState!=0));

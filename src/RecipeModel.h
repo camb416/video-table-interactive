@@ -22,8 +22,8 @@ using namespace cinder::app;
 using namespace std;
 
 struct CookStepModel{
-    string img;
-    string video;
+    vector<string> img;
+    vector<string> video;
     string name;
 };
 
@@ -36,8 +36,10 @@ public:
     int testCase();
     int save();
     CookStepModel getCookStep(int _whichStep = 0);
+    int switchLanguage();
     int trace();
     int getNumSteps();
+    int getNumLanguages();
     
     // for parity with PlistReader
     string name;
@@ -46,9 +48,14 @@ public:
     ButtonModel select_btn;
     ButtonModel fwd_btn;
     
+    int curLanguage;
+   
 
 private:
     CookStepModel emptyCookStep;
+
+    
+    
     
 };
 

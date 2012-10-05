@@ -10,6 +10,7 @@
 
 RecipeModel::RecipeModel(){
     // empty constructor
+    curLanguage = 0;
 
 }
 RecipeModel::~RecipeModel(){
@@ -28,6 +29,29 @@ int RecipeModel::load(string _plist){
     return -1;
 }
 
+int RecipeModel::getNumLanguages(){
+    if(steps.size()>0){
+        int numLanguages = steps.at(0).img.size();
+        return numLanguages;
+    } else {
+        return -1;
+    }
+}
+
+int RecipeModel::switchLanguage(){
+    // switch the language here
+    int prevLanguage = curLanguage;
+    curLanguage++;
+    if(curLanguage>=getNumLanguages()){
+        curLanguage = 0;
+    }
+    if(curLanguage!=prevLanguage){
+        return 1;   // requires view update
+    } else {
+        return 0;   // requires no view update
+    }
+}
+
 int RecipeModel::testCase(){
 
     
@@ -36,16 +60,16 @@ int RecipeModel::testCase(){
     name = "Chicken and Waffles";
     
     CookStepModel ck;
-    ck.img = "ckimg0.png";
-    ck.video = "sample.mov";
+    ck.img.push_back("ckimg0.png");
+    ck.video.push_back("sample.mov");
     steps.push_back(ck);
-    ck.img = "ckimg1.png";
+    ck.img.push_back( "ckimg1.png");
 
-    ck.video = "sample.mov";
+    ck.video.push_back( "sample.mov");
     steps.push_back(ck);
-    ck.img = "ckimg2.png";
+    ck.img.push_back("ckimg2.png");
 
-    ck.video = "sample.mov";
+    ck.video.push_back("sample.mov");
     steps.push_back(ck);
     
 
@@ -69,7 +93,7 @@ int RecipeModel::trace(){
     console() << name << " =====V===== " << endl;
     for(int i=0;i<steps.size();i++){
         CookStepModel csm = steps.at(i);
-    console() << csm.img << " : " << csm.video << " : " <<  endl;
+    console() << csm.img.at(0) << " : " << csm.video.at(0) << " : " <<  endl;
     }
     return 0;
 }

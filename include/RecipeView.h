@@ -42,6 +42,9 @@ public:
     void backwardRelease();
     void selectRelease();
     
+    void next();
+    void prev();
+    
     void setDebug(int _debugState);
     
     int getKeyFunction(char _aChar);
@@ -57,6 +60,7 @@ private:
     int prevStep;
     int prevStepState;
     int align;
+    void reload();
    // int reload();
    // gallerytools::Image img;
    // gallerytools::Image menu_img;

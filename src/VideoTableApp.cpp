@@ -13,9 +13,10 @@ void VideoTable::setup()
     
     cTarget = new gallerytools::CursorTarget();
     
-    controller.setup(&model,&recipeViews);
+   
     
     model.setup("SETTINGS.plist","RECIPES.plist");
+     controller.setup(&model,&recipeViews);
     
     if(model.useSensors){
         console() << "this shouldnt be happening" << endl;
@@ -110,9 +111,7 @@ void VideoTable::keyDown( KeyEvent event )
 void VideoTable::update()
 {
     
-    for(int i=0;i<recipeViews.size();i++){
-        recipeViews.at(i).update();
-    }
+
    
   
     if(model.useSensors){
@@ -139,6 +138,9 @@ void VideoTable::update()
         }
     }
         }
+    for(int i=0;i<recipeViews.size();i++){
+        recipeViews.at(i).update();
+    }
     // console() << endl;
 
 }

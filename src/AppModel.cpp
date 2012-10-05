@@ -16,6 +16,8 @@ using namespace std;
 
 int AppModel::setup(string _appFilePath, string _contentFilePath){
     
+    curLanguage = 0;
+    
     basePath = getHomeDirectory().string()+"/Desktop/videotable/";
     assetsPath = "assets/";
     settingsPath ="settings/";
@@ -27,8 +29,27 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
     buttonPath = "problem loading button path from settings";
     isFullScreen = false;
     
+    XmlTree appTree(loadFile(basePath+settingsPath+_appFilePath));
+    
+    
+        XmlTree root;
+    try {
+        root = appTree.getChild("plist");
+    } catch(XmlTree::Exception e){
+        console() << "the settings file doesn't look like a plist file." << endl;
+        return -1;
+    }
+    try {
+        parseSettings(root);
+    } catch(XmlTree::Exception e){
+        console() << "a problem occurred parsing the settings plist file.";
+        return -1;
+    }
+
+    
+    
     XmlTree contentTree(loadFile( basePath+settingsPath+_contentFilePath ) );
-    XmlTree root;
+
     
     try {
         root = contentTree.getChild("plist");
@@ -42,20 +63,7 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
         return -1;
     }
     
-    XmlTree appTree(loadFile(basePath+settingsPath+_appFilePath));
-    
-    try {
-        root = appTree.getChild("plist");
-    } catch(XmlTree::Exception e){
-        console() << "the settings file doesn't look like a plist file." << endl;
-    }
-    try {
-        parseSettings(root);
-    } catch(XmlTree::Exception e){
-        console() << "a problem occurred parsing the settings plist file.";
-        return -1;
-    }
-    
+        
     
     return 0;
 }
@@ -122,7 +130,7 @@ void AppModel::parseSettings(XmlTree _root){
                 } else if(topLevelKey.compare("sensors")==0){
                     console() << "SENSORS VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     if(tagType.compare("false")==0) useSensors = false;
-                }
+                } 
             } else if(tagType.compare("dict")==0){
                 // this is either the user areas, or the sensor boards
                 // depending on the toplevelkey
@@ -140,6 +148,11 @@ void AppModel::parseSettings(XmlTree _root){
                             uam = UserAreaModel();
                         } else if(topLevelKey.compare("Sensor Boards")==0){
                             tsm = TouchSensorModel();
+                        } else if(topLevelKey.compare("languages")==0){
+                            // we're looping the languages...
+                            console() << "here's a language: " << grandchild->getValue() << endl;
+                            languages.push_back(grandchild->getValue());
+                            
                         }
                         
                         
@@ -178,7 +191,8 @@ void AppModel::parseSettings(XmlTree _root){
                             } else {
                                 if(topLevelKey.compare("User Areas")==0){
                                     uam.name = midLevelKey;
-                                } 
+                                }
+                                
                                 
                                 XmlTree t4 = *baby;
                                 string easyModeKey = "";
@@ -267,9 +281,14 @@ void AppModel::parseRecipes(XmlTree _root){
                                         stepKey = baby->getValue();
                                     } else {
                                         if(stepKey.compare("img")==0){
-                                            sm.img = basePath+assetsPath+baby->getValue();
+                                            for(int i=0;i<languages.size();i++){
+                                                sm.img.push_back(basePath+assetsPath+languages.at(i)+"/"+baby->getValue());
+                                            }
+                                        //    console() << "the image is: " << sm.img << ", while the language is: " << whichLanguage << endl;
                                         } else if(stepKey.compare("video")==0){
-                                            sm.video = basePath+assetsPath+baby->getValue();
+                                            for(int i=0;i<languages.size();i++){
+                                            sm.video.push_back(basePath+assetsPath+languages.at(i)+"/"+baby->getValue());
+                                            }
                                         } else {
                                             console() << "I got a property of a cookstep that was unexpected: " << stepKey << ", " << baby->getValue();
                                         }
@@ -280,7 +299,9 @@ void AppModel::parseRecipes(XmlTree _root){
                                 if(recipes.size()>0 && sm.name.compare("")!=0){
                                     recipes.at(recipes.size()-1).steps.push_back(sm);
                                 }
-                                sm.name = sm.video = sm.img = "";
+                                sm.name = "";
+                                sm.video.clear();
+                                sm.img.clear();
                                 sm.name = greatChild->getValue();
                             }
                             

@@ -27,6 +27,7 @@ PlistReader::PlistReader()
 
 
 void PlistReader::parseRecipes(){
+    /*
     XmlTree t = root.getChild("dict/dict");
     for( XmlTree::Iter child = t.begin(); child != t.end(); ++child ){
         console() << "Tag: " << child->getTag() << "  Value: " << child->getValue() << endl;
@@ -74,11 +75,16 @@ void PlistReader::parseRecipes(){
                                         // then its likely a value
                                         console() << "\t\t\t\t\t\t\t\t " << stepKey << "  Value: " << baby->getValue() << endl;
                                         if(stepKey.compare("start-image")==0){
-                                            sm.img = baby->getValue();
+                                            for(int i=0;i<languages.size();i++){
+                                                sm.img.push_back(baby->getValue());
+                                            }
+                                        
                                         } else if(stepKey.compare("name")==0){
                                             sm.name = baby->getValue();
                                         } else if(stepKey.compare("video")==0){
-                                            sm.video = baby->getValue();
+                                            for(int i=0;i<languages.size();i++){
+                                                sm.video.push_back(baby->getValue());
+                                            }
                                         } else {
                                             console() << "I got a property of a cookstep that was unexpected: " << stepKey << ", " << baby->getValue();
                                         }
@@ -123,4 +129,5 @@ void PlistReader::parseRecipes(){
         }
         
     }
+     */
 }
