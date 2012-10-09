@@ -9,6 +9,7 @@ Sensor data uses the Phidgets-CinderBlock: https://github.com/camb416/Phidgets-C
 
 While more buttons can be added by modifying the plist settings files, the default keymapping is below:
 
+<pre>
 TOP-LEFT USER AREA
 Q............Back / Switch Language
 W............Select Button
@@ -32,3 +33,4 @@ H............Skip Button
 APPLICATION FUNCTIONS:
 ~............Toggle Fullscreen
 SPACE........Cycle Debug States
+</pre>
