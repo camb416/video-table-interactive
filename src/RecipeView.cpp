@@ -174,13 +174,17 @@ void RecipeView::backwardRelease(){
                 curStep = recipeModel.getNumSteps()-1;
             }
         }
+        back_btn.boingScaleOut();
     } else {
         // okay, try to load all the new crap...
-        if(recipeModel.switchLanguage()>0){
-            reload();
+        if(recipeModel.getNumLanguages()>1){
+            if(recipeModel.switchLanguage()>0){
+                reload();
+                back_btn.boingScaleOut();
+            }
         }
     }
-    back_btn.boingScaleOut();
+    
     //  img.load(recipeModel.getCookStep(curStep).img);
 }
     
@@ -196,7 +200,15 @@ void RecipeView::forwardPress(){
 
 void RecipeView::backwardPress(){
     // backward button press
+    if(!(curStep==0 && stepState==0)){
+        back_btn.boingScaleIn();
+    } else {
+if(recipeModel.getNumLanguages()>1){
+   // console() << "the recipe model is reporting " << recipeModel.getNumLanguages() << " languages." << endl;
     back_btn.boingScaleIn();
+}
+    }
+    
 }
 void RecipeView::selectPress(){
     if(stepState==0) select_btn.boingScaleIn();

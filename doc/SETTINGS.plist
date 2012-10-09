@@ -4,10 +4,8 @@
 <dict>
 	<key>languages</key>
 	<dict>
-		<key>language1</key>
+		<key>lang1</key>
 		<string>en</string>
-		<key>language2</key>
-		<string>fr</string>
 	</dict>
 	<key>sensors</key>
 	<false/>
