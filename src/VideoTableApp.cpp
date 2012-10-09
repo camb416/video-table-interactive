@@ -73,6 +73,8 @@ void VideoTable::setup()
      */
     background_tex = gl::Texture( loadImage( model.backgroundPath  ) );
     foreground_tex = gl::Texture( loadImage(  model.foregroundPath ) );
+    
+    pg.setup(&pConnector, &model.sensors);
 }
 
 void VideoTable::parseXML()
@@ -117,6 +119,8 @@ void VideoTable::update()
     if(model.useSensors){
         
     pConnector.updateKits();
+        
+    
     
    // console() << pConnector.getBool(148920, 0) << pConnector.getBool(148920, 1) << pConnector.getBool(148920, 2) << endl;
     
@@ -136,6 +140,9 @@ void VideoTable::update()
             }
             tsm->prev = tsm->val;
         }
+        if(controller.getDebugState()!=0 && model.useSensors) pg.update();
+            
+        
     }
         }
     for(int i=0;i<recipeViews.size();i++){
@@ -164,21 +171,23 @@ void VideoTable::draw()
     if(controller.getDebugState()!=0){
         
         char buffer [50];
-        int n, a=5, b=3;
+        int n;
+        //, a=5, b=3;
         n=sprintf (buffer, "%i, %i, %i", pConnector.getVal(148920, 0),pConnector.getVal(148920,2),pConnector.getVal(148920, 2));
         //printf ("[%s] is a string %d chars long\n",buffer,n);
         
     //    string myString =pConnector.getBool(148920, 0) + pConnector.getBool(148920, 1) +
       //  pConnector.getBool(148920, 2);
         
-        
+        if(controller.getDebugState()!=0){
         cTarget->update(buffer);
         cTarget->update(getMousePos());
         cTarget->draw();
     }//
     //
-    
-    
+  if(model.useSensors) pg.draw(Rectf(getWindowWidth()/3.0f,getWindowHeight()/3.0f,getWindowWidth()*2.0f/3.0f,getWindowHeight()*2.0f/3.0f));
+    }
+   // pg.draw(getWindowBounds());
 }
 
 CINDER_APP_BASIC( VideoTable, RendererGl(0) );

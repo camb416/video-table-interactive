@@ -25,6 +25,7 @@
 #include "RecipeView.h"
 #include "TableController.h"
 #include "CursorTarget.h"
+#include "PhidgetGraph.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -45,6 +46,8 @@ public:
     
     vector<UserArea> mAreas;
     PhidgetConnector pConnector;    // the Phidget Connector object.
+    
+    PhidgetGraph pg;
     
 private:
     void parseXML();
