@@ -45,7 +45,7 @@ void TableController::handleKeyPress(char _key){
     
     
     for(int i=0;i<views->size();i++){
-      //  console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
+        //  console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
         RecipeView * rv = &views->at(i);
         int keyFunc = rv->getKeyFunction(_key);
         switch(keyFunc){
@@ -58,7 +58,7 @@ void TableController::handleKeyPress(char _key){
             case 2:
                 rv->forwardPress();
                 break;
-            
+                
             default:
                 // do nothing
                 break;
@@ -76,7 +76,7 @@ void TableController::handleKeyRelease(char _key){
     console() << "check this out, release: " << _key << endl;
     
     for(int i=0;i<views->size();i++){
-     //   console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
+        //   console() << "does recipeview 1 have key: " << _key << "? answer: " << views->at(i).getKeyFunction(_key) << endl;
         RecipeView * rv = &views->at(i);
         int keyFunc = rv->getKeyFunction(_key);
         switch(keyFunc){
@@ -96,5 +96,5 @@ void TableController::handleKeyRelease(char _key){
     }
     
     
-
+    
 }

@@ -14,6 +14,7 @@
 #include <iostream>
 
 class TableController{
+    
 public:
    void  setup(AppModel * _model, vector<RecipeView>  * _views);
     void handleKeyPress(char _key);

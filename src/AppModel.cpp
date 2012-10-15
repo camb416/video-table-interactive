@@ -25,14 +25,13 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
     useSensors = true;
     useFrontPlate = false;
     backgroundPath = "problem loading background path from settings";
-     foregroundPath = "problem loading background path from settings";
+    foregroundPath = "problem loading background path from settings";
     buttonPath = "problem loading button path from settings";
     isFullScreen = false;
     
     XmlTree appTree(loadFile(basePath+settingsPath+_appFilePath));
     
-    
-        XmlTree root;
+    XmlTree root;
     try {
         root = appTree.getChild("plist");
     } catch(XmlTree::Exception e){
@@ -45,11 +44,8 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
         console() << "a problem occurred parsing the settings plist file.";
         return -1;
     }
-
-    
     
     XmlTree contentTree(loadFile( basePath+settingsPath+_contentFilePath ) );
-
     
     try {
         root = contentTree.getChild("plist");
@@ -62,8 +58,6 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
         console() << "a problem occurred parsing the recipes plist file.";
         return -1;
     }
-    
-        
     
     return 0;
 }
@@ -81,9 +75,9 @@ int AppModel::pretendSetup(){
 int AppModel::trace(){
     if(bLoaded){
         console() << "APPMODEL: " << endl;
-    for(int i=0;i<recipes.size();i++){
-        recipes.at(i).trace();
-    }
+        for(int i=0;i<recipes.size();i++){
+            recipes.at(i).trace();
+        }
         return 0;
     } else {
         return -1;
@@ -92,14 +86,6 @@ int AppModel::trace(){
 
 void AppModel::parseSettings(XmlTree _root){
     XmlTree t = _root.getChild("dict");
-    // is key background?
-    // load background
-    
-    // is key user areas?
-    // loop children
-    // create userareamodel
-    // set x, y, r
-    // is it a button?
     
     UserAreaModel uam;
     TouchSensorModel tsm;
@@ -111,7 +97,7 @@ void AppModel::parseSettings(XmlTree _root){
         console() << "tag: " << tagType << endl;
         if(tagType.compare("key")==0){
             topLevelKey = child->getValue();
-             console() << "topkey: " << topLevelKey << endl;
+            console() << "topkey: " << topLevelKey << endl;
         } else {
             if(tagType.compare("string")==0 || tagType.compare("false")==0 || tagType.compare("true")==0){
                 if(topLevelKey.compare("background")==0){
@@ -152,9 +138,7 @@ void AppModel::parseSettings(XmlTree _root){
                             // we're looping the languages...
                             console() << "here's a language: " << grandchild->getValue() << endl;
                             languages.push_back(grandchild->getValue());
-                            
                         }
-                        
                         
                         // this should always be a dict (either a list of nums and strings for user areas, or nums for sensor boards)
                         XmlTree t3 = *grandchild;
@@ -226,9 +210,7 @@ void AppModel::parseSettings(XmlTree _root){
                                     console() << "couldn't find this button in the ua model... " << easyModeKey << endl;
                                 }
                             }
-                    
-                        
-                        
+                            
                         }
                         if(topLevelKey.compare("User Areas")==0){
                             areas.push_back(uam);
@@ -284,10 +266,10 @@ void AppModel::parseRecipes(XmlTree _root){
                                             for(int i=0;i<languages.size();i++){
                                                 sm.img.push_back(basePath+assetsPath+languages.at(i)+"/"+baby->getValue());
                                             }
-                                        //    console() << "the image is: " << sm.img << ", while the language is: " << whichLanguage << endl;
+                                            //    console() << "the image is: " << sm.img << ", while the language is: " << whichLanguage << endl;
                                         } else if(stepKey.compare("video")==0){
                                             for(int i=0;i<languages.size();i++){
-                                            sm.video.push_back(basePath+assetsPath+languages.at(i)+"/"+baby->getValue());
+                                                sm.video.push_back(basePath+assetsPath+languages.at(i)+"/"+baby->getValue());
                                             }
                                         } else {
                                             console() << "I got a property of a cookstep that was unexpected: " << stepKey << ", " << baby->getValue();
@@ -312,7 +294,7 @@ void AppModel::parseRecipes(XmlTree _root){
                     }
                     
                 } else {
-                   // do nothing?
+                    // do nothing?
                 }
                 
             }
