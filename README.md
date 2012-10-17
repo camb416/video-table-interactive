@@ -34,3 +34,5 @@ APPLICATION FUNCTIONS:
 ~............Toggle Fullscreen
 SPACE........Cycle Debug States
 </pre>
+
+<img src="doc/data_folder_structure.png" />
