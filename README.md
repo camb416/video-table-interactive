@@ -35,4 +35,4 @@ APPLICATION FUNCTIONS:
 SPACE........Cycle Debug States
 </pre>
 
-<img src="../blob/master/doc/data_folder_structure.png" />
+<img src="blob/master/doc/data_folder_structure.png" />
