@@ -35,4 +35,10 @@ APPLICATION FUNCTIONS:
 SPACE........Cycle Debug States
 </pre>
 
+The application is designed and developed for use with Mac OS X 10.7 Lion. A number of data files are required that should be placed in a folder called "videotable" on the user's Desktop.
+
+This folder contains the structure indicated below:
+
 <img src="https://raw.github.com/camb416/video-table-interactive/master/doc/data_folder_structure.png" />
+
+The two plist files are included in the doc folder of this repository, while the jpg and mov files in the assets folder will not be tracked.
