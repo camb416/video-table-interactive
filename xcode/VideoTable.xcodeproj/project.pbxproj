@@ -13,7 +13,6 @@
 		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
-		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		320B342315CB128D003AB00F /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341D15CB128D003AB00F /* Button.cpp */; };
 		320B342415CB128D003AB00F /* VideoTableApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341E15CB128D003AB00F /* VideoTableApp.cpp */; };
 		320B342515CB128D003AB00F /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341F15CB128D003AB00F /* Image.cpp */; };
@@ -22,7 +21,6 @@
 		320B342815CB128D003AB00F /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342215CB128D003AB00F /* VideoPlayer.cpp */; };
 		320B342C15CB1CAF003AB00F /* GalleryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B342A15CB1CAF003AB00F /* GalleryHelper.cpp */; };
 		320B343215CC5E62003AB00F /* RecipeView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B343015CC5E62003AB00F /* RecipeView.cpp */; };
-		322311951607885900FB16AF /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
 		322311E11607885900FB16AF /* PhidgetConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFC15C712D6001BB4A1 /* PhidgetConnector.cpp */; };
 		322311E21607885900FB16AF /* PhidgetModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3238EFFD15C712D6001BB4A1 /* PhidgetModel.cpp */; };
 		322311E31607885900FB16AF /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320B341D15CB128D003AB00F /* Button.cpp */; };
@@ -60,6 +58,8 @@
 		3295E59515DBFD3900B63297 /* PlistReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3295E59415DBFD3900B63297 /* PlistReader.cpp */; };
 		329B28B615D00EC40021F656 /* AppModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329B28B415D00EC40021F656 /* AppModel.cpp */; };
 		32C5161C15EEA28F00525141 /* CursorTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C5161A15EEA28F00525141 /* CursorTarget.cpp */; };
+		32CA47BC162F2EEA00D0F5F0 /* cookingTableIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32CA47BB162F2EE900D0F5F0 /* cookingTableIcon.icns */; };
+		32CA47BD162F2EEA00D0F5F0 /* cookingTableIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 32CA47BB162F2EE900D0F5F0 /* cookingTableIcon.icns */; };
 		32CD143D15EBE27900829F89 /* TableController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32CD143B15EBE27800829F89 /* TableController.cpp */; };
 		32EDFFE716248F9000070D32 /* PhidgetGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32EDFFE516248F9000070D32 /* PhidgetGraph.cpp */; };
 		32EDFFE816248F9000070D32 /* PhidgetGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32EDFFE516248F9000070D32 /* PhidgetGraph.cpp */; };
@@ -76,7 +76,6 @@
 		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		00CCAF14116A9FEE008396D5 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CinderApp.icns; sourceTree = SOURCE_ROOT; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1B029E8E15A248D800FD18F5 /* UserArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserArea.h; path = ../include/UserArea.h; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		32C5156515EC2D3D00525141 /* VideoTableApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoTableApp.h; path = ../include/VideoTableApp.h; sourceTree = "<group>"; };
 		32C5161A15EEA28F00525141 /* CursorTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CursorTarget.cpp; path = ../src/CursorTarget.cpp; sourceTree = "<group>"; };
 		32C5161B15EEA28F00525141 /* CursorTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CursorTarget.h; path = ../src/CursorTarget.h; sourceTree = "<group>"; };
+		32CA47BB162F2EE900D0F5F0 /* cookingTableIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = cookingTableIcon.icns; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* VideoTable_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTable_Prefix.pch; sourceTree = "<group>"; };
 		32CD143A15EBD88200829F89 /* ButtonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ButtonModel.h; path = ../include/ButtonModel.h; sourceTree = "<group>"; };
 		32CD143B15EBE27800829F89 /* TableController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TableController.cpp; sourceTree = "<group>"; };
@@ -278,8 +278,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32CA47BB162F2EE900D0F5F0 /* cookingTableIcon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -407,7 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322311951607885900FB16AF /* CinderApp.icns in Resources */,
+				32CA47BD162F2EEA00D0F5F0 /* cookingTableIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
+				32CA47BC162F2EEA00D0F5F0 /* cookingTableIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

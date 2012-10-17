@@ -42,3 +42,5 @@ This folder contains the structure indicated below:
 <img src="https://raw.github.com/camb416/video-table-interactive/master/doc/data_folder_structure.png" />
 
 The two plist files are included in the doc folder of this repository, while the jpg and mov files in the assets folder will not be tracked.
+
+Icon Art by VectorLady.com.  http://vectorlady.com/kitchen-icons/
