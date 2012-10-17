@@ -12,7 +12,7 @@
 	<key>frontplate</key>
 	<false/>
 	<key>fullscreen</key>
-	<false/>
+	<true/>
 	<key>background</key>
 	<string>backplate.jpg</string>
 	<key>foreground</key>

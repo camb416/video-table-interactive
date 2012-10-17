@@ -13,7 +13,8 @@
 void  TableController::setup(AppModel * _model, vector<RecipeView> * _views){
     model = _model;
     views = _views;
-    debugState = DEVELOPMENT;
+    debugState = PRODUCTION;
+    updateViewStates();
 }
 int TableController::getDebugState(){
     return debugState;
@@ -69,6 +70,7 @@ void TableController::handleKeyPress(char _key){
 }
 void TableController::updateViewStates(){
     for(int i=0;i<views->size();i++){
+        console() << debugState << endl;
         views->at(i).setDebug(debugState);
     }
 }
