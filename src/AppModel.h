@@ -39,6 +39,7 @@ struct TouchSensorModel{
     char keymap;
     int val;
     int prev;
+    bool isTouched;
 };
 
 class AppModel{

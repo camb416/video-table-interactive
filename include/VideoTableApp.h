@@ -10,6 +10,7 @@
 #define CinderProject_CinderProjectApp_h
 
 #include "cinder/app/AppBasic.h"
+#include "cinder/params/Params.h"
 #include "cinder/Surface.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/qtime/QuickTime.h"
@@ -50,6 +51,14 @@ public:
     PhidgetGraph pg;
     
 private:
+    
+    // Debugging UI
+	params::InterfaceGl	mParams;
+    
+    void selectButtonHandler();
+    void skipButtonHandler();
+    void backButtonHandler();
+
     void parseXML();
     
 

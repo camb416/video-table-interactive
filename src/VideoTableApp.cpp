@@ -35,6 +35,25 @@ void VideoTable::setup(){
     foreground_tex = gl::Texture( loadImage(  model.foregroundPath ) );
     
     pg.setup(&pConnector, &model.sensors);
+    
+    
+    mParams = params::InterfaceGl( "CardBox Functions", Vec2i( 225, 200 ) );
+    mParams.addButton("select button", std::bind( &VideoTable::selectButtonHandler, this ));
+    mParams.addButton("back button", std::bind( &VideoTable::backButtonHandler, this ));
+    mParams.addButton("skip button", std::bind( &VideoTable::skipButtonHandler, this ));
+    
+    mParams.show();
+
+}
+
+void VideoTable::selectButtonHandler(){
+    console() << "select button handler" << endl;
+}
+void VideoTable::backButtonHandler(){
+    console() << "back button handler" << endl;
+}
+void VideoTable::skipButtonHandler(){
+    console() << "skip button handler" << endl;
 }
 
 void VideoTable::parseXML()
@@ -72,12 +91,14 @@ void VideoTable::update(){
             tsm->val = pConnector.getVal(tsm->board, tsm->sensor);
             if(abs(tsm->val-tsm->prev)>1){
                 console() << tsm->keymap << " : " << tsm->val << ", " << tsm->prev << endl;
-                if(tsm->val>tsm->prev){
+                if(tsm->val>tsm->prev && !tsm->isTouched){
                     console() << "TOUCHED!" << "...omg" << endl;
                     controller.handleKeyPress(tsm->keymap);
-                } else {
+                    tsm->isTouched = true;
+                } else if(tsm->isTouched){
                     console() << "RELEASED" << endl;
                     controller.handleKeyRelease(tsm->keymap);
+                    tsm->isTouched = false;
                 }
                 tsm->prev = tsm->val;
             }
@@ -117,7 +138,13 @@ void VideoTable::draw()
             cTarget->draw();
         }
         if(model.useSensors) pg.draw(Rectf(getWindowWidth()/3.0f,getWindowHeight()/3.0f,getWindowWidth()*2.0f/3.0f,getWindowHeight()*2.0f/3.0f));
+        
+        mParams.show();
+    } else {
+        mParams.hide();
     }
+    
+     params::InterfaceGl::draw();
 }
 
 CINDER_APP_BASIC( VideoTable, RendererGl(0) );

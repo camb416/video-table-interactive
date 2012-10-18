@@ -91,6 +91,8 @@ void AppModel::parseSettings(XmlTree _root){
     TouchSensorModel tsm;
     ButtonModel bm;
     
+    
+    
     string topLevelKey = "";
     for( XmlTree::Iter child = t.begin(); child != t.end(); ++child ){
         string tagType = child->getTag();
@@ -134,6 +136,7 @@ void AppModel::parseSettings(XmlTree _root){
                             uam = UserAreaModel();
                         } else if(topLevelKey.compare("Sensor Boards")==0){
                             tsm = TouchSensorModel();
+                            tsm.isTouched = false;
                         } else if(topLevelKey.compare("languages")==0){
                             // we're looping the languages...
                             console() << "here's a language: " << grandchild->getValue() << endl;
