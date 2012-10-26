@@ -18,7 +18,7 @@ int AppModel::setup(string _appFilePath, string _contentFilePath){
     
     curLanguage = 0;
     
-    basePath = getHomeDirectory().string()+"/Desktop/videotable/";
+    basePath = getHomeDirectory().string()+"/Documents/AMNH/videotable/";
     assetsPath = "assets/";
     settingsPath ="settings/";
     

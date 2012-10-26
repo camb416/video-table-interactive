@@ -176,34 +176,34 @@
 	</dict>
 	<key>Sensor Boards</key>
 	<dict>
-		<key>148920</key>
+		<key>148959</key>
 		<dict>
-			<key>a</key>
-			<integer>0</integer>
-			<key>s</key>
-			<integer>1</integer>
 			<key>d</key>
+			<integer>0</integer>
+			<key>a</key>
+			<integer>1</integer>
+			<key>s</key>
 			<integer>2</integer>
-			<key>f</key>
+			<key>e</key>
 			<integer>3</integer>
-			<key>g</key>
+			<key>w</key>
 			<integer>4</integer>
-			<key>h</key>
+			<key>q</key>
 			<integer>5</integer>
 		</dict>
 		<key>148986</key>
 		<dict>
-			<key>q</key>
-			<integer>0</integer>
-			<key>w</key>
-			<integer>1</integer>
-			<key>e</key>
-			<integer>2</integer>
-			<key>r</key>
-			<integer>3</integer>
-			<key>t</key>
-			<integer>4</integer>
 			<key>y</key>
+			<integer>0</integer>
+			<key>t</key>
+			<integer>1</integer>
+			<key>r</key>
+			<integer>2</integer>
+			<key>h</key>
+			<integer>3</integer>
+			<key>g</key>
+			<integer>4</integer>
+			<key>f</key>
 			<integer>5</integer>
 		</dict>
 	</dict>
