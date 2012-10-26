@@ -35,7 +35,7 @@ APPLICATION FUNCTIONS:
 SPACE........Cycle Debug States
 </pre>
 
-The application is designed and developed for use with Mac OS X 10.7 Lion. A number of data files are required that should be placed in a folder called "videotable" on the user's Desktop.
+The application is designed and developed for use with Mac OS X 10.7 Lion. A number of data files are required that should be placed in a folder called "videotable" in ~/Documents/AMNH/.
 
 This folder contains the structure indicated below:
 
