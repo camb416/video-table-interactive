@@ -10,9 +10,8 @@ void VideoTable::setup(){
     model.setup("SETTINGS.plist","RECIPES.plist");
     
     if(model.useSensors){
-        console() << "this shouldnt be happening" << endl;
         pConnector.useEvents(false);
-        pConnector.connect(148920);
+        
     }
     
     setFullScreen(model.isFullScreen);
@@ -34,7 +33,30 @@ void VideoTable::setup(){
     background_tex = gl::Texture( loadImage( model.backgroundPath  ) );
     foreground_tex = gl::Texture( loadImage(  model.foregroundPath ) );
     
-    pg.setup(&pConnector, &model.sensors);
+    if(model.useSensors){
+    vector<int> uniqueSensorBoards;
+    
+    for(int i=0;i<model.sensors.size();i++){
+        TouchSensorModel thisParticularSensor = model.sensors.at(i);
+        int thisParticularInt = thisParticularSensor.board;
+        bool isThisParticularIntUnique = true;
+        for(int j=0;j<uniqueSensorBoards.size();j++){
+            if(uniqueSensorBoards.at(j) == thisParticularInt){
+                isThisParticularIntUnique = false;
+            }
+        }
+        if(isThisParticularIntUnique){
+            uniqueSensorBoards.push_back(thisParticularInt);
+        }
+    }
+    for(int i=0;i<uniqueSensorBoards.size();i++){
+        pConnector.connect(uniqueSensorBoards.at(i), model.sensorTimeOut);
+    }
+        pg.setup(&pConnector, &model.sensors);
+    }
+    
+    
+    
     
     
     mParams = params::InterfaceGl( "CardBox Functions", Vec2i( 225, 200 ) );

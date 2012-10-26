@@ -16,6 +16,7 @@ using namespace std;
 
 int AppModel::setup(string _appFilePath, string _contentFilePath){
     
+    sensorTimeOut = -1;
     curLanguage = 0;
     
     basePath = getHomeDirectory().string()+"/Documents/AMNH/videotable/";
@@ -101,7 +102,7 @@ void AppModel::parseSettings(XmlTree _root){
             topLevelKey = child->getValue();
             console() << "topkey: " << topLevelKey << endl;
         } else {
-            if(tagType.compare("string")==0 || tagType.compare("false")==0 || tagType.compare("true")==0){
+            if(tagType.compare("string")==0 || tagType.compare("false")==0 || tagType.compare("true")==0 || tagType.compare("integer")==0){
                 if(topLevelKey.compare("background")==0){
                     backgroundPath = basePath+assetsPath+child->getValue();
                 } else if(topLevelKey.compare("foreground")==0){
@@ -118,7 +119,10 @@ void AppModel::parseSettings(XmlTree _root){
                 } else if(topLevelKey.compare("sensors")==0){
                     console() << "SENSORS VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     if(tagType.compare("false")==0) useSensors = false;
-                } 
+                } else if(topLevelKey.compare("sensor_timeout")==0){
+                    console() << "SENSORS TIMEOUT VALUE:::: " << tagType << "!!!!!!!!!" << endl;
+                    sensorTimeOut = atoi(child->getValue().c_str());
+                }
             } else if(tagType.compare("dict")==0){
                 // this is either the user areas, or the sensor boards
                 // depending on the toplevelkey

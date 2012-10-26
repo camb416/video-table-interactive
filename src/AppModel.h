@@ -68,6 +68,7 @@ public:
     bool isFullScreen;
     bool useFrontPlate;
     bool useSensors;
+    int sensorTimeOut;
     
     
     vector<string> languages;
