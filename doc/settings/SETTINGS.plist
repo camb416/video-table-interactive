@@ -10,7 +10,7 @@
 	<key>sensors</key>
 	<false/>
 	<key>frontplate</key>
-	<false/>
+	<true/>
 	<key>fullscreen</key>
 	<true/>
 	<key>background</key>
