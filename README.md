@@ -3,6 +3,8 @@ video-table-interactive
 
 A video table interactive in Cinder and C++.
 
+<img src="https://raw.github.com/camb416/video-table-interactive/master/screenshot.jpg" width="500" />
+
 The application consists of four user areas that play videos by receiving keypresses or analog sensor signals from the a Phidgets 8/8/8 InterfaceKit.
 
 Sensor data uses the Phidgets-CinderBlock: https://github.com/camb416/Phidgets-CinderBlock
