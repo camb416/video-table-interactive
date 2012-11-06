@@ -2,13 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>sensor_timeout</key>
+	<integer>1</integer>
 	<key>languages</key>
 	<dict>
 		<key>lang1</key>
 		<string>en</string>
 	</dict>
 	<key>sensors</key>
-	<false/>
+	<true/>
 	<key>frontplate</key>
 	<true/>
 	<key>fullscreen</key>
