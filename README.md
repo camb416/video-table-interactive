@@ -45,4 +45,9 @@ This folder contains the structure indicated below:
 
 The two plist files are included in the doc folder of this repository, while the jpg and mov files in the assets folder will not be tracked.
 
+<h3>TroubleShooting</h3>
+- If the touch sensors are not working properly, try unplugging the audio amp as ground-loop interference can wreak havoc on them, especially considering there is no common ground between the Mac Mini and the Gilderfluke (they both get power over IEC-C7 "shotgun" connectors).
+
+- If the touch sensors are not working at all, check the SETTINGS.plist file and make sure "usesensors" is true. Also confirm that the serial numbers match the boards as labeled in the casework. Note that if there are two specified, they BOTH need to be connected or neither will work.
+
 Icon Art by VectorLady.com.  http://vectorlady.com/kitchen-icons/
