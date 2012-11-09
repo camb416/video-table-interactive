@@ -162,11 +162,12 @@ void VideoTable::draw()
         if(model.useSensors) pg.draw(Rectf(getWindowWidth()/3.0f,getWindowHeight()/3.0f,getWindowWidth()*2.0f/3.0f,getWindowHeight()*2.0f/3.0f));
         
         mParams.show();
+             params::InterfaceGl::draw();
     } else {
         mParams.hide();
     }
     
-     params::InterfaceGl::draw();
+
 }
 
 CINDER_APP_BASIC( VideoTable, RendererGl(0) );
