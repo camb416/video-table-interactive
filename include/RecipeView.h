@@ -45,11 +45,17 @@ public:
     void next();
     void prev();
     
+    void goStart();
+    void delayTimeOut();
+    
+    
     void setDebug(int _debugState);
     
     int getKeyFunction(char _aChar);
     
 private:
+    float timeOut;
+    double lastTouched;
     int debugState;
     Vec2f pos;
     float rotation;

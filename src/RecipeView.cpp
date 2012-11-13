@@ -16,38 +16,7 @@
 #include <stdlib.h>
 
 RecipeView::RecipeView(RecipeModel _model){
-  /*  recipeModel = _model;
-    // menu_img.load(_model.getMenuImage());
-    
-    curStep = 0;
-    stepState = 0;
-    prevStepState = -1;
-    prevStep = -1;
-    
-    
-    console() << "this recipemodel has this many steps: " << recipeModel.getNumSteps() << "." << endl;
-    for(int i=0;i<recipeModel.getNumSteps();i++){
-        console() << "wtf: " << recipeModel.getCookStep(i).img << endl;
-        gallerytools::Image anImage;
-        anImage.load(recipeModel.getCookStep(i).img);
-        anImage.hide();
-        images.push_back(anImage);
-        gallerytools::Video aVideo;
-        aVideo.load(recipeModel.getCookStep(i).video);
-        aVideo.hide();
-        videos.push_back(aVideo);
-    }
-    
-    string normalFont( "Arial" );
-    
-	TextLayout layout;
-	layout.clear( ColorA( 0.5f, 0.5f, 0.5f, 0.5f ) );
-	layout.setFont( Font( normalFont, 24 ) );
-	layout.setColor( Color( 1, 1, 1 ) );
-	layout.addLine( "testing here");
-	Surface8u rendered = layout.render( true, false );
-	text_texture = gl::Texture( rendered );
-*/
+
     console() << "error, this is deprecated" << endl;
     
 }
@@ -64,6 +33,9 @@ void RecipeView::setDebug(int _debugState){
 }
 
 RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
+   timeOut = 60.0f;
+    lastTouched = getElapsedSeconds();
+    
     recipeModel = _recipe;
     areaModel = _area;
     // menu_img.load(_model.getMenuImage());
@@ -161,9 +133,17 @@ void RecipeView::forwardRelease(){
         fwd_btn.boingScaleOut();
     } 
       //
+    delayTimeOut();
     
 }
 
+void RecipeView::goStart(){
+        // do this on a timeout, basically.
+        curStep = 0;
+        stepState = 0;
+    delayTimeOut();
+
+}
 
 void RecipeView::backwardRelease(){
     //stepState++;
@@ -185,17 +165,22 @@ void RecipeView::backwardRelease(){
         }
     }
     
+    delayTimeOut();
     //  img.load(recipeModel.getCookStep(curStep).img);
 }
     
 void RecipeView::selectRelease(){
     select_btn.boingScaleOut();
     if(stepState==0) next();
+    
+    delayTimeOut();
 }
 
 void RecipeView::forwardPress(){
 // forward button press
     if(!(curStep==0 && stepState==0)) fwd_btn.boingScaleIn();
+    
+    delayTimeOut();
 }
 
 void RecipeView::backwardPress(){
@@ -208,13 +193,33 @@ if(recipeModel.getNumLanguages()>1){
     back_btn.boingScaleIn();
 }
     }
-    
+    delayTimeOut();
 }
 void RecipeView::selectPress(){
     if(stepState==0) select_btn.boingScaleIn();
+    delayTimeOut();
+}
+
+void RecipeView::delayTimeOut(){
+    lastTouched = getElapsedSeconds();
 }
 
 void RecipeView::update(){
+    
+    
+    //console() << ":::TIMED OUT:::" << endl;
+    if((curStep==0 && stepState==0) || stepState==1){
+        // it's already at the start, or if it's on a video...
+        delayTimeOut();
+    } else {
+        double curTime = getElapsedSeconds();
+        if((curTime-lastTouched)>timeOut){
+            console() << "going to start: " << recipeModel.name << endl;
+            goStart();
+        }
+    }
+    
+    
       for(int i=0;i<videos.size();i++){
         if(i!=curStep){
                       // videos.at(i).stop();
@@ -237,14 +242,23 @@ void RecipeView::update(){
 	layout.addLine( buffer);
 	Surface8u rendered = layout.render( true, false );
     text_texture = gl::Texture( rendered );
+    
+    
+    // this needs work here....
+    // this is specifically to handle a goStart() situation...
+    if(prevStepState==0 && stepState == 0 && prevStep!=curStep){
+        console() << "THIS SHOULD BE FIRING on TIMEOUT >>> " << recipeModel.name << endl;
+        if(images.size()>prevStep) images.at(prevStep).hide();
+        if(images.size()>curStep) images.at(curStep).show();
+        prevStep = curStep;
+        
+    } else {
+        
     if(prevStep!=curStep){
         // moved from video to new start image
         // load both the image and the video for the new step
-
        if(prevStep>-1) videos.at(prevStep).stop();
         prevStep = curStep;
-
-        
     }
     if(prevStepState!=stepState){
         // moved from start image to video
@@ -259,6 +273,7 @@ void RecipeView::update(){
         }
         prevStepState = stepState;
     }
+        }
     
 }
 
