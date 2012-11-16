@@ -33,11 +33,12 @@ void RecipeView::setDebug(int _debugState){
 }
 
 RecipeView::RecipeView(UserAreaModel _area, RecipeModel _recipe){
-   timeOut = 60.0f;
+   
     lastTouched = getElapsedSeconds();
     
     recipeModel = _recipe;
     areaModel = _area;
+    timeOut = areaModel.timeout;
     // menu_img.load(_model.getMenuImage());
     debugState = 2;
     

@@ -122,6 +122,9 @@ void AppModel::parseSettings(XmlTree _root){
                 } else if(topLevelKey.compare("sensor_timeout")==0){
                     console() << "SENSORS TIMEOUT VALUE:::: " << tagType << "!!!!!!!!!" << endl;
                     sensorTimeOut = atoi(child->getValue().c_str());
+                } else if(topLevelKey.compare("area_timeout")==0){
+                    console() << "User Area Timeout value: " << tagType << "." << endl;
+                    areaTimeOut = atof(child->getValue().c_str());
                 }
             } else if(tagType.compare("dict")==0){
                 // this is either the user areas, or the sensor boards
@@ -227,6 +230,12 @@ void AppModel::parseSettings(XmlTree _root){
             }
         }
     }
+    
+    for(int i=0;i<areas.size();i++){
+        UserAreaModel * uam = &areas.at(i);
+        uam->timeout = areaTimeOut;
+    }
+    
 }
 
 RecipeModel AppModel::getRecipeModel(string _recipeTitle){

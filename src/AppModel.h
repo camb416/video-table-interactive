@@ -31,6 +31,7 @@ struct UserAreaModel{
     ButtonModel back_btn;
     ButtonModel select_btn;
     ButtonModel fwd_btn;
+    float timeout;
     
 };
 struct TouchSensorModel{
@@ -73,6 +74,8 @@ public:
     
     vector<string> languages;
     int curLanguage;
+    
+    float areaTimeOut;
     
     
 private:

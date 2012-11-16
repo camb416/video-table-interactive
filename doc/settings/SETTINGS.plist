@@ -4,6 +4,8 @@
 <dict>
 	<key>sensor_timeout</key>
 	<integer>1</integer>
+	<key>area_timeout</key>
+	<integer>60</integer>
 	<key>languages</key>
 	<dict>
 		<key>lang1</key>
