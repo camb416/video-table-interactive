@@ -50,4 +50,29 @@ The two plist files are included in the doc folder of this repository, while the
 
 - If the touch sensors are not working at all, check the SETTINGS.plist file and make sure "usesensors" is true. Also confirm that the serial numbers match the boards as labeled in the casework. Note that if there are two specified, they BOTH need to be connected or neither will work.
 
-Icon Art by VectorLady.com.  http://vectorlady.com/kitchen-icons/
+# Adding another language
+
+- in ~/Documents/AMNH/videotable/settings/SETTINGS.xml:
+
+add the key/value pair:
+<pre>
+Key  	Type	Value
+lang2	String	fr
+</pre>
+to the languages dictionary.
+
+
+- duplicate the "en" folder in ~/Documents/AMNH/assets.
+
+- rename the folder to "fr"
+
+The table should now support switching languages by pressing the "back" key on the first frame of the interaction.
+
+- make sure to add the "change language" button in the first graphic of the recipe assets.
+
+
+#Credits
+
+-Software 2012 American Museum of Natural History
+
+-Icon Art by VectorLady.com.  http://vectorlady.com/kitchen-icons/
