@@ -68,7 +68,7 @@ to the languages dictionary.
 
 - update the assets in the "fr" folder to the alternate language.
 
-The table should now support switching languages by pressing the "back" key on the first frame of the interaction.
+The table should now support switching languages by pressing the "back" sensor on the first frame of the interaction.
 
 - make sure to add the "change language" button in the first graphic of the recipe assets.
 
