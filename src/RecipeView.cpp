@@ -157,7 +157,7 @@ void RecipeView::backwardRelease(){
         }
         back_btn.boingScaleOut();
     } else {
-        // okay, try to load all the new crap...
+        // okay, try to load the next language...
         if(recipeModel.getNumLanguages()>1){
             if(recipeModel.switchLanguage()>0){
                 reload();
