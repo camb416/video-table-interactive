@@ -52,7 +52,7 @@ The two plist files are included in the doc folder of this repository, while the
 
 # Adding another language
 
-- in ~/Documents/AMNH/videotable/settings/SETTINGS.xml:
+- in ~/Documents/AMNH/videotable/settings/SETTINGS.plist:
 
 add the key/value pair:
 <pre>
@@ -65,6 +65,8 @@ to the languages dictionary.
 - duplicate the "en" folder in ~/Documents/AMNH/assets.
 
 - rename the folder to "fr"
+
+- update the assets in the "fr" folder to the alternate language.
 
 The table should now support switching languages by pressing the "back" key on the first frame of the interaction.
 
